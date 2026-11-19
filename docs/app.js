@@ -118,7 +118,7 @@
     const box = document.getElementById(id);
     box.innerHTML = "";
     const width = box.clientWidth, height = opt.height || (width < 560 ? 240 : 300);
-    const m = { t: 10, r: opt.endLabels === false ? 12 : 104, b: 26, l: 44 };
+    const m = { t: 10, r: opt.endLabels === false ? 12 : width < 560 ? 88 : 104, b: 26, l: 40 };
     const i0 = rangeStart(), idx = []; for (let i = i0; i <= L; i++) idx.push(i);
     const svg = el("svg", { viewBox: `0 0 ${width} ${height}`, height, role: "img", "aria-label": opt.aria || "" }, box);
     const vals = opt.series.flatMap(s => idx.map(i => s.values[i])).filter(x => x != null && isFinite(x) && (!opt.log || x > 0));
@@ -155,9 +155,10 @@
       const key = yy * 12 + mm;
       if (key === lastMonth) continue;
       lastMonth = key;
-      const every = idx.length > 60 ? 3 : idx.length > 20 ? 1 : 1;
+      // keep roughly one label per 55px so narrow screens don't collide
+      const months = idx.length / 4.35, slots = Math.max(2, Math.floor(iw / 55));
+      const every = [1, 2, 3, 6, 12].find(e => months / e <= slots) || 12;
       if ((mm - 1) % every !== 0) continue;
-      if (idx.length > 20 && idx.length <= 60 && mm % 2 === 0) continue;
       const t = el("text", { x: x(i), y: m.t + ih + 17, "text-anchor": "middle" }, svg);
       t.textContent = mm === 1 ? String(yy) : `${mm}月`;
     }
