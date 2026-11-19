@@ -1,0 +1,99 @@
+{
+ "2026-11-01": {
+  "prev_week_end": "2026-10-04",
+  "rows": [
+   {
+    "change": "-3.9pts",
+    "cur": 49.3,
+    "metric": "Share of token spend",
+    "prev": 53.2,
+    "who": "Anthropic"
+   },
+   {
+    "change": "+3.8pts",
+    "cur": 46.1,
+    "metric": "Share of token spend",
+    "prev": 42.3,
+    "who": "OpenAI"
+   },
+   {
+    "change": "-0.1pts",
+    "cur": 2.4,
+    "metric": "Share of token spend",
+    "prev": 2.5,
+    "who": "xAI"
+   },
+   {
+    "change": "0.0pts",
+    "cur": 1.7,
+    "metric": "Share of token spend",
+    "prev": 1.7,
+    "who": "Google"
+   },
+   {
+    "change": "+0.2pts",
+    "cur": 0.2,
+    "metric": "Share of token spend",
+    "prev": 0.0,
+    "who": "DeepSeek"
+   },
+   {
+    "change": "-1.8pts",
+    "cur": 55.1,
+    "metric": "Share of token volume",
+    "prev": 56.8,
+    "who": "Anthropic"
+   },
+   {
+    "change": "+1.5pts",
+    "cur": 41.4,
+    "metric": "Share of token volume",
+    "prev": 39.9,
+    "who": "OpenAI"
+   },
+   {
+    "change": "+0.1pts",
+    "cur": 1.5,
+    "metric": "Share of token volume",
+    "prev": 1.4,
+    "who": "xAI"
+   },
+   {
+    "change": "-0.3pts",
+    "cur": 1.2,
+    "metric": "Share of token volume",
+    "prev": 1.5,
+    "who": "Google"
+   },
+   {
+    "change": "+0.5pts",
+    "cur": 0.6,
+    "metric": "Share of token volume",
+    "prev": 0.0,
+    "who": "DeepSeek"
+   },
+   {
+    "change": "-14.8%",
+    "cur": 0.53,
+    "metric": "Blended price per million tokens",
+    "prev": 0.62,
+    "who": "OpenAI & Anthropic"
+   },
+   {
+    "change": "-17.7%",
+    "cur": 0.5,
+    "metric": "Blended price per million tokens",
+    "prev": 0.61,
+    "who": "OpenAI"
+   },
+   {
+    "change": "-12.5%",
+    "cur": 0.55,
+    "metric": "Blended price per million tokens",
+    "prev": 0.63,
+    "who": "Anthropic"
+   }
+  ],
+  "week_end": "2026-11-01"
+ }
+}

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramp 企业 token 支出 · Anthropic 追踪</title>
+<meta name="description" content="用 Ramp AI Index 公开周度数据跟踪 Anthropic 在美国企业 token 支出中的份额、用量和单位支出。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./">ramp-ai-tracker</a>
+    <nav>
+      <a href="#models">模型</a>
+      <a href="#dashboard">看板原值</a>
+      <a href="#method">方法</a>
+      <a href="#downloads">下载</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <header class="pack-head">
+    <p class="eyebrow">Tracker · 企业 AI 支出 · 每日检查更新</p>
+    <h1>Ramp 企业 token 支出：Anthropic 追踪</h1>
+    <p class="dek" id="dek">载入中…</p>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+  <p class="note kpi-note">份额和变化都由 Ramp 公开周度接口算出。接口只给指数（每组数据单周最高值 = 100），算不出美元金额；单位 token 支出 = 支出指数 ÷ 用量指数，只看相对变化。口径见文末「方法」。</p>
+
+  <div class="controls" role="group" aria-label="时间范围">
+    <span>时间范围</span>
+    <div class="seg" id="range">
+      <button data-n="all" aria-pressed="true">全部</button>
+      <button data-n="52" aria-pressed="false">近 52 周</button>
+      <button data-n="26" aria-pressed="false">近 26 周</button>
+      <button data-n="13" aria-pressed="false">近 13 周</button>
+    </div>
+  </div>
+
+  <section class="card" id="split">
+    <h2>最近四周：谁拿走了企业的 token 预算</h2>
+    <p class="note" id="split-note"></p>
+    <div class="bars" id="bars"></div>
+    <div class="legend" id="bars-legend"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-top">
+      <div><h2>每周 token 支出</h2>
+      <p class="note">Ramp 指数，按厂商。所有厂商共用一个基准，可以直接横向比较。</p></div>
+      <div class="seg scale" data-for="c-spend"><button data-v="lin" aria-pressed="true">线性</button><button data-v="log" aria-pressed="false">对数</button></div>
+    </div>
+    <div class="legend" data-legend="groups"></div>
+    <div class="chart" id="c-spend"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-top">
+      <div><h2>每周 token 用量</h2>
+      <p class="note">Ramp 指数，按厂商。各厂商用自己的 tokenizer 计数。</p></div>
+      <div class="seg scale" data-for="c-volume"><button data-v="lin" aria-pressed="true">线性</button><button data-v="log" aria-pressed="false">对数</button></div>
+    </div>
+    <div class="legend" data-legend="groups"></div>
+    <div class="chart" id="c-volume"></div>
+  </section>
+
+  <section class="card">
+    <h2>份额走势</h2>
+    <p class="note">四周滚动合计，所有厂商合计 = 100%。实线为支出份额，虚线为用量份额。</p>
+    <div class="legend" id="share-legend"></div>
+    <div class="chart" id="c-share"></div>
+  </section>
+
+  <section class="card">
+    <h2>单位 token 支出</h2>
+    <p class="note">支出指数 ÷ 用量指数，四周滚动，以 Anthropic 最近四周 = 100。高于 100 表示每个 token 花得比 Anthropic 现在更多。这和 Ramp 看板上的每百万 token 美元单价不是同一口径。</p>
+    <div class="legend" id="price-legend"></div>
+    <div class="chart" id="c-price"></div>
+  </section>
+
+  <section class="card" id="makers">
+    <h2>按厂商，最近四周</h2>
+    <p class="note" id="makers-note"></p>
+    <div class="tablewrap"><table class="t" id="t-makers"></table></div>
+  </section>
+
+  <section class="card" id="models">
+    <div class="card-top">
+      <div><h2>Anthropic 内部：各模型系列占比</h2>
+      <p class="note">四周滚动，占 Anthropic 模型层合计的比例。</p></div>
+      <div class="seg" id="fam-metric"><button data-v="spend" aria-pressed="true">支出</button><button data-v="volume" aria-pressed="false">用量</button></div>
+    </div>
+    <div class="legend" id="fam-legend"></div>
+    <div class="chart" id="c-fam"></div>
+  </section>
+
+  <section class="card">
+    <h2>Anthropic 各模型，最近四周</h2>
+    <p class="note" id="models-note"></p>
+    <div class="tablewrap"><table class="t" id="t-models"></table></div>
+  </section>
+
+  <section class="card" id="dashboard">
+    <h2>Ramp 看板公布值</h2>
+    <p class="note">每次构建时从 <a href="https://ramp.com/data/ai-index">Ramp AI Index 看板</a> 的 Tokenomics 表抓取并按周存档。单价是 Ramp 直接公布的美元数，其余图表用的接口数据算不出这个数。</p>
+    <div class="tablewrap"><table class="t" id="t-dash"></table></div>
+  </section>
+
+  <section class="card" id="revisions">
+    <h2>数据修订</h2>
+    <p class="note" id="rev-note"></p>
+    <div class="tablewrap"><table class="t" id="t-rev"></table></div>
+  </section>
+
+  <section class="card method prose-card" id="method">
+    <h2>方法</h2>
+    <div class="prose">
+      <ul>
+        <li><b>数据来源：</b>Ramp AI Index 的公开周度接口 <code>ramp.com/data/ai-index/chart-data/tokenVolumes</code>，按厂商和按模型分别给出 token 支出与 token 用量。数据来自接入 Ramp AI 支出管理产品的企业，包括直连 API，以及经 AWS、GCP、Azure 和多家路由、推理平台的消费。Ramp 注明这部分不代表其全部 AI 支出。</li>
+        <li><b>指数口径：</b>接口给的是指数。每个「指标 × 维度」组合里，单周最高值记为 100，厂商维度和模型维度分别归一。所以同一组里的份额、环比和比值都成立，厂商层和模型层的数值不能直接相加比较。出现新的单周最高值时，整条历史会按比例重算，本页因此只展示份额和相对变化。</li>
+        <li><b>单位 token 支出：</b>支出指数 ÷ 用量指数。同一厂商不同时间、不同厂商同一时间都可以比较相对高低，但换算不出美元。Ramp 看板上的「每百万 token 混合单价」采用的口径无法从公开接口复现，两者走势可能不一致，看板原值单独列在上面的表里。</li>
+        <li><b>周的定义：</b>周一到周日，按周日日期标注，和 Ramp 看板的「Week ending」一致。</li>
+        <li><b>修订：</b>企业接入新的模型供应商后，Ramp 会回补其历史数据。本站每次检测到接口数据变化都保存一份原始快照，并对比 Anthropic 份额在各周的变化。</li>
+        <li><b>覆盖范围：</b>样本是 Ramp 的美国企业客户，不含消费者订阅、海外客户和大型直签合同，不能直接换算为 Anthropic 全公司收入或 ARR。</li>
+        <li><b>更新：</b>GitHub Actions 每天检查一次接口，数据有变化才重新构建。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card" id="downloads">
+    <h2>下载</h2>
+    <p class="note">全部为 Ramp 原始指数，未做任何换算。</p>
+    <ul class="note">
+      <li><a href="data/ramp-makers-weekly.csv">ramp-makers-weekly.csv</a>：按厂商，周度支出与用量指数</li>
+      <li><a href="data/ramp-anthropic-models-weekly.csv">ramp-anthropic-models-weekly.csv</a>：Anthropic 各模型，周度支出与用量指数</li>
+      <li><a href="data/tracker.json">tracker.json</a>：本页使用的全部数据，含看板存档与修订记录</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">数据：Ramp AI Index（ramp.com/data/ai-index）。份额、变化和单位支出为本站根据公开指数计算，非 Ramp 官方口径。</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
