@@ -17,13 +17,14 @@ import re
 import sys
 import urllib.request
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS_DATA = ROOT / "docs" / "data"
 SNAPSHOTS = ROOT / "data" / "snapshots"
 DASH_HISTORY = ROOT / "data" / "dashboard_history.json"
+CALIBRATION = ROOT / "data" / "calibration.json"
 
 TOKEN_URL = "https://ramp.com/data/ai-index/chart-data/tokenVolumes"
 DASH_URL = "https://ramp.com/data/ai-index"
@@ -167,10 +168,42 @@ def main():
         "dashboard": [history[k] for k in sorted(history)],
         "dashboard_weeks": sorted(history),
         "revisions": revisions(prev_snapshot, data),
+        "usd": calibrate(data),
     }
     (DOCS_DATA / "tracker.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
-    write_csvs(weeks, week_start, maker_out, keep)
+    write_csvs(weeks, week_start, maker_out, keep, out["usd"])
     print(f"built {len(weeks)} weeks through {weeks[-1]}; makers={makers}")
+
+
+def calibrate(data):
+    """Dollars and tokens per maker-level index point, fitted on the archived dollar payload.
+
+    Weeks are spread evenly over their days so the archived (Sat-Fri) and current (Mon-Sun) bins
+    can be compared over identical calendar months. Refitted on every build because Ramp rescales
+    the index whenever a new weekly high appears.
+    """
+    if not CALIBRATION.exists():
+        return None
+    cal = json.loads(CALIBRATION.read_text())
+    idx = {"token_spend": defaultdict(float), "token_volume": defaultdict(float)}
+    for r in data:
+        if r["dimension_type"] != "maker" or r["metric_key"] not in idx:
+            continue
+        s, e = date.fromisoformat(r["period_start"]), date.fromisoformat(r["period_end"])
+        n = (e - s).days + 1
+        for i in range(n):
+            idx[r["metric_key"]][(s + timedelta(i)).strftime("%Y-%m")] += float(r["metric_value"] or 0) / n
+    out = {"fetched_on": cal["fetched_on"], "window": cal["window"]}
+    for metric, key, name in (("token_spend", "spend_usd", "usd_per_spend_point"),
+                              ("token_volume", "tokens", "tokens_per_volume_point")):
+        months = [m for m in cal["months"] if idx[metric].get(m)]
+        if not months:
+            return None
+        f = sum(cal["months"][m][key] for m in months) / sum(idx[metric][m] for m in months)
+        per = [cal["months"][m][key] / idx[metric][m] / f - 1 for m in months]
+        out[name] = f
+        out[name.replace("per", "spread")] = [round(min(per), 4), round(max(per), 4)]
+    return out
 
 
 def build_weeks(data):
@@ -218,13 +251,17 @@ def revisions(prev_snapshot, data):
     return {"compared_with": name.replace(".json.gz", ""), "changes": out}
 
 
-def write_csvs(weeks, week_start, makers, models):
+def write_csvs(weeks, week_start, makers, models, usd):
     with open(DOCS_DATA / "ramp-makers-weekly.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["week_start", "week_end", "maker", "token_spend_index", "token_volume_index"])
+        w.writerow(["week_start", "week_end", "maker", "token_spend_index", "token_volume_index",
+                    "token_spend_usd_est", "token_volume_est"])
+        fs = usd["usd_per_spend_point"] if usd else None
+        fv = usd["tokens_per_volume_point"] if usd else None
         for k, m in makers.items():
             for i, wk in enumerate(weeks):
-                w.writerow([week_start[i], wk, k, m["spend"][i], m["volume"][i]])
+                w.writerow([week_start[i], wk, k, m["spend"][i], m["volume"][i],
+                            round(m["spend"][i] * fs) if fs else "", round(m["volume"][i] * fv) if fv else ""])
     with open(DOCS_DATA / "ramp-anthropic-models-weekly.csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["week_start", "week_end", "model", "family", "token_spend_index", "token_volume_index"])

@@ -56,16 +56,38 @@
   const totSpendG = s4(TOT_S, a4) / s4(TOT_S, p4) - 1;
   const yoy = L - 52 >= 0 ? L - 52 : null;
 
+  // Dollar / token estimates: index points × factor fitted on the archived dollar payload (see 方法).
+  const U = D.usd, fS = U ? U.usd_per_spend_point : null, fV = U ? U.tokens_per_volume_point : null;
+  const usd = x => (x == null || !isFinite(x) ? "—" : x >= 1e8 ? "$" + (x / 1e8).toFixed(x >= 1e9 ? 1 : 2) + " 亿" : "$" + Math.round(x / 1e4).toLocaleString("en-US") + " 万");
+  const usdAxis = t => (t === 0 ? "0" : t >= 1e8 ? "$" + +(t / 1e8).toFixed(2) + "亿" : "$" + +(t / 1e4).toFixed(0) + "万");
+  const tok = x => (x == null || !isFinite(x) ? "—" : x >= 1e12 ? (x / 1e12).toFixed(1) + " 万亿" : (x / 1e8).toFixed(0) + " 亿");
+  const tokAxis = t => (t === 0 ? "0" : t >= 1e12 ? +(t / 1e12).toFixed(1) + "万亿" : +(t / 1e8).toFixed(0) + "亿");
+  const perM = (s, vv) => (vv ? (s * fS) / ((vv * fV) / 1e6) : null);
+  const dashPrice = who => {
+    const h = (D.dashboard || []).slice(-1)[0];
+    const r = h && h.rows.find(x => x.metric === "Blended price per million tokens" && x.who === who);
+    return r ? { v: r.cur, week: h.week_end } : null;
+  };
+
   document.getElementById("dek").innerHTML =
     `截至 ${dLong(W[L])} 那周，Anthropic 拿走了 Ramp 企业客户 token 支出的 <b>${pct(aSpendShare[L])}</b>，四周前是 ${pct(aSpendShare[L - 4])}；` +
     `OpenAI 是 ${pct(oSpendShare[L])}。最近四周 Anthropic 的 token 用量比前四周<b>${verb(gVol)}</b>，支出<b>${verb(gSpend)}</b>，` +
-    `每个 token 的支出${verb(gUnit)}。同期所有厂商合计的 token 支出${verb(totSpendG)}。`;
+    `每个 token 的支出${verb(gUnit)}。同期所有厂商合计的 token 支出${verb(totSpendG)}。` +
+    (U ? `按 ${U.fetched_on} 存档的美元数据换算，这一周 Ramp 样本里 Anthropic 的 token 支出约 <b>${usd(SP.anthropic[L] * fS)}</b>，年化约 ${usd(SP.anthropic[L] * fS * 52)}（估算）。` : "");
   document.getElementById("meta").textContent =
     `数据截至 ${W[L]}（${wkRange(L)} 那周）· 本站构建于 ${D.built_at.replace("T", " ").replace("+00:00", " UTC")}`;
 
+  const dpA = dashPrice("Anthropic");
+  const usdCards = U ? [
+    [{ k: "Anthropic 周 token 支出，最近一周（估算）", v: usd(SP.anthropic[L] * fS), n: `年化约 ${usd(SP.anthropic[L] * fS * 52)}；四周前 ${usd(SP.anthropic[L - 4] * fS)}` + (yoy != null ? `；一年前 ${usd(SP.anthropic[yoy] * fS)}` : "") },
+     { k: "Anthropic 每百万 token 支出，最近一周（估算）", v: "$" + perM(SP.anthropic[L], VO.anthropic[L]).toFixed(2), n: `OpenAI $${perM(SP.openai[L], VO.openai[L]).toFixed(2)}` + (dpA ? `；Ramp 看板公布 $${dpA.v.toFixed(2)}，口径不同` : "") }],
+    [{ k: "所有厂商周 token 支出，最近一周（估算）", v: usd(TOT_S[L] * fS), n: `用量约 ${tok(TOT_V[L] * fV)} token；四周前 ${usd(TOT_S[L - 4] * fS)}` }],
+  ] : [[], []];
   const kpis = [
     { k: "Anthropic 支出份额，最近一周", v: pct(aSpendShare[L]), n: `四周前 ${pct(aSpendShare[L - 4])}，${pts(aSpendShare[L] - aSpendShare[L - 4])}` + (yoy != null ? `；一年前 ${pct(aSpendShare[yoy])}` : ""), hl: true },
+    ...usdCards[0],
     { k: "Anthropic 用量份额，最近一周", v: pct(aVolShare[L]), n: `四周前 ${pct(aVolShare[L - 4])}，${pts(aVolShare[L] - aVolShare[L - 4])}` },
+    ...usdCards[1],
     { k: "Anthropic 相对 OpenAI 的单位 token 支出", v: aoRatio.toFixed(2) + "×", n: "最近四周。1.00 表示每个 token 花的钱一样多" },
     { k: "Anthropic token 支出，近四周比前四周", v: chg(gSpend), n: `最近一周比四周前 ${chg(SP.anthropic[L] / SP.anthropic[L - 4] - 1)}` },
     { k: "Anthropic token 用量，近四周比前四周", v: chg(gVol), n: `最近一周比四周前 ${chg(VO.anthropic[L] / VO.anthropic[L - 4] - 1)}` },
@@ -134,6 +156,7 @@
     } else {
       if (opt.yMin == null && !opt.stack) { const pad = (hi - lo) * 0.08; lo = Math.max(0, lo - pad); hi += pad; } else if (!opt.stack) hi *= 1.06;
       ticks = niceTicks(lo, hi);
+      if (ticks.length > 1 && ticks[ticks.length - 1] < hi) ticks.push(+(2 * ticks[ticks.length - 1] - ticks[ticks.length - 2]).toFixed(10));
       lo = Math.min(lo, ticks[0]); hi = Math.max(hi, ticks[ticks.length - 1]);
       y = val => m.t + ih - ((val - lo) / (hi - lo)) * ih;
     }
@@ -235,15 +258,20 @@
 
   // ---------- chart definitions ----------
   const scale = { "c-spend": "lin", "c-volume": "lin" };
+  const unitMode = { "c-spend": U ? "abs" : "idx", "c-volume": U ? "abs" : "idx", "c-price": U ? "abs" : "idx" };
   let famMetric = "spend";
   const idxFmt = t => (t >= 10 ? t.toFixed(0) : t >= 1 ? t.toFixed(1) : t.toPrecision(1));
 
   function drawAll() {
-    for (const [id, src] of [["c-spend", SP], ["c-volume", VO]]) {
+    for (const [id, src, f] of [["c-spend", SP, fS], ["c-volume", VO, fV]]) {
+      const abs = unitMode[id] === "abs" && f;
+      const spend = id === "c-spend";
       lineChart(id, {
         log: scale[id] === "log", yMin: scale[id] === "log" ? null : 0,
-        series: D.groups.map(g => ({ label: GROUPS[g].label, color: GROUPS[g].color, values: src[g] })),
-        yFmt: idxFmt, tipFmt: t => t.toFixed(1), aria: id === "c-spend" ? "每周 token 支出指数" : "每周 token 用量指数",
+        series: D.groups.map(g => ({ label: GROUPS[g].label, color: GROUPS[g].color, values: abs ? src[g].map(x => x * f) : src[g] })),
+        yFmt: abs ? (spend ? usdAxis : tokAxis) : idxFmt,
+        tipFmt: abs ? (spend ? usd : tok) : t => t.toFixed(1),
+        aria: spend ? "每周 token 支出" : "每周 token 用量",
       });
     }
 
@@ -257,15 +285,16 @@
     document.getElementById("share-legend").innerHTML = legendHTML(shareSeries);
     lineChart("c-share", { series: shareSeries, yMin: 0, yFmt: t => t + "%", tipFmt: t => pct(t), aria: "份额走势" });
 
-    const base = unit(SP.anthropic, VO.anthropic, a4);
-    const up = (S, V) => roll(S).map((s, i) => { const vv = roll(V)[i]; return vv ? (s / vv / base) * 100 : null; });
+    const priceAbs = unitMode["c-price"] === "abs" && fS;
+    const base = priceAbs ? fV / fS / 1e6 : unit(SP.anthropic, VO.anthropic, a4) / 100;
+    const up = (S, V) => roll(S).map((s, i) => { const vv = roll(V)[i]; return vv ? s / vv / base : null; });
     const priceSeries = [
       { label: "Anthropic", color: GROUPS.anthropic.color, values: up(SP.anthropic, VO.anthropic) },
       { label: "OpenAI", color: GROUPS.openai.color, values: up(SP.openai, VO.openai) },
       { label: "全部厂商", color: v("--faint"), dash: true, values: up(TOT_S, TOT_V) },
     ];
     document.getElementById("price-legend").innerHTML = legendHTML(priceSeries);
-    lineChart("c-price", { series: priceSeries, yMin: 0, yFmt: t => t, tipFmt: t => t.toFixed(0), aria: "单位 token 支出指数" });
+    lineChart("c-price", { series: priceSeries, yMin: 0, yFmt: priceAbs ? t => "$" + t : t => t, tipFmt: priceAbs ? t => "$" + t.toFixed(2) : t => t.toFixed(0), aria: "单位 token 支出" });
 
     const famTot = D.family_order.reduce((acc, f) => add(acc, roll(D.families[f][famMetric])), zeros());
     const famSeries = D.family_order.map(f => ({
@@ -349,6 +378,10 @@
   // ---------- controls ----------
   const press = (group, btn) => group.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === btn));
   document.querySelectorAll("#range button").forEach(b => b.addEventListener("click", () => { RANGE = b.dataset.n; press(b.parentNode, b); drawAll(); }));
+  document.querySelectorAll(".seg.unit").forEach(g => {
+    if (!U) { g.remove(); return; }
+    g.querySelectorAll("button").forEach(b => { b.setAttribute("aria-pressed", b.dataset.v === unitMode[g.dataset.for]); b.addEventListener("click", () => { unitMode[g.dataset.for] = b.dataset.v; press(g, b); drawAll(); }); });
+  });
   document.querySelectorAll(".seg.scale").forEach(g => g.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { scale[g.dataset.for] = b.dataset.v; press(g, b); drawAll(); })));
   document.querySelectorAll("#fam-metric button").forEach(b => b.addEventListener("click", () => { famMetric = b.dataset.v; press(b.parentNode, b); drawAll(); }));
   let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(drawAll, 120); });
