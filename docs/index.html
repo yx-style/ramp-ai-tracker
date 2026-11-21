@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <header class="site-head">
@@ -32,12 +32,15 @@
   <header class="pack-head">
     <p class="eyebrow">Tracker · 企业 AI 支出 · 每日检查更新</p>
     <h1>Ramp 企业 token 支出：Anthropic 追踪</h1>
+    <div class="seg" id="caliber-mode" aria-label="历史数据口径" role="group">
+      <button data-mode="stitched">按周拼接</button><button data-mode="latest">新口径全历史</button>
+    </div>
     <p class="dek" id="dek">载入中…</p>
     <p class="meta" id="meta"></p>
   </header>
 
   <section class="kpis" id="kpis"></section>
-  <p class="note kpi-note">厂商份额按每周支出和用量指数计算。美元和 token 数按 11 月 4 日的存档估算，逐月偏差见<a href="#method">方法</a>。</p>
+  <p class="note kpi-note"><span id="kpi-period"></span>厂商份额按每周支出和用量指数计算。美元和 token 数按 11 月 4 日的存档估算，逐月偏差见<a href="#method">方法</a>。</p>
 
   <div class="controls" role="group" aria-label="时间范围">
     <span>时间范围</span>
@@ -84,7 +87,7 @@
 
   <section class="card">
     <h2>份额走势</h2>
-    <p class="note">四周滚动合计，所有厂商合计 = 100%。实线为支出份额，虚线为用量份额。</p>
+    <p class="note">四周滚动合计，所有厂商合计 = 100%。官方厂商指数段用实线表示支出、虚线表示用量。模型汇总段分别使用长虚线和短虚线。</p>
     <div class="legend" id="share-legend"></div>
     <div class="chart" id="c-share"></div>
   </section>
@@ -92,7 +95,7 @@
   <section class="card">
     <div class="card-top">
       <div><h2>单位 token 支出</h2>
-      <p class="note">四周滚动。美元估算模式为每百万 token 支出；相对模式以 Anthropic 最近四周 = 100。两者都和 Ramp 看板上的每百万 token 混合单价口径不同，看板原值见下方表格。</p></div>
+      <p class="note">四周滚动。美元估算模式为每百万 token 支出；相对模式以各口径最后四周的 Anthropic 单位支出为 100。两者都和 Ramp 看板上的每百万 token 混合单价口径不同，看板原值见下方表格。</p></div>
       <div class="seg unit" data-for="c-price"><button data-v="abs">$/百万 token 估算</button><button data-v="idx">相对</button></div>
     </div>
     <div class="legend" id="price-legend"></div>
@@ -135,11 +138,14 @@
 
   <section class="card method prose-card" id="method">
     <h2>方法</h2>
+    <h3>口径历史</h3>
+    <div class="tablewrap"><table class="t" id="caliber-history"></table></div>
     <div class="prose">
       <ul>
         <li><b>数据来源：</b>Ramp AI Index 的公开周度接口 <code>ramp.com/data/ai-index/chart-data/tokenVolumes</code>提供每周 token 支出与用量指数。数据来自接入 Ramp AI 支出管理产品的企业，包括直连 API，以及经 AWS、GCP、Azure 和多家路由、推理平台的消费。Ramp 注明这部分不代表其全部 AI 支出。</li>
-        <li><b>厂商指数。</b>2026 年 11 月中旬，Ramp 改为只发布模型指数。本站按每个模型的厂商归属，逐周加总支出和用量。若接口恢复完整的厂商指数，则优先采用官方序列。两种序列的指数点尺度不同，计算份额时同一指标的公共倍数会抵消。<span id="maker-source"></span></li>
-        <li><b>美元和 token 估算。</b>本站用 11 月 4 日存档的绝对金额和 token 数校准当前指数。旧数据按周六至周五统计，当前数据按周一至周日统计。将两者的周数据均摊到每天，再按自然月汇总。每次构建都用 2026 年 1–9 月全体厂商的存档总量除以同期指数总和，分别得到支出和用量的换算系数。<span id="calibration-fit"></span>单月偏差按当月估算值除以存档值再减一计算。单个厂商、单周和校准期之后的估算精度仍未知。</li>
+        <li><b>厂商指数。</b>拼接时，每周优先取完整的官方厂商指数。同等精度下保留当周生效的版本。2026 年 11 月 2 日起，按模型的厂商归属汇总。选择「新口径全历史」可查看 Ramp 最新修订的历史序列。</li>
+        <li><b>跨口径的四周窗口。</b>同一口径下，份额按窗口内的指数合计计算。窗口横跨两种口径时，取各周份额的算术平均。支出、用量、增速和单位支出均先按各周系数换算；跨口径比较模型支出或单位支出时，按各模型每周在 Anthropic 内的份额分摊厂商支出和用量。</li>
+        <li><b>美元和 token 估算。</b>本站用 11 月 4 日存档的绝对金额和 token 数校准当前指数。旧数据按周六至周五统计，当前数据按周一至周日统计。将两者的周数据均摊到每天，再按自然月汇总。每次构建都用 2026 年 1–9 月全体厂商的存档总量除以同期指数总和，分别得到支出和用量的换算系数。单月偏差按当月估算值除以存档值再减一计算。单个厂商、单周和校准期之后的估算精度仍未知。</li>
         <li><b>单位 token 支出。</b>将校准后的支出除以用量即可估算每百万 token 支出。Ramp 看板另行公布混合单价，原值见上表。</li>
         <li><b>周的定义：</b>周一到周日，按周日日期标注，和 Ramp 看板的「Week ending」一致。</li>
         <li><b>修订：</b>企业接入新的模型供应商后，Ramp 会回补其历史数据。本站每次检测到接口数据变化都保存一份原始快照，并对比 Anthropic 份额在各周的变化。</li>
@@ -164,6 +170,6 @@
   <div class="wrap">数据：Ramp AI Index（ramp.com/data/ai-index）。份额、变化和单位支出为本站根据公开指数计算，非 Ramp 官方口径。</div>
 </footer>
 
-<script src="app.js?v=7"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>

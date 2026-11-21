@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/tracker.json docs/data/ramp-*.csv data/dashboard_history.json data/snapshots/
+          git add data/calibers/ docs/data/tracker*.json docs/data/ramp-*.csv data/dashboard_history.json data/snapshots/
           if git diff --cached --quiet; then
             echo "no data change"
           else

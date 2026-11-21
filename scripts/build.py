@@ -21,6 +21,8 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from calibers import ARCHIVE, compose, freeze, next_day
+
 ROOT = Path(__file__).resolve().parent.parent
 DOCS_DATA = ROOT / "docs" / "data"
 SNAPSHOTS = ROOT / "data" / "snapshots"
@@ -156,10 +158,14 @@ def main():
         history[dash["week_end"]] = dash
         DASH_HISTORY.write_text(json.dumps(history, indent=1, sort_keys=True, ensure_ascii=False))
 
-    force = "--force" in sys.argv
-    if old.get("source_sha256") == digest and old.get("maker_source") == maker_source and not force and old.get("dashboard") == [history[k] for k in sorted(history)]:
-        print("upstream unchanged; nothing to do")
-        return
+    latest_path = DOCS_DATA / "tracker-latest.json"
+    prior_live = json.loads(latest_path.read_text()) if latest_path.exists() else old
+    # A source transition closes the prior period. Same-schema methodology changes
+    # can be explicitly declared once the upstream change has been identified.
+    if prior_live and (prior_live.get("maker_source") != maker_source or "--new-caliber" in sys.argv):
+        frozen = sorted(ARCHIVE.glob("*.json"))
+        start = next_day(json.loads(frozen[-1].read_text())["end"]) if frozen else prior_live["week_start"][0]
+        freeze(prior_live, start)
 
     # Keep one raw snapshot per upstream change so revisions can be audited later.
     if archived:
@@ -230,8 +236,14 @@ def main():
         "revisions": revisions(prev_snapshot, data, maker_source),
         "usd": calibrate(data),
     }
-    (DOCS_DATA / "tracker.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
-    write_csvs(weeks, week_start, maker_out, keep, out["usd"])
+    for view, suffix in zip(compose(out), ("", "-latest")):
+        path = DOCS_DATA / f"tracker{suffix}.json"
+        prior = prior_live if suffix else old
+        view["built_at"] = prior.get("built_at", out["built_at"])
+        if view != prior or not path.exists():
+            view["built_at"] = out["built_at"]
+            path.write_text(json.dumps(view, ensure_ascii=False, separators=(",", ":")))
+        write_csvs(view, suffix)
     print(f"built {len(weeks)} weeks through {weeks[-1]}; makers={makers}")
 
 
@@ -313,24 +325,30 @@ def revisions(prev_snapshot, data, maker_source):
     return {"compared_with": name.replace(".json.gz", ""), "maker_source_changed": old_source != maker_source, "changes": out}
 
 
-def write_csvs(weeks, week_start, makers, models, usd):
-    with open(DOCS_DATA / "ramp-makers-weekly.csv", "w", newline="") as f:
+def write_csvs(view, suffix):
+    weeks, week_start = view["weeks"], view["week_start"]
+    makers, models = view["makers"], view["anthropic_models"]
+    periods = [view["calibers"][n] for n in view["caliber_by_week"]]
+    with open(DOCS_DATA / f"ramp-makers-weekly{suffix}.csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["week_start", "week_end", "maker", "token_spend_index", "token_volume_index",
-                    "token_spend_usd_est", "token_volume_est"])
-        fs = usd["usd_per_spend_point"] if usd else None
-        fv = usd["tokens_per_volume_point"] if usd else None
+                    "token_spend_usd_est", "token_volume_est", "caliber_start", "maker_source"])
         for k, m in makers.items():
             for i, wk in enumerate(weeks):
+                period = periods[i]
+                fs = period["usd"]["usd_per_spend_point"]
+                fv = period["usd"]["tokens_per_volume_point"]
                 w.writerow([week_start[i], wk, k, m["spend"][i], m["volume"][i],
-                            round(m["spend"][i] * fs) if fs else "", round(m["volume"][i] * fv) if fv else ""])
-    with open(DOCS_DATA / "ramp-anthropic-models-weekly.csv", "w", newline="") as f:
+                            round(m["spend"][i] * fs) if fs else "", round(m["volume"][i] * fv) if fv else "",
+                            period["start"], period["maker_source"]])
+    with open(DOCS_DATA / f"ramp-anthropic-models-weekly{suffix}.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["week_start", "week_end", "model", "family", "token_spend_index", "token_volume_index"])
+        w.writerow(["week_start", "week_end", "model", "family", "token_spend_index", "token_volume_index", "caliber_start", "maker_source"])
         for k, m in models.items():
             for i, wk in enumerate(weeks):
                 if m["spend"][i] or m["volume"][i]:
-                    w.writerow([week_start[i], wk, k, m["family"], m["spend"][i], m["volume"][i]])
+                    w.writerow([week_start[i], wk, k, m["family"], m["spend"][i], m["volume"][i],
+                                periods[i]["start"], periods[i]["maker_source"]])
 
 
 if __name__ == "__main__":

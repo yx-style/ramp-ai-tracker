@@ -1,9 +1,37 @@
 (async function () {
-  const D = await fetch("data/tracker.json", { cache: "no-cache" }).then(r => r.json());
+  const url = new URL(location.href);
+  const latest = url.searchParams.get("caliber") === "latest";
+  const suffix = latest ? "-latest" : "";
+  for (const button of document.querySelectorAll("#caliber-mode button")) {
+    const useLatest = button.dataset.mode === "latest";
+    button.setAttribute("aria-pressed", useLatest === latest);
+    button.onclick = () => {
+      if (useLatest === latest) return;
+      if (useLatest) url.searchParams.set("caliber", "latest");
+      else url.searchParams.delete("caliber");
+      location.assign(url);
+    };
+  }
+  if (latest) document.querySelectorAll("#downloads a").forEach(a => {
+    a.href = a.href.replace(/\.(csv|json)$/, "-latest.$1");
+    a.textContent = a.href.split("/").pop();
+  });
+  const D = await fetch(`data/tracker${suffix}.json`, { cache: "no-cache" }).then(r => r.json());
   const css = getComputedStyle(document.documentElement);
   const v = name => css.getPropertyValue(name).trim();
 
   const W = D.weeks, L = W.length - 1;
+  const ids = D.caliber_by_week;
+  const periods = D.calibers;
+  const name = p => p.maker_source === "official" ? "官方厂商指数" : "模型汇总";
+  const source = i => {
+    const p = periods[ids[i]];
+    return periods.filter(other => other.maker_source === p.maker_source).length > 1
+      ? `${name(p)}（${p.start} 版）` : name(p);
+  };
+  const mixed = ([a,b]) => ids.slice(Math.max(0,a), b+1).some(id => id !== ids[b]);
+  const windowSource = (a,b) => mixed([a,b]) ? "跨口径窗口" : source(b);
+  const factor = (metric, i) => periods[ids[i]].usd[metric === "spend" ? "usd_per_spend_point" : "tokens_per_volume_point"];
   const GROUPS = {
     anthropic: { label: "Anthropic", color: v("--s-anthropic") },
     openai: { label: "OpenAI", color: v("--s-openai") },
@@ -28,7 +56,10 @@
     }
     return out;
   };
-  const SP = groupSeries("spend"), VO = groupSeries("volume");
+  const rawSP = groupSeries("spend"), rawVO = groupSeries("volume");
+  const absolute = (values, metric) => values.map((x,i) => x * factor(metric,i));
+  const scaled = (raw, metric) => Object.fromEntries(Object.entries(raw).map(([g,a]) => [g, absolute(a, metric)]));
+  const SP = scaled(rawSP,"spend"), VO = scaled(rawVO,"volume");
   const TOT_S = Object.values(SP).reduce(add, zeros()), TOT_V = Object.values(VO).reduce(add, zeros());
   const share = (s, t) => s.map((x, i) => (t[i] ? (x / t[i]) * 100 : null));
 
@@ -57,19 +88,30 @@
   const yoy = L - 52 >= 0 ? L - 52 : null;
 
   // Dollar / token estimates: index points × factor fitted on the archived dollar payload (see 方法).
-  const U = D.usd, fS = U ? U.usd_per_spend_point : null, fV = U ? U.tokens_per_volume_point : null;
-  document.getElementById("maker-source").textContent = D.maker_source === "model_sum"
-    ? "本次厂商指数由模型汇总。" : "本次采用官方厂商指数。";
-  if (U) {
-    const range = values => values.map(x => chg(x)).join(" 至 ");
-    document.getElementById("calibration-fit").textContent =
-      `本次每个支出指数点约合 ${Math.round(fS).toLocaleString("en-US")} 美元，每个用量指数点约合 ${(fV / 1e8).toFixed(2)} 亿 token。校准期内，支出的单月偏差为 ${range(U.usd_per_spend_point_monthly_error)}，用量为 ${range(U.tokens_per_volume_point_monthly_error)}。`;
+  const U = periods[ids[L]].usd;
+  const range = values => values.map(x => chg(x)).join(" 至 ");
+  document.getElementById("caliber-history").innerHTML =
+    "<thead><tr>" + ["版本生效日期（周一至周日）","厂商来源","美元／支出点","token／用量点","月度支出偏差","月度用量偏差"].map(x => `<th>${x}</th>`).join("") + "</tr></thead><tbody>" +
+    periods.map(p => `<tr><td>${p.start} 至 ${p.end || "今"}</td><td>${name(p)}</td><td>${p.usd.usd_per_spend_point.toLocaleString("en-US",{maximumFractionDigits:2})}</td><td>${p.usd.tokens_per_volume_point.toExponential(5)}</td><td>${range(p.usd.usd_per_spend_point_monthly_error)}</td><td>${range(p.usd.tokens_per_volume_point_monthly_error)}</td></tr>`).join("") + "</tbody>";
+  const windowNote = `最近四周（${windowSource(L-3,L)}），前四周（${windowSource(L-7,L-4)}）。`;
+  document.getElementById("kpi-period").textContent = `本周采用${source(L)}，四周前采用${source(L-4)}。${windowNote}`;
+  function periodShare(values, totals, range) {
+    if (!mixed(range)) {
+      const total = s4(totals,range);
+      return total ? s4(values,range) / total * 100 : null;
+    }
+    const weekly = [];
+    for (let i = Math.max(0,range[0]); i <= range[1]; i++) {
+      if (totals[i]) weekly.push(values[i] / totals[i]);
+    }
+    return weekly.length ? weekly.reduce((a,b) => a+b,0) * 100 / weekly.length : null;
   }
+  const rollingShare = (values, totals) => W.map((_,i) => periodShare(values,totals,[i-3,i]));
   const usd = x => (x == null || !isFinite(x) ? "—" : x >= 1e8 ? "$" + (x / 1e8).toFixed(x >= 1e9 ? 1 : 2) + " 亿" : "$" + Math.round(x / 1e4).toLocaleString("en-US") + " 万");
   const usdAxis = t => (t === 0 ? "0" : t >= 1e8 ? "$" + +(t / 1e8).toFixed(2) + "亿" : "$" + +(t / 1e4).toFixed(0) + "万");
   const tok = x => (x == null || !isFinite(x) ? "—" : x >= 1e12 ? (x / 1e12).toFixed(1) + " 万亿" : (x / 1e8).toFixed(0) + " 亿");
   const tokAxis = t => (t === 0 ? "0" : t >= 1e12 ? +(t / 1e12).toFixed(1) + "万亿" : +(t / 1e8).toFixed(0) + "亿");
-  const perM = (s, vv) => (vv ? (s * fS) / ((vv * fV) / 1e6) : null);
+  const perM = (s, vv) => (vv ? s / vv * 1e6 : null);
   const dashPrice = who => {
     const h = (D.dashboard || []).slice(-1)[0];
     const r = h && h.rows.find(x => x.metric === "Blended price per million tokens" && x.who === who);
@@ -80,15 +122,15 @@
     `截至 ${dLong(W[L])} 那周，Anthropic 拿走了 Ramp 企业客户 token 支出的 <b>${pct(aSpendShare[L])}</b>，四周前是 ${pct(aSpendShare[L - 4])}；` +
     `OpenAI 是 ${pct(oSpendShare[L])}。最近四周 Anthropic 的 token 用量比前四周<b>${verb(gVol)}</b>，支出<b>${verb(gSpend)}</b>，` +
     `每个 token 的支出${verb(gUnit)}。同期所有厂商合计的 token 支出${verb(totSpendG)}。` +
-    (U ? `按 ${U.fetched_on} 存档的美元数据换算，这一周 Ramp 样本里 Anthropic 的 token 支出约 <b>${usd(SP.anthropic[L] * fS)}</b>，年化约 ${usd(SP.anthropic[L] * fS * 52)}（估算）。` : "");
+    (U ? `按 ${U.fetched_on} 存档的美元数据换算，这一周 Ramp 样本里 Anthropic 的 token 支出约 <b>${usd(SP.anthropic[L])}</b>，年化约 ${usd(SP.anthropic[L] * 52)}（估算）。` : "");
   document.getElementById("meta").textContent =
     `数据截至 ${W[L]}（${wkRange(L)} 那周）· 本站构建于 ${D.built_at.replace("T", " ").replace("+00:00", " UTC")}`;
 
   const dpA = dashPrice("Anthropic");
   const usdCards = U ? [
-    [{ k: "Anthropic 周 token 支出，最近一周（估算）", v: usd(SP.anthropic[L] * fS), n: `年化约 ${usd(SP.anthropic[L] * fS * 52)}；四周前 ${usd(SP.anthropic[L - 4] * fS)}` + (yoy != null ? `；一年前 ${usd(SP.anthropic[yoy] * fS)}` : "") },
+    [{ k: "Anthropic 周 token 支出，最近一周（估算）", v: usd(SP.anthropic[L]), n: `年化约 ${usd(SP.anthropic[L] * 52)}；四周前 ${usd(SP.anthropic[L - 4])}` + (yoy != null ? `；一年前 ${usd(SP.anthropic[yoy])}` : "") },
      { k: "Anthropic 每百万 token 支出，最近一周（估算）", v: "$" + perM(SP.anthropic[L], VO.anthropic[L]).toFixed(2), n: `OpenAI $${perM(SP.openai[L], VO.openai[L]).toFixed(2)}` + (dpA ? `；Ramp 看板（截至 ${dpA.week}）公布 $${dpA.v.toFixed(2)}，口径不同` : "") }],
-    [{ k: "所有厂商周 token 支出，最近一周（估算）", v: usd(TOT_S[L] * fS), n: `用量约 ${tok(TOT_V[L] * fV)} token；四周前 ${usd(TOT_S[L - 4] * fS)}` }],
+    [{ k: "所有厂商周 token 支出，最近一周（估算）", v: usd(TOT_S[L]), n: `用量约 ${tok(TOT_V[L])} token；四周前 ${usd(TOT_S[L - 4])}` }],
   ] : [[], []];
   const kpis = [
     { k: "Anthropic 支出份额，最近一周", v: pct(aSpendShare[L]), n: `四周前 ${pct(aSpendShare[L - 4])}，${pts(aSpendShare[L] - aSpendShare[L - 4])}` + (yoy != null ? `；一年前 ${pct(aSpendShare[yoy])}` : ""), hl: true },
@@ -111,11 +153,11 @@
 
   // ---------- share bars ----------
   document.getElementById("split-note").textContent =
-    `${D.week_start[L - 3]} 至 ${W[L]}，四周合计。四家单列厂商以外的模型厂商合并为「其他」。`;
+    `${D.week_start[L - 3]} 至 ${W[L]}，${windowNote}四家单列厂商以外的模型厂商合并为「其他」。`;
   const barRow = (label, S, T) => {
-    const segs = D.groups.map(g => ({ g, p: (s4(S[g], a4) / s4(T, a4)) * 100 }));
+    const segs = D.groups.map(g => ({ g, p: periodShare(S[g],T,a4) }));
     return `<div class="row"><span>${label}</span><div class="track">` + segs.map(s =>
-      `<div class="seg-b${s.g === "other" ? " darkt" : ""}" style="flex:${s.p} 1 0;background:${GROUPS[s.g].color}" title="${GROUPS[s.g].label} ${pct(s.p)}">${s.p >= 6 ? pct(s.p, 0) : ""}</div>`).join("") + `</div></div>`;
+      `<div class="seg-b${s.g === "other" ? " darkt" : ""}" style="flex:${s.p} 1 0;background:${GROUPS[s.g].color}" title="${GROUPS[s.g].label} ${pct(s.p)} · ${windowSource(L-3,L)}">${s.p >= 6 ? pct(s.p, 0) : ""}</div>`).join("") + `</div></div>`;
   };
   document.getElementById("bars").innerHTML = barRow("支出", SP, TOT_S) + barRow("用量", VO, TOT_V);
   document.getElementById("bars-legend").innerHTML = legendHTML(groupItems, true);
@@ -147,7 +189,7 @@
     const box = document.getElementById(id);
     box.innerHTML = "";
     const width = box.clientWidth, height = opt.height || (width < 560 ? 240 : 300);
-    const m = { t: 10, r: opt.endLabels === false ? 12 : width < 560 ? 88 : 104, b: 26, l: 40 };
+    const m = { t: 24, r: opt.endLabels === false ? 12 : width < 560 ? 88 : 104, b: 26, l: 40 };
     const i0 = rangeStart(), idx = []; for (let i = i0; i <= L; i++) idx.push(i);
     const svg = el("svg", { viewBox: `0 0 ${width} ${height}`, height, role: "img", "aria-label": opt.aria || "" }, box);
     const vals = opt.series.flatMap(s => idx.map(i => s.values[i])).filter(x => x != null && isFinite(x) && (!opt.log || x > 0));
@@ -205,15 +247,52 @@
       }
     } else {
       for (const s of opt.series) {
-        let d = "", pen = false;
+        let d = "", previous = null, caliber;
+        const stroke = () => {
+          if (d) el("path", { d, fill: "none", stroke: s.color, "stroke-width": s.width || 2,
+            "stroke-linejoin": "round", "stroke-linecap": "round",
+            "stroke-dasharray": caliber > 0 ? (s.dash ? "2 3" : "7 3") : (s.dash ? "5 4" : "none") }, svg);
+        };
         for (const i of idx) {
+          if (ids[i] !== caliber) {
+            stroke();
+            caliber = ids[i];
+            d = previous ? "M" + previous : "";
+          }
           const val = s.values[i];
-          if (!ok(val)) { pen = false; continue; }
-          d += `${pen ? "L" : "M"}${x(i).toFixed(1)},${y(val).toFixed(1)}`; pen = true;
+          if (!ok(val)) { previous = null; continue; }
+          const point = `${x(i).toFixed(1)},${y(val).toFixed(1)}`;
+          d += (previous ? "L" : "M") + point;
+          previous = point;
         }
-        el("path", { d, fill: "none", stroke: s.color, "stroke-width": s.width || 2, "stroke-linejoin": "round", "stroke-linecap": "round", "stroke-dasharray": s.dash ? "5 4" : "none" }, svg);
+        stroke();
       }
     }
+
+    // Tint each newer methodology and mark its first effective week.
+    for (let k = 0; k < idx.length; ) {
+      const i = idx[k], id = ids[i];
+      let end = k;
+      while (end + 1 < idx.length && ids[idx[end+1]] === id) end++;
+      const left = k ? (x(i-1)+x(i))/2 : x(i);
+      const right = end+1 < idx.length ? (x(idx[end])+x(idx[end]+1))/2 : x(idx[end]);
+      if (id > 0) el("rect", {class:"caliber-band", x:left,y:m.t,width:right-left,height:ih,fill:id%2 ? "#8262aa" : "#397f87",opacity:0.14},svg);
+      if (i > 0 && ids[i-1] !== id) {
+        el("line",{class:"caliber-line",x1:left,x2:left,y1:m.t-4,y2:m.t+ih,stroke:"#6c526f","stroke-dasharray":"3 3"},svg);
+        const label = el("text",{x:left,y:m.t-8,"text-anchor":left > width/2 ? "end" : "start"},svg);
+        label.textContent = `${dShort(D.week_start[i])}起 · ${source(i)}`;
+      }
+      k = end+1;
+    }
+    const captions = [...new Set(idx.map(i => ids[i]))].map(n => {
+      const p = periods[n];
+      const fit = p.maker_source === "model_sum" ? "，美元估算偏差较大" : "";
+      return `${n === 0 ? "白底" : n%2 ? "淡紫底" : "淡青底"} · ${name(p)}${fit}`;
+    });
+    const legend = document.createElement("div");
+    legend.className = "legend caliber-legend";
+    legend.textContent = captions.join("　／　");
+    box.append(legend);
 
     // direct end labels, nudged apart
     if (opt.endLabels !== false) {
@@ -251,7 +330,7 @@
       });
       const rows = opt.series.map(s => ({ s, val: s.values[i] })).filter(o => o.val != null && isFinite(o.val));
       if (!opt.stack) rows.sort((a, b) => b.val - a.val);
-      tip.innerHTML = `<div class="h">${wkRange(i)}</div>` + rows.map(o =>
+      tip.innerHTML = `<div class="h">${wkRange(i)} · ${source(i)}${opt.rolling && mixed([i-3,i]) ? "（跨口径四周）" : ""}</div>` + rows.map(o =>
         `<div class="r"><span><i style="background:${o.s.color}"></i>${o.s.label}</span><b>${opt.tipFmt(o.val)}</b></div>`).join("");
       tip.classList.remove("hidden");
       const bx = box.getBoundingClientRect(), tx = (x(i) / width) * bx.width;
@@ -270,19 +349,19 @@
   const idxFmt = t => (t >= 10 ? t.toFixed(0) : t >= 1 ? t.toFixed(1) : t.toPrecision(1));
 
   function drawAll() {
-    for (const [id, src, f] of [["c-spend", SP, fS], ["c-volume", VO, fV]]) {
-      const abs = unitMode[id] === "abs" && f;
+    for (const [id, src, raw] of [["c-spend", SP, rawSP], ["c-volume", VO, rawVO]]) {
+      const abs = unitMode[id] === "abs";
       const spend = id === "c-spend";
       lineChart(id, {
         log: scale[id] === "log", yMin: scale[id] === "log" ? null : 0,
-        series: D.groups.map(g => ({ label: GROUPS[g].label, color: GROUPS[g].color, values: abs ? src[g].map(x => x * f) : src[g] })),
+        series: D.groups.map(g => ({ label: GROUPS[g].label, color: GROUPS[g].color, values: abs ? src[g] : raw[g] })),
         yFmt: abs ? (spend ? usdAxis : tokAxis) : idxFmt,
         tipFmt: abs ? (spend ? usd : tok) : t => t.toFixed(1),
         aria: spend ? "每周 token 支出" : "每周 token 用量",
       });
     }
 
-    const rs = (S, T) => share(roll(S), roll(T));
+    const rs = rollingShare;
     const shareSeries = [
       { label: "Anthropic 支出", short: "A 支出", color: GROUPS.anthropic.color, values: rs(SP.anthropic, TOT_S) },
       { label: "Anthropic 用量", short: "A 用量", color: GROUPS.anthropic.color, dash: true, values: rs(VO.anthropic, TOT_V) },
@@ -290,26 +369,30 @@
       { label: "OpenAI 用量", short: "O 用量", color: GROUPS.openai.color, dash: true, values: rs(VO.openai, TOT_V) },
     ];
     document.getElementById("share-legend").innerHTML = legendHTML(shareSeries);
-    lineChart("c-share", { series: shareSeries, yMin: 0, yFmt: t => t + "%", tipFmt: t => pct(t), aria: "份额走势" });
+    lineChart("c-share", { rolling:true, series: shareSeries, yMin: 0, yFmt: t => t + "%", tipFmt: t => pct(t), aria: "份额走势" });
 
-    const priceAbs = unitMode["c-price"] === "abs" && fS;
-    const base = priceAbs ? fV / fS / 1e6 : unit(SP.anthropic, VO.anthropic, a4) / 100;
-    const up = (S, V) => roll(S).map((s, i) => { const vv = roll(V)[i]; return vv ? s / vv / base : null; });
+    const priceAbs = unitMode["c-price"] === "abs";
+    const bases = periods.map(period => {
+      if (priceAbs) return 1 / 1e6;
+      const end = !latest && period.end ? W.indexOf(period.end) : L;
+      return unit(SP.anthropic, VO.anthropic, [end-3,end]) / 100;
+    });
+    const up = (S, V) => { const vol = roll(V); return roll(S).map((s,i) => vol[i] ? s / vol[i] / bases[ids[i]] : null); };
     const priceSeries = [
       { label: "Anthropic", color: GROUPS.anthropic.color, values: up(SP.anthropic, VO.anthropic) },
       { label: "OpenAI", color: GROUPS.openai.color, values: up(SP.openai, VO.openai) },
       { label: "全部厂商", color: v("--faint"), dash: true, values: up(TOT_S, TOT_V) },
     ];
     document.getElementById("price-legend").innerHTML = legendHTML(priceSeries);
-    lineChart("c-price", { series: priceSeries, yMin: 0, yFmt: priceAbs ? t => "$" + t : t => t, tipFmt: priceAbs ? t => "$" + t.toFixed(2) : t => t.toFixed(0), aria: "单位 token 支出" });
+    lineChart("c-price", { rolling:true, series: priceSeries, yMin: 0, yFmt: priceAbs ? t => "$" + t : t => t, tipFmt: priceAbs ? t => "$" + t.toFixed(2) : t => t.toFixed(0), aria: "单位 token 支出" });
 
-    const famTot = D.family_order.reduce((acc, f) => add(acc, roll(D.families[f][famMetric])), zeros());
+    const famTot = D.family_order.reduce((acc, f) => add(acc, D.families[f][famMetric]), zeros());
     const famSeries = D.family_order.map(f => ({
       label: D.families[f].label, color: FAM_COLORS[f],
-      values: roll(D.families[f][famMetric]).map((x, i) => (famTot[i] ? (x / famTot[i]) * 100 : null)),
+      values: rollingShare(D.families[f][famMetric],famTot),
     })).filter(s => s.values.some(x => x > 0.05));
     document.getElementById("fam-legend").innerHTML = legendHTML(famSeries, true);
-    lineChart("c-fam", { stack: true, endLabels: false, series: famSeries, yFmt: t => t + "%", tipFmt: t => pct(t), aria: "Anthropic 各模型系列占比" });
+    lineChart("c-fam", { rolling:true, stack: true, endLabels: false, series: famSeries, yFmt: t => t + "%", tipFmt: t => pct(t), aria: "Anthropic 各模型系列占比" });
   }
 
   // ---------- tables ----------
@@ -317,15 +400,16 @@
     const keys = Object.keys(D.makers);
     const rows = keys.map(k => {
       const m = D.makers[k];
-      const ss = s4(m.spend, a4) / s4(TOT_S, a4) * 100, ssp = s4(m.spend, p4) / s4(TOT_S, p4) * 100;
-      const vs = s4(m.volume, a4) / s4(TOT_V, a4) * 100, vsp = s4(m.volume, p4) / s4(TOT_V, p4) * 100;
-      const gs = s4(m.spend, a4) / s4(m.spend, p4) - 1, gv = s4(m.volume, a4) / s4(m.volume, p4) - 1;
-      const u = s4(m.volume, a4) ? (s4(m.spend, a4) / s4(m.volume, a4)) / unit(SP.anthropic, VO.anthropic, a4) : null;
+      const sp = absolute(m.spend,"spend"), vo = absolute(m.volume,"volume");
+      const ss = periodShare(sp,TOT_S,a4), ssp = periodShare(sp,TOT_S,p4);
+      const vs = periodShare(vo,TOT_V,a4), vsp = periodShare(vo,TOT_V,p4);
+      const gs = s4(sp,a4) / s4(sp,p4) - 1, gv = s4(vo,a4) / s4(vo,p4) - 1;
+      const u = s4(vo,a4) ? unit(sp,vo,a4) / unit(SP.anthropic,VO.anthropic,a4) : null;
       return { k, label: m.label, ss, ssp, vs, vsp, gs, gv, u };
     }).sort((a, b) => b.ss - a.ss);
     const color = k => (GROUPS[k] || GROUPS.other).color;
     document.getElementById("makers-note").textContent =
-      `${D.week_start[L - 3]} 至 ${W[L]}，对比前四周（${D.week_start[L - 7]} 至 ${W[L - 4]}）。单位支出以 Anthropic = 1.00。`;
+      `${D.week_start[L - 3]} 至 ${W[L]}，对比前四周（${D.week_start[L - 7]} 至 ${W[L - 4]}）。${windowNote}单位支出以 Anthropic = 1.00。`;
     document.getElementById("t-makers").innerHTML =
       `<thead><tr><th>厂商</th><th>支出份额</th><th>变化</th><th>用量份额</th><th>变化</th><th>支出环比</th><th>用量环比</th><th>单位支出</th></tr></thead><tbody>` +
       rows.map(r => `<tr class="${r.k === "anthropic" ? "focus" : ""}"><td><i style="background:${color(r.k)}"></i>${r.label}</td>` +
@@ -335,14 +419,22 @@
 
   (function modelTable() {
     const ms = Object.entries(D.anthropic_models);
-    const tS = ms.reduce((a, [, m]) => a + s4(m.spend, a4), 0), tV = ms.reduce((a, [, m]) => a + s4(m.volume, a4), 0);
+    const total = metric => ms.reduce((a,[,m]) => add(a,m[metric]),zeros());
+    const tS = total("spend"), tV = total("volume");
     const rows = ms.map(([k, m]) => {
-      const ss = s4(m.spend, a4) / tS * 100, vs = s4(m.volume, a4) / tV * 100;
-      const prev = s4(m.spend, p4);
-      return { k, label: m.label, fam: m.family, ss, vs, u: vs ? ss / vs : null, g: prev ? s4(m.spend, a4) / prev - 1 : null };
+      const ss = periodShare(m.spend,tS,a4), vs = periodShare(m.volume,tV,a4);
+      const allocated = (values, totals, maker) => values.map((x,i) => totals[i] ? x/totals[i] * maker[i] : 0);
+      const spending = mixed([p4[0],a4[1]]) ? allocated(m.spend,tS,SP.anthropic) : m.spend;
+      let u = vs ? ss / vs : null;
+      if (mixed(a4)) {
+        const volume = allocated(m.volume,tV,VO.anthropic);
+        u = s4(volume,a4) ? unit(spending,volume,a4) / unit(SP.anthropic,VO.anthropic,a4) : null;
+      }
+      const prev = s4(spending,p4);
+      return { k, label: m.label, fam: m.family, ss, vs, u, g: prev ? s4(spending,a4)/prev-1 : null };
     }).filter(r => r.ss >= 0.3 || r.vs >= 0.3).sort((a, b) => b.ss - a.ss);
     document.getElementById("models-note").textContent =
-      `${D.week_start[L - 3]} 至 ${W[L]}。占比为 Anthropic 模型层合计的比例；单位支出以 Anthropic 平均 = 1.00；只列支出或用量占比 ≥ 0.3% 的模型。名字里带 EAP 的是未公开发布的内测代号。`;
+      `${D.week_start[L - 3]} 至 ${W[L]}。${windowNote}占比为 Anthropic 模型层合计的比例；单位支出以 Anthropic 平均 = 1.00；只列支出或用量占比 ≥ 0.3% 的模型。名字里带 EAP 的是未公开发布的内测代号。`;
     document.getElementById("t-models").innerHTML =
       `<thead><tr><th>模型</th><th>占支出</th><th>占用量</th><th>单位支出</th><th>支出环比</th></tr></thead><tbody>` +
       rows.map(r => `<tr><td><i style="background:${FAM_COLORS[r.fam]}"></i>${r.label}${/eap/i.test(r.k) ? '<span class="tag">EAP</span>' : ""}</td>` +
