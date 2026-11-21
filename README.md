@@ -14,3 +14,18 @@
 python3 scripts/build.py
 cd docs && python3 -m http.server 8765
 ```
+
+## YipitData Anthropic
+
+`docs/yipit.html` 使用 YipitData Anthropic Data File 和同期研究报告。该部分含付费数据，上线前需访问控制，保护范围包括页面和 `docs/data/yipit.json`。当前只在本地使用。
+
+下载的 XLSX 放在仓库外。在仓库根目录运行：
+
+```sh
+/Users/owen/projects/yipit-data/.venv/bin/python scripts/build_yipit.py /Users/owen/projects/yipit-data/raw/*.xlsx
+python3 -m http.server 8766 --bind 127.0.0.1 --directory docs
+```
+
+打开 <http://127.0.0.1:8766/yipit.html>。脚本按文件名中的日期识别报告，支持一次传入多份文件，也可只传新一期。重跑同一期会替换该期数据，其余期次保留。页面可切换期次，并在「历史期次与修订」中对比相邻两期的同一观察值。
+
+脚本使用 openpyxl。公式没有缓存时，会用本机 LibreOffice 在临时目录重算。也可传入已由 Excel 重算并保存的副本。网页无需安装依赖。新增期次的图表从工作簿生成。报告摘要及报告专属外推按发布日期单独维护。工作表改名或表头变动时应检查脚本中的字段映射。

@@ -88,6 +88,15 @@ def scrape_dashboard():
 def main():
     raw = fetch(TOKEN_URL)
     data = json.loads(raw)
+    # Ramp sometimes serves a model-only payload. The maker indices have a
+    # different normalization, so summing models cannot recover those series.
+    dimensions = {r["dimension_type"] for r in data if r["period_grain"] == "weekly"}
+    if not {"maker", "model"} <= dimensions:
+        previous = DOCS_DATA / "tracker.json"
+        if previous.exists() and json.loads(previous.read_text()).get("makers"):
+            print("Ramp weekly feed incomplete; keeping the last complete snapshot")
+            return
+        raise ValueError("Ramp weekly feed is missing maker or model data")
     digest = hashlib.sha256(raw).hexdigest()
 
     SNAPSHOTS.mkdir(parents=True, exist_ok=True)

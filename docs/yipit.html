@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YipitData Anthropic · 收入与用量追踪</title>
+<link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap"><a class="brand" href="index.html">ramp-ai-tracker</a>
+    <nav aria-label="页内导航"><a href="#charts">图表</a><a href="#method">方法</a><a href="#history">历史期次</a></nav>
+  </div>
+  <div class="switch-band"><nav class="wrap tracker-switch" aria-label="数据来源">
+    <a href="index.html">Ramp 企业 token 支出</a><a href="yipit.html" aria-current="page">YipitData Anthropic</a>
+  </nav></div>
+</header>
+<main class="wrap">
+  <header class="pack-head">
+    <p class="eyebrow">YipitData · 付费研究</p>
+    <h1>Anthropic 收入与用量追踪</h1>
+    <p class="dek">从企业云、API 和订阅支出，跟踪 Anthropic 的收入与年化收入变化。</p>
+    <label class="note">报告期次 <select id="edition" aria-label="报告期次"></select></label>
+    <p class="note" id="status" role="status">正在读取本地数据…</p>
+  </header>
+  <section id="nov-summary" hidden>
+    <div class="card method">
+      <p class="eyebrow">PM Summary · 2026 年 11 月 18 日</p>
+      <h2>10 月收入约 67 亿美元，11 月初增长放缓</h2>
+      <p>Yipit 首次估算 Anthropic 收入。10 月收入环比增长约 12%，比 7 月高约 27%。若 10 月占四季度收入的比例与去年相同，4Q26 收入约 220 亿美元，环比增约 30%，低于三季度的 47%。这一外推只有一个可比季度。</p>
+      <p>11 月前 8 天，非云渠道的用量收入和订阅增长放缓，云渠道的同比增速也在下降。Yipit 认为，前五大客户增长和蒸馏收入变化此前影响了面板捕获率，预计 10 月下降后趋稳。按此假设，11 月 8 日的年化收入约为 830 亿美元。</p>
+      <p class="note">Matt Wegner · 美东时间 2026-11-18 18:12 · <a href="https://portal.yipitdata.com/products/27eec794-0834-4c2e-81d5-9cd269c8fb3e/reports/ae9c7244-906f-4f48-a232-44b63cc22a16">YipitData 原报告</a></p>
+    </div>
+    <div class="card method">
+      <p class="eyebrow">Key Takeaways</p><h2>客户扩张、份额与订阅</h2>
+      <p><b>ARR 新增。</b>按月初 8 天外推，11 月新增近 70 亿美元，10 月约为 100 亿美元。11 月当时仅过了 27%。Yipit 表示，预计 2026 年 11 月月末将是最后一次 ARR 估算，此后的 KPI 估算将以公司披露为基础。</p>
+      <p><b>企业客户。</b>客户的年化支出平均用约 17 个月达到 10 万美元，再用约 7 个月达到 100 万美元，随后约 2 个月达到 200 万美元。按过去 12 个月支出计算，10 月有 24% 的面板客户超过 10 万美元，去年 12 月为 7%。10 月又有 3 家超过 1,000 万美元。</p>
+      <p><b>与 OpenAI 的份额。</b>10 月，Anthropic 在各行业占两家合计支出的 67%–95%，科技行业为 79%。在同时使用两家的 B2B 客户中，两家支出占比为 76% 和 24%。截至 11 月 8 日，Anthropic 回吐了部分 10 月赢得的 token 支出份额，单看 OpenRouter，最近一周又有回升。</p>
+      <p><b>用量与订阅。</b>11 月前 8 天的每百万 token 价格比 10 月低约 10%，截至 11 月 8 日当周，支出和用量环比基本持平。10 月 B2B 支出及中位数环比回升，同比增速继续放缓。11 月初消费者交易面板的新增收入放缓，电子收据面板的订阅新增仍在增长。</p>
+      <p><b>收入回测。</b>Yipit 用已知的 10 月 ARR 校准四季度收入捕获率。自 2Q25 以来，季度收入回测的平均绝对百分比误差为 8.5%，最近四季为 6%。实时估算的误差可能更大。</p>
+    </div>
+  </section>
+  <section class="kpis" id="kpis" aria-label="关键指标"></section>
+  <div id="charts"></div>
+  <section id="method" class="card method"><h2>方法与口径</h2>
+    <p>收入和 ARR 由 YipitData 根据面板支出估算。图中另行标出工作簿所列的公司披露、媒体信息或插值。月度收入对照值由季度数据分配而来，部分历史季度也用了半年度数据推算。</p>
+    <p>按 Cover 定义，Yipit 将 API 最近 28 天支出乘以 13，12 月改用截至 20 日的数据，以减小假期影响。消费者订阅先把最新一天的订阅折算为月收入，再乘以 12。B2B 面板用月内支出除以该月天数，再乘以 365。收入估算使用未年化的观测支出，并根据面板可观测到的收入比例推算整体。</p>
+    <p>Anthropic 定义的 run-rate revenue 为截至测量日最近 28 天按用量计费的金额乘以 13，加上当日活跃订阅的月费乘以 12。它衡量当前业务的年化规模。</p>
+    <details><summary>查看本期 Cover 定义原文</summary>
+      <p lang="en" id="cover-yipit"></p><p lang="en" id="cover-company"></p>
+    </details>
+    <p class="note" id="cutoffs"></p>
+  </section>
+  <section id="history" class="card"><h2>历史期次与修订</h2><p class="note" id="history-note"></p><div id="revisions"></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">数据来源：YipitData Anthropic Data File 及同期报告。</div></footer>
+<script src="yipit.js"></script>
+</body></html>

@@ -135,3 +135,16 @@ table.t tr.focus td { background: var(--band); color: var(--fg); font-weight: 60
   .card-top { flex-direction: column; gap: 8px; }
   .card h2 { font-size: 21px; }
 }
+
+.switch-band { border-top: 1px solid var(--line-soft); }
+.site-head nav.tracker-switch { height: auto; display: flex; justify-content: flex-start; gap: 22px; margin: auto; font-size: 13px; }
+.tracker-switch a { padding-block: 8px; border-bottom: 2px solid transparent; }
+.tracker-switch [aria-current] { color: var(--title-red); border-color: currentColor; font-weight: 600; }
+#charts select, #edition, #revisions select { max-width: 100%; min-width: 0; background: var(--panel); color: var(--fg); border: 1px solid var(--line); border-radius: 5px; padding: 5px 8px; font: inherit; }
+.y-selectors { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 12px 0; font-size: 13px; }
+.y-selectors label { display: flex; max-width: 100%; align-items: center; gap: 6px; }
+.y-selectors span { flex-shrink: 0; }
+#charts details { font-size: 13px; color: var(--muted); margin-top: 8px; }
+#charts summary { cursor: pointer; }
+#charts details .tablewrap, #revisions .tablewrap { max-height: 370px; }
+#charts svg { overflow: hidden; }
