@@ -58,6 +58,13 @@
 
   // Dollar / token estimates: index points × factor fitted on the archived dollar payload (see 方法).
   const U = D.usd, fS = U ? U.usd_per_spend_point : null, fV = U ? U.tokens_per_volume_point : null;
+  document.getElementById("maker-source").textContent = D.maker_source === "model_sum"
+    ? "本次厂商指数由模型汇总。" : "本次采用官方厂商指数。";
+  if (U) {
+    const range = values => values.map(x => chg(x)).join(" 至 ");
+    document.getElementById("calibration-fit").textContent =
+      `本次每个支出指数点约合 ${Math.round(fS).toLocaleString("en-US")} 美元，每个用量指数点约合 ${(fV / 1e8).toFixed(2)} 亿 token。校准期内，支出的单月偏差为 ${range(U.usd_per_spend_point_monthly_error)}，用量为 ${range(U.tokens_per_volume_point_monthly_error)}。`;
+  }
   const usd = x => (x == null || !isFinite(x) ? "—" : x >= 1e8 ? "$" + (x / 1e8).toFixed(x >= 1e9 ? 1 : 2) + " 亿" : "$" + Math.round(x / 1e4).toLocaleString("en-US") + " 万");
   const usdAxis = t => (t === 0 ? "0" : t >= 1e8 ? "$" + +(t / 1e8).toFixed(2) + "亿" : "$" + +(t / 1e4).toFixed(0) + "万");
   const tok = x => (x == null || !isFinite(x) ? "—" : x >= 1e12 ? (x / 1e12).toFixed(1) + " 万亿" : (x / 1e8).toFixed(0) + " 亿");
@@ -104,7 +111,7 @@
 
   // ---------- share bars ----------
   document.getElementById("split-note").textContent =
-    `${D.week_start[L - 3]} 至 ${W[L]}，四周合计。Cursor、DeepSeek、Moonshot、Zhipu 合并为「其他」。`;
+    `${D.week_start[L - 3]} 至 ${W[L]}，四周合计。四家单列厂商以外的模型厂商合并为「其他」。`;
   const barRow = (label, S, T) => {
     const segs = D.groups.map(g => ({ g, p: (s4(S[g], a4) / s4(T, a4)) * 100 }));
     return `<div class="row"><span>${label}</span><div class="track">` + segs.map(s =>
@@ -369,10 +376,12 @@
   (function revTable() {
     const R = D.revisions, note = document.getElementById("rev-note"), t = document.getElementById("t-rev");
     if (!R) { note.textContent = "目前只有一份接口快照，下次接口数据变化后，这里会列出 Anthropic 份额被回补修改的周。"; t.remove(); return; }
-    if (!R.changes.length) { note.textContent = `和 ${R.compared_with} 的快照相比，Anthropic 各周份额的变化都小于 0.1 个百分点。`; t.remove(); return; }
-    note.textContent = `和 ${R.compared_with} 的快照相比，Anthropic 份额变化 ≥ 0.1 个百分点的周。`;
+    const sourceNote = R.maker_source_changed ? "两份快照的厂商指数来源不同。统一缩放不影响份额，表中列出历史份额的实际变化。" : "";
+    if (!R.changes.length) { note.textContent = `和 ${R.compared_with} 的快照相比，Anthropic 各周份额的变化都小于 0.1 个百分点。${sourceNote}`; t.remove(); return; }
+    const recent = [...R.changes].sort((a, b) => b.week.localeCompare(a.week)).slice(0, 8);
+    note.textContent = `与 ${R.compared_with} 快照相比，有 ${R.changes.length} 条周度指标的份额变化达到 0.1 个百分点。下表显示最近 ${recent.length} 条，完整记录可下载 tracker.json。${sourceNote}`;
     t.innerHTML = `<thead><tr><th>周（截至）</th><th>指标</th><th>修订前</th><th>修订后</th><th>变化</th></tr></thead><tbody>` +
-      R.changes.slice().reverse().map(c => `<tr><td>${c.week}</td><td>${c.metric}</td><td>${pct(c.old, 2)}</td><td>${pct(c.new, 2)}</td><td>${ptsShort(c.delta_pts, 2)}</td></tr>`).join("") + "</tbody>";
+      recent.map(c => `<tr><td>${c.week}</td><td>${c.metric}</td><td>${pct(c.old, 2)}</td><td>${pct(c.new, 2)}</td><td>${ptsShort(c.delta_pts, 2)}</td></tr>`).join("") + "</tbody>";
   })();
 
   // ---------- controls ----------

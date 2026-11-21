@@ -37,7 +37,7 @@
   </header>
 
   <section class="kpis" id="kpis"></section>
-  <p class="note kpi-note">份额和变化由 Ramp 公开周度接口直接算出。接口现在只给指数（每组数据单周最高值 = 100），标「估算」的美元和 token 数，是用 2026 年 11 月 4 日存档的美元版接口数据换算的，误差约 ±2%，最近几周受 Ramp 修订影响可能更大。口径见文末「方法」。</p>
+  <p class="note kpi-note">厂商份额按每周支出和用量指数计算。美元和 token 数按 11 月 4 日的存档估算，逐月偏差见<a href="#method">方法</a>。</p>
 
   <div class="controls" role="group" aria-label="时间范围">
     <span>时间范围</span>
@@ -59,7 +59,7 @@
   <section class="card">
     <div class="card-top">
       <div><h2>每周 token 支出</h2>
-      <p class="note">按厂商，每周合计。可切换 Ramp 原始指数和美元估算。</p></div>
+      <p class="note">按厂商，每周合计。可切换 厂商指数和美元估算。</p></div>
       <div class="tools">
         <div class="seg unit" data-for="c-spend"><button data-v="abs">美元估算</button><button data-v="idx">指数</button></div>
         <div class="seg scale" data-for="c-spend"><button data-v="lin" aria-pressed="true">线性</button><button data-v="log" aria-pressed="false">对数</button></div>
@@ -72,7 +72,7 @@
   <section class="card">
     <div class="card-top">
       <div><h2>每周 token 用量</h2>
-      <p class="note">按厂商，每周合计，各厂商用自己的 tokenizer 计数。可切换 Ramp 原始指数和 token 数估算。</p></div>
+      <p class="note">按厂商，每周合计，各厂商用自己的 tokenizer 计数。可切换 厂商指数和 token 数估算。</p></div>
       <div class="tools">
         <div class="seg unit" data-for="c-volume"><button data-v="abs">token 估算</button><button data-v="idx">指数</button></div>
         <div class="seg scale" data-for="c-volume"><button data-v="lin" aria-pressed="true">线性</button><button data-v="log" aria-pressed="false">对数</button></div>
@@ -137,10 +137,10 @@
     <h2>方法</h2>
     <div class="prose">
       <ul>
-        <li><b>数据来源：</b>Ramp AI Index 的公开周度接口 <code>ramp.com/data/ai-index/chart-data/tokenVolumes</code>，按厂商和按模型分别给出 token 支出与 token 用量。数据来自接入 Ramp AI 支出管理产品的企业，包括直连 API，以及经 AWS、GCP、Azure 和多家路由、推理平台的消费。Ramp 注明这部分不代表其全部 AI 支出。</li>
-        <li><b>指数口径：</b>接口给的是指数。每个「指标 × 维度」组合里，单周最高值记为 100，厂商维度和模型维度分别归一。所以同一组里的份额、环比和比值都成立，厂商层和模型层的数值不能直接相加比较。出现新的单周最高值时，整条历史会按比例重算，本页因此只展示份额和相对变化。</li>
-        <li><b>美元和 token 估算：</b>Ramp 接口在 2026 年 11 月初之前返回美元支出和 token 绝对数量，之后改为指数。本站用 2026 年 11 月 4 日存档的美元版数据，在 2026 年 1–9 月这段重叠期把新旧数据按天对齐（每周平摊到 7 天，因为旧数据一周是周六到周五），拟合出「每个指数点对应多少美元 / 多少 token」，再乘到当前指数上。1–9 月逐月的系数偏差在 ±2% 以内，Anthropic 和 OpenAI 一致。10 月 Anthropic 的偏差约 +23%，OpenAI 没有，说明存档之后 Ramp 下修了 Anthropic 10 月的数据，因此最近几周的美元估算还会随 Ramp 修订变动。系数每次构建都重新拟合，Ramp 指数重新归一化不影响结果。</li>
-        <li><b>单位 token 支出：</b>支出指数 ÷ 用量指数。同一厂商不同时间、不同厂商同一时间都可以比较相对高低，但换算不出美元。Ramp 看板上的「每百万 token 混合单价」采用的口径无法从公开接口复现，两者走势可能不一致，看板原值单独列在上面的表里。</li>
+        <li><b>数据来源：</b>Ramp AI Index 的公开周度接口 <code>ramp.com/data/ai-index/chart-data/tokenVolumes</code>提供每周 token 支出与用量指数。数据来自接入 Ramp AI 支出管理产品的企业，包括直连 API，以及经 AWS、GCP、Azure 和多家路由、推理平台的消费。Ramp 注明这部分不代表其全部 AI 支出。</li>
+        <li><b>厂商指数。</b>2026 年 11 月中旬，Ramp 改为只发布模型指数。本站按每个模型的厂商归属，逐周加总支出和用量。若接口恢复完整的厂商指数，则优先采用官方序列。两种序列的指数点尺度不同，计算份额时同一指标的公共倍数会抵消。<span id="maker-source"></span></li>
+        <li><b>美元和 token 估算。</b>本站用 11 月 4 日存档的绝对金额和 token 数校准当前指数。旧数据按周六至周五统计，当前数据按周一至周日统计。将两者的周数据均摊到每天，再按自然月汇总。每次构建都用 2026 年 1–9 月全体厂商的存档总量除以同期指数总和，分别得到支出和用量的换算系数。<span id="calibration-fit"></span>单月偏差按当月估算值除以存档值再减一计算。单个厂商、单周和校准期之后的估算精度仍未知。</li>
+        <li><b>单位 token 支出。</b>将校准后的支出除以用量即可估算每百万 token 支出。Ramp 看板另行公布混合单价，原值见上表。</li>
         <li><b>周的定义：</b>周一到周日，按周日日期标注，和 Ramp 看板的「Week ending」一致。</li>
         <li><b>修订：</b>企业接入新的模型供应商后，Ramp 会回补其历史数据。本站每次检测到接口数据变化都保存一份原始快照，并对比 Anthropic 份额在各周的变化。</li>
         <li><b>覆盖范围：</b>样本是 Ramp 的美国企业客户，不含消费者订阅、海外客户和大型直签合同，不能直接换算为 Anthropic 全公司收入或 ARR。</li>
@@ -151,7 +151,7 @@
 
   <section class="card" id="downloads">
     <h2>下载</h2>
-    <p class="note">指数列为 Ramp 原始数据；带 est 后缀的列为本站估算。</p>
+    <p class="note">厂商指数的来源见上方方法说明。模型指数来自 Ramp，带 est 后缀的列为本站估算。</p>
     <ul class="note">
       <li><a href="data/ramp-makers-weekly.csv">ramp-makers-weekly.csv</a>：按厂商，周度支出与用量指数，另附美元和 token 估算列</li>
       <li><a href="data/ramp-anthropic-models-weekly.csv">ramp-anthropic-models-weekly.csv</a>：Anthropic 各模型，周度支出与用量指数</li>
@@ -164,6 +164,6 @@
   <div class="wrap">数据：Ramp AI Index（ramp.com/data/ai-index）。份额、变化和单位支出为本站根据公开指数计算，非 Ramp 官方口径。</div>
 </footer>
 
-<script src="app.js?v=6"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>

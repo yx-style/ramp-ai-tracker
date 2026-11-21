@@ -13,6 +13,7 @@ import gzip
 import hashlib
 import html
 import json
+import math
 import re
 import sys
 import urllib.request
@@ -85,30 +86,64 @@ def scrape_dashboard():
     return {"week_end": iso(weeks[0]), "prev_week_end": iso(weeks[1]), "rows": rows}
 
 
-def complete_weekly(data):
-    weeks = [r for r in data if r["period_grain"] == "weekly"]
-    latest = max((r["period_end"] for r in weeks), default=None)
-    metrics = {(r["dimension_type"], r["metric_key"]) for r in weeks
-               if r["period_end"] == latest and r["metric_value"] is not None}
-    return all((dim, metric) in metrics for dim in ("maker", "model")
-               for metric in ("token_spend", "token_volume"))
+def prepare_weekly(rows, required_weeks=()):
+    """Select one maker scale for the whole history. Keep the snapshot itself raw."""
+    metrics = {"token_spend", "token_volume"}
+    weekly = [r for r in rows if r["period_grain"] == "weekly" and r["metric_key"] in metrics]
+    weeks = sorted({r["period_end"] for r in weekly})
+    if not weeks or not set(required_weeks).issubset(weeks):
+        return None
+    if any(date.fromisoformat(b) - date.fromisoformat(a) != timedelta(days=7)
+           for a, b in zip(weeks, weeks[1:])):
+        return None
+
+    models = [r for r in weekly if r["dimension_type"] == "model"]
+    totals = defaultdict(float)
+    starts = {}
+    # Both long-running providers are present throughout Ramp's published series.
+    providers = defaultdict(set)
+    for r in models:
+        week, metric, maker = r["period_end"], r["metric_key"], r.get("model_maker")
+        value = r["metric_value"]
+        if not maker or value is None or not math.isfinite(value) or value < 0:
+            return None
+        starts[week] = r["period_start"]
+        totals[week, metric, maker] += value
+        providers[week, metric].add(maker)
+    if any(not {"anthropic", "openai"} <= providers[w, m] for w in weeks for m in metrics):
+        return None
+
+    official = [r for r in weekly if r["dimension_type"] == "maker"]
+    keys = {(r["period_end"], r["metric_key"], r["series_key"]) for r in official
+            if r["metric_value"] is not None and math.isfinite(r["metric_value"])}
+    if len(keys) == len(official) and totals.keys() <= keys:
+        return models + official, "official"
+
+    makers = [{"period_grain": "weekly", "period_start": starts[w], "period_end": w,
+               "metric_key": metric, "dimension_type": "maker", "series_key": maker,
+               "series_label": MAKER_LABELS.get(maker, maker.title()), "model_maker": maker,
+               "metric_value": value} for (w, metric, maker), value in totals.items()]
+    return models + makers, "model_sum"
 
 
 def main():
     raw = fetch(TOKEN_URL)
-    data = json.loads(raw)
+    prev_meta = DOCS_DATA / "tracker.json"
+    old = json.loads(prev_meta.read_text()) if prev_meta.exists() else {}
+    prepared = prepare_weekly(json.loads(raw), old.get("weeks", ()))
     snapshots = sorted(SNAPSHOTS.glob("*.json.gz"))
     archived = None
-    if not complete_weekly(data):
+    if prepared is None:
         for path in reversed(snapshots):
             raw = gzip.decompress(path.read_bytes())
-            data = json.loads(raw)
-            if complete_weekly(data):
+            prepared = prepare_weekly(json.loads(raw), old.get("weeks", ()))
+            if prepared is not None:
                 archived = path
                 print(f"Ramp weekly feed incomplete; using {path.name}")
                 break
         else:
             raise ValueError("No complete weekly Ramp data available")
+    data, maker_source = prepared
     digest = hashlib.sha256(raw).hexdigest()
 
     SNAPSHOTS.mkdir(parents=True, exist_ok=True)
@@ -121,10 +156,8 @@ def main():
         history[dash["week_end"]] = dash
         DASH_HISTORY.write_text(json.dumps(history, indent=1, sort_keys=True, ensure_ascii=False))
 
-    prev_meta = DOCS_DATA / "tracker.json"
-    old = json.loads(prev_meta.read_text()) if prev_meta.exists() else {}
     force = "--force" in sys.argv
-    if old.get("source_sha256") == digest and not force and old.get("dashboard") == [history[k] for k in sorted(history)]:
+    if old.get("source_sha256") == digest and old.get("maker_source") == maker_source and not force and old.get("dashboard") == [history[k] for k in sorted(history)]:
         print("upstream unchanged; nothing to do")
         return
 
@@ -141,9 +174,9 @@ def main():
 
     prev_snapshot = None
     for path in reversed(earlier):
-        previous = json.loads(gzip.decompress(path.read_bytes()))
-        if complete_weekly(previous):
-            prev_snapshot = (path.name, previous)
+        previous = prepare_weekly(json.loads(gzip.decompress(path.read_bytes())))
+        if previous is not None:
+            prev_snapshot = (path.name, *previous)
             break
 
     weeks, week_start = build_weeks(data)
@@ -187,13 +220,14 @@ def main():
         "weeks": weeks,
         "week_start": week_start,
         "makers": maker_out,
+        "maker_source": maker_source,
         "groups": GROUPS,
         "families": {f: {"label": lab, **fam[f]} for f, lab in FAMILIES},
         "family_order": [f for f, _ in FAMILIES],
         "anthropic_models": keep,
         "dashboard": [history[k] for k in sorted(history)],
         "dashboard_weeks": sorted(history),
-        "revisions": revisions(prev_snapshot, data),
+        "revisions": revisions(prev_snapshot, data, maker_source),
         "usd": calibrate(data),
     }
     (DOCS_DATA / "tracker.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
@@ -227,6 +261,8 @@ def calibrate(data):
             return None
         f = sum(cal["months"][m][key] for m in months) / sum(idx[metric][m] for m in months)
         per = [cal["months"][m][key] / idx[metric][m] / f - 1 for m in months]
+        errors = [idx[metric][m] * f / cal["months"][m][key] - 1 for m in months]
+        out[name + "_monthly_error"] = [min(errors), max(errors)]
         out[name] = f
         out[name.replace("per", "spread")] = [round(min(per), 4), round(max(per), 4)]
     return out
@@ -261,11 +297,11 @@ def shares(data, metric):
     return {w: ant[w] / tot[w] for w in tot if tot[w]}
 
 
-def revisions(prev_snapshot, data):
+def revisions(prev_snapshot, data, maker_source):
     """Weeks where Anthropic's share moved between the previous snapshot and this one."""
     if not prev_snapshot:
         return None
-    name, old = prev_snapshot
+    name, old, old_source = prev_snapshot
     out = []
     for metric, label in (("token_spend", "支出份额"), ("token_volume", "用量份额")):
         a, b = shares(old, metric), shares(data, metric)
@@ -274,7 +310,7 @@ def revisions(prev_snapshot, data):
             if abs(d) >= 0.1:
                 out.append({"week": w, "metric": label, "old": round(a[w] * 100, 2),
                             "new": round(b[w] * 100, 2), "delta_pts": round(d, 2)})
-    return {"compared_with": name.replace(".json.gz", ""), "changes": out}
+    return {"compared_with": name.replace(".json.gz", ""), "maker_source_changed": old_source != maker_source, "changes": out}
 
 
 def write_csvs(weeks, week_start, makers, models, usd):
