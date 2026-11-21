@@ -189,7 +189,8 @@
     const box = document.getElementById(id);
     box.innerHTML = "";
     const width = box.clientWidth, height = opt.height || (width < 560 ? 240 : 300);
-    const m = { t: 24, r: opt.endLabels === false ? 12 : width < 560 ? 88 : 104, b: 26, l: 40 };
+    const rightMargin = (id === "c-spend" || id === "c-volume") ? 112 : (width < 560 ? 88 : 104);
+    const m = { t: 24, r: opt.endLabels === false ? 12 : rightMargin, b: 26, l: 40 };
     const i0 = rangeStart(), idx = []; for (let i = i0; i <= L; i++) idx.push(i);
     const svg = el("svg", { viewBox: `0 0 ${width} ${height}`, height, role: "img", "aria-label": opt.aria || "" }, box);
     const vals = opt.series.flatMap(s => idx.map(i => s.values[i])).filter(x => x != null && isFinite(x) && (!opt.log || x > 0));
@@ -305,6 +306,11 @@
         return { s, y: yy, val };
       }).filter(Boolean).sort((a, b) => a.y - b.y);
       for (let k = 1; k < labs.length; k++) if (labs[k].y - labs[k - 1].y < 14) labs[k].y = labs[k - 1].y + 14;
+      let bottom = m.t + ih;
+      for (let k = labs.length - 1; k >= 0; k--) {
+        labs[k].y = Math.min(labs[k].y, bottom);
+        bottom = labs[k].y - 14;
+      }
       for (const lb of labs) {
         const t = el("text", { class: "endlab", x: m.l + iw + 8, y: lb.y + 4 }, svg);
         const n1 = el("tspan", {}, t); n1.textContent = (lb.s.short || lb.s.label) + " ";
