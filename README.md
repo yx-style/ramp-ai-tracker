@@ -17,7 +17,7 @@ cd docs && python3 -m http.server 8765
 
 ## YipitData Anthropic
 
-`docs/yipit.html` 使用 YipitData Anthropic Data File 和同期研究报告。该部分含付费数据，上线前需访问控制，保护范围包括页面和 `docs/data/yipit.json`。当前只在本地使用。
+`docs/yipit.html` 使用 YipitData Anthropic Data File 和同期研究报告。页面与已提交的 `docs/data/yipit.json` 随 GitHub Pages 一起发布。日常 Ramp 更新只重建 Ramp 数据。
 
 下载的 XLSX 放在仓库外。在仓库根目录运行：
 

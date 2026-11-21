@@ -85,18 +85,30 @@ def scrape_dashboard():
     return {"week_end": iso(weeks[0]), "prev_week_end": iso(weeks[1]), "rows": rows}
 
 
+def complete_weekly(data):
+    weeks = [r for r in data if r["period_grain"] == "weekly"]
+    latest = max((r["period_end"] for r in weeks), default=None)
+    metrics = {(r["dimension_type"], r["metric_key"]) for r in weeks
+               if r["period_end"] == latest and r["metric_value"] is not None}
+    return all((dim, metric) in metrics for dim in ("maker", "model")
+               for metric in ("token_spend", "token_volume"))
+
+
 def main():
     raw = fetch(TOKEN_URL)
     data = json.loads(raw)
-    # Ramp sometimes serves a model-only payload. The maker indices have a
-    # different normalization, so summing models cannot recover those series.
-    dimensions = {r["dimension_type"] for r in data if r["period_grain"] == "weekly"}
-    if not {"maker", "model"} <= dimensions:
-        previous = DOCS_DATA / "tracker.json"
-        if previous.exists() and json.loads(previous.read_text()).get("makers"):
-            print("Ramp weekly feed incomplete; keeping the last complete snapshot")
-            return
-        raise ValueError("Ramp weekly feed is missing maker or model data")
+    snapshots = sorted(SNAPSHOTS.glob("*.json.gz"))
+    archived = None
+    if not complete_weekly(data):
+        for path in reversed(snapshots):
+            raw = gzip.decompress(path.read_bytes())
+            data = json.loads(raw)
+            if complete_weekly(data):
+                archived = path
+                print(f"Ramp weekly feed incomplete; using {path.name}")
+                break
+        else:
+            raise ValueError("No complete weekly Ramp data available")
     digest = hashlib.sha256(raw).hexdigest()
 
     SNAPSHOTS.mkdir(parents=True, exist_ok=True)
@@ -112,22 +124,27 @@ def main():
     prev_meta = DOCS_DATA / "tracker.json"
     old = json.loads(prev_meta.read_text()) if prev_meta.exists() else {}
     force = "--force" in sys.argv
-    if old.get("source_sha256") == digest and not force and old.get("dashboard_weeks") == sorted(history):
+    if old.get("source_sha256") == digest and not force and old.get("dashboard") == [history[k] for k in sorted(history)]:
         print("upstream unchanged; nothing to do")
         return
 
     # Keep one raw snapshot per upstream change so revisions can be audited later.
-    snaps = sorted(SNAPSHOTS.glob("*.json.gz"))
-    last = gzip.open(snaps[-1]).read() if snaps else None
-    prev_snapshot = None
-    if last is None or hashlib.sha256(last).hexdigest() != digest:
-        if last is not None:
-            prev_snapshot = (snaps[-1].name, json.loads(last))
-        stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%MZ")
+    if archived:
+        earlier = snapshots[:snapshots.index(archived)]
+    elif snapshots and raw == gzip.decompress(snapshots[-1].read_bytes()):
+        earlier = snapshots[:-1]
+    else:
+        earlier = snapshots
+        stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%S%fZ")
         with gzip.open(SNAPSHOTS / f"{stamp}.json.gz", "wb") as f:
             f.write(raw)
-    elif len(snaps) > 1:
-        prev_snapshot = (snaps[-2].name, json.loads(gzip.open(snaps[-2]).read()))
+
+    prev_snapshot = None
+    for path in reversed(earlier):
+        previous = json.loads(gzip.decompress(path.read_bytes()))
+        if complete_weekly(previous):
+            prev_snapshot = (path.name, previous)
+            break
 
     weeks, week_start = build_weeks(data)
     series = aggregate(data)

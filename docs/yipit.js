@@ -37,6 +37,24 @@
     }
   }
 
+  function completeMonths(g, data) {
+    if (g.grain !== "月度" && g.grain !== "测量日") return g;
+    // The combined model panel requires both component panels to close.
+    const dates = g.sheet === "Combined Cloud and OR"
+      ? [data.through["OpenRouter"], data.through["Cloud API"]]
+      : [data.through[g.sheet]];
+    const cutoff = [data.date, ...dates.filter(Boolean)].sort()[0];
+    const count = g.periods.findIndex(p => {
+      const [year, month] = p.split("-").map(Number);
+      const end = new Date(Date.UTC(year, month, 0)).toISOString().slice(0, 10);
+      return end > cutoff || (g.grain === "测量日" && p !== end);
+    });
+    if (count < 0) return g;
+    return { ...g, periods: g.periods.slice(0, count), columns: g.columns.slice(0, count),
+      series: g.series.map(s => ({ ...s, values: s.values.slice(0, count) }))
+        .filter(s => s.values.some(v => v != null)) };
+  }
+
   // Periods occupy source-column order, including missing interior observations.
   function plot(box, g, lines) {
     box.replaceChildren();
@@ -45,7 +63,16 @@
     const width = box.clientWidth;
     const left = 58, right = width - 12, top = 12, bottom = width < 540 ? 168 : 208;
     const values = lines.flatMap(s => s.values.filter(n => n != null));
-    const lo = Math.min(0, ...values), hi = Math.max(0, ...values);
+    if (!values.length) {
+      element("p", "暂无完整期间的数据。", box, "note");
+      return;
+    }
+    const min = Math.min(0, ...values), max = Math.max(0, ...values);
+    const rough = (max - min || 1) / 4;
+    const power = 10 ** Math.floor(Math.log10(rough));
+    const step = [1, 2, 5, 10].find(n => n * power >= rough) * power;
+    const lowTick = Math.floor(min / step), highTick = Math.ceil(max / step);
+    const lo = lowTick * step, hi = highTick * step;
     const x = i => start === end ? (left + right) / 2 : left + (i - start) / (end - start) * (right - left);
     const y = n => bottom - (n - lo) / (hi - lo || 1) * (bottom - top);
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -60,10 +87,10 @@
       svg.append(n);
       return n;
     }
-    for (let j = 0; j <= (lo === hi ? 0 : 4); j++) {
-      const n = lo + (hi - lo) * j / 4;
+    for (let j = lowTick; j <= highTick; j++) {
+      const n = j * step;
       mark("line", { x1: left, x2: right, y1: y(n), y2: y(n), class: "grid" });
-      const tick = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 2 })
+      const tick = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumSignificantDigits: 3 })
         .format(g.unit === "%" ? n * 100 : n);
       mark("text", { x: left - 6, y: y(n) + 4, "text-anchor": "end" }, tick);
     }
@@ -135,12 +162,12 @@
     }
     function changeMetric() {
       const key = channel ? channel.value + "-" + metric.value : metric.value;
-      g = data.charts[key];
+      g = completeMonths(data.charts[key], data);
       if (selector) selector.parentElement.remove();
       const overview = g.series.length <= 4 ? "全部" : g.grain === "观察月序" ? "最近三个满六期的批次" : "最近一期按绝对值取前三项";
       selector = select(controls, "序列", [["*", overview], ...g.series.map((s,i) => [i,label(s.label)])]);
       selector.onchange = chooseSeries;
-      source.textContent = [g.grain, g.unit, g.sheet, data.date + " 期"].join(" · ");
+      source.textContent = [g !== data.charts[key] ? g.grain + "（仅展示完整月份）" : g.grain, g.unit, g.sheet, data.date + " 期"].join(" · ");
       chooseSeries();
     }
     metric.onchange = changeMetric;
@@ -236,16 +263,16 @@
         if (choices.length) chartCard(data, title, choices, note);
       }
       card("收入估算与披露口径", ["month","quarter"], "月度对照值按季度收入分配。季度图只含完整季度。");
-      card("年化收入与月新增", ["arr","adds"], "历史月份取月末，未完月取最新测量日。新增以此前一月的披露或插值为基数。");
+      card("年化收入与月新增", ["arr","adds"], "图中展示月末数据。页首列出最新测量日的估算。新增以此前一月的披露或插值为基数。");
       chartCard(data, "各模型的 token 支出、用量与价格",
         [["spend","支出"],["tokens","用量"],["price","每百万 token 价格"],["blended","综合单价"]],
-        "云 API 周表以周一标记，OpenRouter 周表以周日标记。最新月份可能只覆盖部分天数。OpenRouter 在 2025 年 6 月前的价格和支出未充分反映提示缓存。",
+        "云 API 周表以周一标记，OpenRouter 周表以周日标记。OpenRouter 在 2025 年 6 月前的价格和支出未充分反映提示缓存。",
         [["combined","企业云与 OpenRouter 加权 · 月度"],["cloud","Cloud API · 月度"],["cloud-w","Cloud API · 周度"],
          ["router","OpenRouter · 月度"],["router-w","OpenRouter · 周度"]]);
       card("B2B 支出面板", ["b2b","median","large"], "大客户按当月支出年化。2026-11-18 报告中的 24% 采用过去 12 个月累计支出。");
       card("B2B 客户留存与支出扩张", ["retain","expand"], "按首次交易月分组。横轴按原表从左至右的观察次序排列，首列为基期。");
       card("各行业的 Anthropic 采用率与支出", ["adopt","sector"], "覆盖企业云和 B2B 面板。两家公司在各行业的支出份额见 11 月 18 日报告摘要，工作簿未列该序列。");
-      card("Claude 订阅", ["active","new","net"], "来自电子邮件收据固定面板。最新月份的活跃与净新增可能只覆盖部分天数。");
+      card("Claude 订阅", ["active","new","net"], "来自电子邮件收据固定面板。");
       card("消费者交易面板", ["consumer","users","arpu"], "ARPU 包含额外用量费用，年付订阅摊入各月。");
       card("客户支出分层", ["tiers","tier-median","tier-avg","tier-count"], "企业云和 B2B 客户合并统计。前 1%、其后的前 10% 档、前 50% 档及其余客户分别计数。");
       card("历史估算与误差", ["rev-test","rev-error","arr-test","arr-error"], "误差按估算值除以参照值再减 1 计算。ARR 参照值含插值，本期回测和当时发布的初步估算分别列示。");

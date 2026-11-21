@@ -80,7 +80,7 @@
   const dpA = dashPrice("Anthropic");
   const usdCards = U ? [
     [{ k: "Anthropic 周 token 支出，最近一周（估算）", v: usd(SP.anthropic[L] * fS), n: `年化约 ${usd(SP.anthropic[L] * fS * 52)}；四周前 ${usd(SP.anthropic[L - 4] * fS)}` + (yoy != null ? `；一年前 ${usd(SP.anthropic[yoy] * fS)}` : "") },
-     { k: "Anthropic 每百万 token 支出，最近一周（估算）", v: "$" + perM(SP.anthropic[L], VO.anthropic[L]).toFixed(2), n: `OpenAI $${perM(SP.openai[L], VO.openai[L]).toFixed(2)}` + (dpA ? `；Ramp 看板公布 $${dpA.v.toFixed(2)}，口径不同` : "") }],
+     { k: "Anthropic 每百万 token 支出，最近一周（估算）", v: "$" + perM(SP.anthropic[L], VO.anthropic[L]).toFixed(2), n: `OpenAI $${perM(SP.openai[L], VO.openai[L]).toFixed(2)}` + (dpA ? `；Ramp 看板（截至 ${dpA.week}）公布 $${dpA.v.toFixed(2)}，口径不同` : "") }],
     [{ k: "所有厂商周 token 支出，最近一周（估算）", v: usd(TOT_S[L] * fS), n: `用量约 ${tok(TOT_V[L] * fV)} token；四周前 ${usd(TOT_S[L - 4] * fS)}` }],
   ] : [[], []];
   const kpis = [
