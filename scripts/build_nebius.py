@@ -12,16 +12,18 @@ import re
 import subprocess
 import sys
 import tempfile
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = ROOT / "data/nebius/raw"
+BACKFILL = ROOT / "data/nebius/backfill_06ai"
 PUBLIC = ROOT / "docs/data"
 API = "https://api.nebius.cloud/billing/v1alpha1/spot-price"
 PRICES = "https://nebius.com/prices"
 HOUR = timedelta(hours=1)
+DYNAMIC_START = "2026-10-08"
 LABELS = {"b300": "B300", "b200": "B200", "h200": "H200", "h100": "H100",
           "rtx6000": "RTX PRO 6000"}
 
@@ -195,6 +197,63 @@ def find_gaps(series, retention_start):
     return gaps
 
 
+def complete_days(points):
+    days = {}
+    for end, value in points:
+        day = (instant(end) - HOUR).date().isoformat()
+        days.setdefault(day, []).append(value)
+    # Archived points are unique, ordered, and aligned to whole UTC hours.
+    return {day: sum(values) / 24 for day, values in days.items() if len(values) == 24}
+
+
+def read_daily_backfill(series, official_days):
+    try:
+        content = (BACKFILL / "nebius-spot-daily.csv").read_bytes()
+    except FileNotFoundError:
+        return {"dynamicStart": DYNAMIC_START, "points": {}}
+    metadata = json.loads((BACKFILL / "metadata.json").read_bytes())
+    if hashlib.sha256(content).hexdigest() != metadata["sha256"]:
+        raise ValueError("06.ai daily archive does not match its recorded SHA-256")
+    if metadata["dynamicStart"] != DYNAMIC_START:
+        raise ValueError("Unexpected 06.ai dynamic pricing start")
+    eligible = {s["skuId"]: s for s in series if official_days[s["skuId"]]}
+    first = {sku: min(official_days[sku]) for sku in eligible}
+    points = {}
+    for row in csv.DictReader(io.StringIO(content.decode("utf-8"), newline="")):
+        sku = row["sku_id"]
+        if row["region"] == "all" or row["steps"] != "96" or sku not in eligible:
+            continue
+        day = date.fromisoformat(row["date"]).isoformat()
+        if day >= first[sku]:
+            continue
+        s = eligible[sku]
+        value = float(row["avg_usd_per_gpu_hour"])
+        if ((row["gpu"], row["region"]) != (s["model"], s["region"])
+                or not math.isfinite(value) or value < 0):
+            raise ValueError(f"Invalid 06.ai daily quote for {sku} on {day}")
+        by_date = points.setdefault(sku, {})
+        if day in by_date:
+            raise ValueError(f"Duplicate 06.ai daily quote for {sku} on {day}")
+        by_date[day] = value
+    return {**metadata, "points": {sku: sorted(days.items()) for sku, days in points.items()}}
+
+
+def daily_csv(series, official_days, backfill):
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(["sku_id", "model", "region", "platform", "date_utc",
+                     "spot_usd_per_gpu_hour", "source", "regime"])
+    for s in series:
+        sku = s["skuId"]
+        prefix = [sku, s["model"], s["region"], s["platform"]]
+        for source, points in (("06.ai", backfill["points"].get(sku, ())),
+                               ("nebius_api", sorted(official_days[sku].items()))):
+            for day, value in points:
+                regime = "fixed_preemptible" if day < backfill["dynamicStart"] else "dynamic_spot"
+                writer.writerow([*prefix, day, value, source, regime])
+    return output.getvalue().encode()
+
+
 def archive_spot(now):
     end = now.replace(minute=0, second=0, microsecond=0)
     today = now.date().isoformat()
@@ -266,6 +325,9 @@ def archive_spot(now):
               "revisions": old.get("revisions", []),
               "series": sorted(series.values(), key=lambda s: (s["model"], s["region"], s["skuId"]))}
     result["gaps"] = find_gaps(result["series"], instant(result["retentionStart"]))
+    official_days = {s["skuId"]: complete_days(s["points"]) for s in result["series"]}
+    result["dailyBackfill"] = read_daily_backfill(result["series"], official_days)
+    daily = daily_csv(result["series"], official_days, result["dailyBackfill"])
     output = io.StringIO(newline="")
     writer = csv.writer(output, lineterminator="\n")
     writer.writerow(["sku_id", "model", "region", "platform", "hour_end_utc", "spot_usd_per_gpu_hour"])
@@ -283,6 +345,7 @@ def archive_spot(now):
             change.update(observedAt=iso(now), archive=str(raw_path))
         result["revisions"].extend(changes)
     publish(PUBLIC / "nebius.csv", output.getvalue().encode())
+    publish(PUBLIC / "nebius-daily.csv", daily)
     publish(path, encode(result))
     for gap in result["gaps"]:
         warn(f"{gap['skuId']} missing {gap['hours']} hours [{gap['start']}, {gap['end']}); {gap['outsideRetentionHours']} outside retention")

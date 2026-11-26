@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://06.ai/data/nebius-spot-daily.csv",
+  "pageUrl": "https://06.ai/trackers/gpu-spot-prices/",
+  "capturedAt": "2026-11-26",
+  "sha256": "c6759fed84700a78b22ade3f46a3ce6ecb07a2971783b82bac854e56e255f043",
+  "method": "UTC 自然日内 96 个 15 分钟区间末价的算术平均（GRANULARITY_MINUTE_15 / METHOD_LAST_PRICE）。仅使用分区完整日和官方对应 SKU 首个完整日之前的记录。",
+  "dynamicStart": "2026-10-08",
+  "validation": "13 个 SKU ID 与 Nebius 官方归档匹配。367 组同 SKU、同地区的完整日均对照，平均绝对误差为 0.01191 美元／GPU 小时。9/19 仅一个样本，已剔除。H200 eu-north2 的 06.ai 序列始于 11/18，未用于回填，合并日线由官方自 10/27 起覆盖该地区。"
+}

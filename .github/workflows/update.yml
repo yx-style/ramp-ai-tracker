@@ -86,7 +86,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/nebius/raw/ docs/data/nebius.json docs/data/nebius.csv
+          git add -- data/nebius/raw/ docs/data/nebius.json docs/data/nebius.csv docs/data/nebius-daily.csv
           if ! git diff --cached --quiet; then
             git commit -m "更新 Nebius GPU 小时报价"
             git push origin HEAD:main

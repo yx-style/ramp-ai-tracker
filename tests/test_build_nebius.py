@@ -2,6 +2,7 @@
 import contextlib
 import csv
 import gzip
+import hashlib
 import io
 import json
 import sys
@@ -25,12 +26,15 @@ class ArchiveTests(unittest.TestCase):
         root = Path(temp.name)
         self.public = root / "public"
         self.raw = root / "raw"
+        self.backfill = root / "backfill"
         self.end = datetime(2026, 11, 26, 7, tzinfo=timezone.utc)
         self.boundary = self.end - 720 * builder.HOUR
         self.models = {"a": "b300", "b": "h200"}
         self.values = {}
+        self.missing = set()
         self.patch("PUBLIC", self.public)
         self.patch("ARCHIVE", self.raw)
+        self.patch("BACKFILL", self.backfill)
         self.patch("pages", self.pages)
         self.patch("accepts_hour", lambda t: t >= self.boundary)
 
@@ -52,7 +56,8 @@ class ArchiveTests(unittest.TestCase):
                 points = []
                 while start < end:
                     start += builder.HOUR
-                    points.append({"timestamp": builder.iso(start), "value": self.values.get((sku, start), "2")})
+                    if (sku, start) not in self.missing:
+                        points.append({"timestamp": builder.iso(start), "value": self.values.get((sku, start), "2")})
                 row.update(currency="usd", unitTitle="GPU hour", points=points)
             result.append(row)
         return result, [{"url": endpoint, "body": {"items": result}}]
@@ -66,6 +71,77 @@ class ArchiveTests(unittest.TestCase):
         state = {"props": {"pageProps": {"__APOLLO_STATE__": {"prices": page}}}}
         html = '<script id="__NEXT_DATA__">' + json.dumps(state) + '</script>'
         return patch.object(builder, "fetch", return_value=html.encode())
+
+    def daily_rows(self):
+        with (self.public / "nebius-daily.csv").open() as f:
+            return list(csv.DictReader(f))
+
+    def write_backfill(self, content):
+        self.backfill.mkdir()
+        (self.backfill / "nebius-spot-daily.csv").write_bytes(content)
+        (self.backfill / "metadata.json").write_bytes(builder.encode({
+            "dynamicStart": "2026-10-08", "sha256": hashlib.sha256(content).hexdigest(),
+            "sourceUrl": "https://06.ai/data/nebius-spot-daily.csv",
+        }))
+
+    def test_missing_backfill_keeps_official_complete_days(self):
+        builder.archive_spot(self.end)
+        self.assertEqual(self.data()["dailyBackfill"], {"dynamicStart": "2026-10-08", "points": {}})
+        rows = self.daily_rows()
+        self.assertEqual(len(rows), 58)
+        self.assertEqual({(r["source"], r["regime"]) for r in rows}, {("nebius_api", "dynamic_spot")})
+        self.assertEqual(min(r["date_utc"] for r in rows), "2026-10-28")
+        self.assertEqual(max(r["date_utc"] for r in rows), "2026-11-25")
+
+    def test_backfill_stops_before_each_skus_first_complete_day(self):
+        first = datetime(2026, 10, 28, tzinfo=timezone.utc)
+        self.missing.add(("b", first + builder.HOUR))
+        # The 00:00 close belongs to the previous UTC date.
+        self.values["a", first] = "240"
+        self.values["a", first + 24 * builder.HOUR] = "26"
+        with contextlib.redirect_stderr(io.StringIO()):
+            builder.archive_spot(self.end)
+        original = self.data()
+        csv_before = (self.public / "nebius.csv").read_bytes()
+        raw_before = {p: p.read_bytes() for p in self.raw.rglob("*.gz")}
+        self.write_backfill(b"""date,gpu,region,avg_usd_per_gpu_hour,steps,sku_id
+2026-09-19,B300,r,4,1,a
+2026-09-20,B300,r,4,96,a
+2026-09-21,B300,all,8,96,a
+2026-10-07,B300,r,4,95,a
+2026-10-08,B300,r,3,96,a
+2026-10-27,B300,r,5,96,a
+2026-10-28,B300,r,6,96,a
+2026-10-29,B300,r,7,96,a
+2026-10-28,H200,r,8,96,b
+2026-10-29,H200,r,9,96,b
+2026-10-30,H200,r,9,96,unknown
+""")
+        with contextlib.redirect_stderr(io.StringIO()):
+            builder.archive_spot(self.end)
+        updated = self.data()
+        self.assertEqual(updated.pop("dailyBackfill")["points"], {
+            "a": [["2026-09-20", 4], ["2026-10-08", 3], ["2026-10-27", 5]],
+            "b": [["2026-10-28", 8]],
+        })
+        original.pop("dailyBackfill")
+        self.assertEqual(updated, original)
+        self.assertEqual((self.public / "nebius.csv").read_bytes(), csv_before)
+        self.assertEqual({p: p.read_bytes() for p in self.raw.rglob("*.gz")}, raw_before)
+        rows = self.daily_rows()
+        by_key = {(r["sku_id"], r["date_utc"]): r for r in rows}
+        self.assertEqual(len(rows), len(by_key))
+        self.assertEqual(list(rows[0]), ["sku_id", "model", "region", "platform", "date_utc",
+                                        "spot_usd_per_gpu_hour", "source", "regime"])
+        order = [(r["model"], r["region"], r["sku_id"], r["date_utc"]) for r in rows]
+        self.assertEqual(order, sorted(order))
+        self.assertEqual(by_key["a", "2026-09-20"]["regime"], "fixed_preemptible")
+        self.assertEqual(by_key["a", "2026-10-08"]["regime"], "dynamic_spot")
+        self.assertEqual(by_key["a", "2026-10-27"]["source"], "06.ai")
+        self.assertEqual(by_key["a", "2026-10-28"]["source"], "nebius_api")
+        self.assertEqual(float(by_key["a", "2026-10-28"]["spot_usd_per_gpu_hour"]), 3)
+        self.assertEqual(by_key["b", "2026-10-28"]["source"], "06.ai")
+        self.assertEqual(by_key["b", "2026-10-29"]["source"], "nebius_api")
 
     def test_rate_failure_keeps_new_hour_and_old_verified_card(self):
         builder.archive_spot(self.end)
