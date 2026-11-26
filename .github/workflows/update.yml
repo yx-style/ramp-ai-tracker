@@ -82,6 +82,8 @@ jobs:
       - name: Report rate update failure
         if: steps.rates.outcome == 'failure'
         run: echo "::warning::牌价更新失败，沿用已存牌价，继续提交现货归档。"
+      - name: Run Nebius archive regression tests
+        run: python -m unittest discover -s tests -p 'test_build_nebius.py' -v
       - name: Commit Nebius data only
         run: |
           git config user.name "github-actions[bot]"
@@ -91,13 +93,10 @@ jobs:
             git commit -m "更新 Nebius GPU 小时报价"
             git push origin HEAD:main
           fi
-      - name: Run Nebius archive regression tests
-        if: github.event_name == 'push'
-        run: python -m unittest discover -s tests -p 'test_build_nebius.py' -v
 
   package:
     needs: [update, nebius]
-    if: "!cancelled() && (needs.update.result == 'success' || needs.nebius.result == 'success')"
+    if: "!failure() && !cancelled() && (needs.update.result == 'success' || needs.nebius.result == 'success')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

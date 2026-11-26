@@ -31,23 +31,23 @@
     <div class="y-selectors">
       <label>型号 <select id="model"></select></label><label>地区 <select id="region"></select></label>
       <label>粒度 <select id="grain"><option value="day">日均</option><option value="hour">小时</option></select></label>
-      <label>时间范围 <select id="range"><option value="dynamic">10/08 起（动态现货）</option><option value="all">9/20 起（含固定挂牌）</option><option value="official">10/27 起（仅官方归档）</option></select></label>
+      <label>时间范围 <select id="range"><option value="dynamic">10/08 起（动态现货）</option><option value="all">全部历史（含固定挂牌）</option><option value="official">仅官方归档</option></select></label>
     </div>
     <div class="legend" id="nebius-legend"></div>
-    <p class="note" id="hour-note" hidden>小时视图仅显示 Nebius 官方归档，自 2026-10-26 08:00 UTC 起。</p>
+    <p class="note" id="hour-note" hidden>小时视图仅显示 Nebius 官方归档。</p>
     <canvas id="nebius-plot" aria-label="所选型号和地区的现货报价走势，具体数值见下表"></canvas>
     <p class="note" id="detail"></p><details><summary>查看图中数值</summary><div class="tablewrap"><table class="t" id="nebius-values"><thead><tr><th>UTC 区间起点</th><th>价格（美元）</th><th>地区数</th><th>来源／口径</th></tr></thead><tbody id="values"></tbody></table></div></details>
   </section>
   <section class="card method" id="method"><h2>方法与口径</h2>
-    <p>2026-09-20 至 10-26 使用 06.ai 冻结日线，取 UTC 自然日内 96 个 15 分钟区间末价的算术平均。10-08 启用动态现货定价，此前为固定可抢占挂牌价。官方于 11-02 取消现货价上限，现货价可以高于按需价。<a href="https://06.ai/trackers/gpu-spot-prices/">06.ai 追踪器</a> · <a href="https://nebius.com/blog/posts/introducing-spot-pricing-for-preemptible-vms">官方定价说明</a></p>
-    <p>官方接口的 METHOD_AVG_PRICE 取每小时内报价的算术平均。时间戳标记小时结束，本站减去一小时后按 UTC 自然日分组，取完整 24 小时的均价。各 SKU 自首个完整官方日切换至官方数据。367 组同 SKU、同地区完整日均的平均绝对差约为 $0.012／GPU 小时。官方标示的历史窗口为 30 天，本站每 6 小时更新归档。<a href="https://docs.nebius.com/signup-billing/spot-prices">接口文档</a></p>
-    <p>跨地区日均价对当日有完整报价的地区等权，卡片采用最近完整日。H200 截至 10-26 覆盖 eu-north1、eu-west1 和 us-central1。官方日线从 10-27 起纳入第 4 个地区 eu-north2，06.ai 从 11-18 才开始记录该地区。</p>
-    <p>按需牌价在 2026-10-01 上调，图中从该日起绘制最近核实的牌价参考线。<a href="https://nebius.com/prices">官网牌价表</a></p>
+    <p>历史回填使用 06.ai 冻结日线，取 UTC 自然日内 96 个 15 分钟区间末价的算术平均。10-08 启用动态现货定价，此前为固定可抢占挂牌价。官方于 11-02 取消现货价上限，现货价可以高于按需价。<a href="https://06.ai/trackers/gpu-spot-prices/">06.ai 追踪器</a> · <a href="https://nebius.com/blog/posts/introducing-spot-pricing-for-preemptible-vms">官方定价说明</a></p>
+    <p>官方接口的 METHOD_AVG_PRICE 取每小时内报价的算术平均。时间戳标记小时结束，本站减去一小时后按 UTC 自然日分组。下载的日线按 SKU 取完整 24 小时的均价，各 SKU 自首个完整官方日切换至官方数据。本次历史回填所用快照中，各序列自 2026-10-27 起均为官方数据。367 组同 SKU、同地区完整日均的平均绝对差约为 $0.012／GPU 小时。官方标示的历史窗口为 30 天，本站每 6 小时更新归档。<a href="https://docs.nebius.com/signup-billing/spot-prices">接口文档</a></p>
+    <p>图表先汇合同一型号、同一地区的官方小时报价，再计算完整 24 小时的地区均价。同一地区同一天同时有官方日均与回填时，采用官方日均。跨地区日均价对当日有完整报价的地区等权，卡片采用最近完整日。H200 截至 10-26 覆盖 eu-north1、eu-west1 和 us-central1。官方日线从 10-27 起纳入第 4 个地区 eu-north2，06.ai 从 11-18 才开始记录该地区。</p>
+    <p>2026-10-01 起，四款 HGX GPU（B300、B200、H200、H100）的按需牌价上调，RTX PRO 6000 维持 $1.80。图中自该日起绘制最近核实的按需牌价参考线。<a href="https://nebius.com/prices">官网牌价表</a></p>
     <p>每日重查接口可提供的全部小时报价，其余更新重查最近 24 小时。若官方修订报价，图表采用新值，JSON 保留修订前后的价格及原始响应位置。</p>
     <p id="coverage"></p><ul id="gap-list" hidden></ul>
   </section>
   <section class="card" id="downloads"><h2>下载数据</h2><p><a download href="data/nebius-daily.csv">合并日线 CSV（含 06.ai 历史回填）</a>　<a download href="data/nebius.csv">逐小时 CSV</a>　<a download href="data/nebius.json">完整 JSON（含按需价）</a>　<a href="https://github.com/yx-style/ramp-ai-tracker/tree/main/data/nebius/raw">原始响应存档</a></p></section>
 </main>
 <footer class="site-foot"><div class="wrap">Nebius AI Cloud · GPU 报价归档</div></footer>
-<script src="nebius.js?v=3"></script>
+<script src="nebius.js?v=4"></script>
 </body></html>

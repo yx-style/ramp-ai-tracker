@@ -206,25 +206,43 @@ def complete_days(points):
     return {day: sum(values) / 24 for day, values in days.items() if len(values) == 24}
 
 
-def read_daily_backfill(series, official_days):
+def read_backfill_source(previous):
     try:
         content = (BACKFILL / "nebius-spot-daily.csv").read_bytes()
-    except FileNotFoundError:
-        return {"dynamicStart": DYNAMIC_START, "points": {}}
+    except FileNotFoundError as exc:
+        previous = previous or {}
+        if ((BACKFILL / "metadata.json").exists() or previous.get("series")
+                or any(previous.get("points", {}).values())):
+            raise ValueError("Missing frozen 06.ai CSV: nebius-spot-daily.csv") from exc
+        return None
     metadata = json.loads((BACKFILL / "metadata.json").read_bytes())
     if hashlib.sha256(content).hexdigest() != metadata["sha256"]:
         raise ValueError("06.ai daily archive does not match its recorded SHA-256")
     if metadata["dynamicStart"] != DYNAMIC_START:
         raise ValueError("Unexpected 06.ai dynamic pricing start")
-    eligible = {s["skuId"]: s for s in series if official_days[s["skuId"]]}
-    first = {sku: min(official_days[sku]) for sku in eligible}
+    return content, metadata
+
+
+def read_daily_backfill(series, official_days, today, source):
+    if source is None:
+        return {"dynamicStart": DYNAMIC_START, "points": {}}
+    content, metadata = source
+    eligible = {s["skuId"]: s for s in series}
+    cutoff = {}
+    for sku, s in eligible.items():
+        first = today
+        if official_days[sku]:
+            first = min(official_days[sku])
+        elif s["points"]:
+            first = (instant(s["points"][0][0]) - HOUR).date().isoformat()
+        cutoff[sku] = min(first, today)
     points = {}
     for row in csv.DictReader(io.StringIO(content.decode("utf-8"), newline="")):
         sku = row["sku_id"]
         if row["region"] == "all" or row["steps"] != "96" or sku not in eligible:
             continue
         day = date.fromisoformat(row["date"]).isoformat()
-        if day >= first[sku]:
+        if day >= cutoff[sku]:
             continue
         s = eligible[sku]
         value = float(row["avg_usd_per_gpu_hour"])
@@ -235,7 +253,11 @@ def read_daily_backfill(series, official_days):
         if day in by_date:
             raise ValueError(f"Duplicate 06.ai daily quote for {sku} on {day}")
         by_date[day] = value
-    return {**metadata, "points": {sku: sorted(days.items()) for sku, days in points.items()}}
+    # Keep the daily series identifiable when there are no hourly series to display.
+    identities = [{key: s[key] for key in ("skuId", "model", "region")}
+                  for s in series if s["skuId"] in points]
+    return {**metadata, "points": {sku: sorted(days.items()) for sku, days in points.items()},
+            "series": identities}
 
 
 def daily_csv(series, official_days, backfill):
@@ -259,6 +281,7 @@ def archive_spot(now):
     today = now.date().isoformat()
     path = PUBLIC / "nebius.json"
     old = json.loads(path.read_bytes()) if path.exists() else {"series": []}
+    backfill_source = read_backfill_source(old.get("dailyBackfill"))
     if not path.exists() and ARCHIVE.exists() and any(ARCHIVE.rglob("*.gz")):
         raise ValueError("Restore merged history from git before updating")
     series = {s["skuId"]: s for s in old["series"]}
@@ -326,7 +349,7 @@ def archive_spot(now):
               "series": sorted(series.values(), key=lambda s: (s["model"], s["region"], s["skuId"]))}
     result["gaps"] = find_gaps(result["series"], instant(result["retentionStart"]))
     official_days = {s["skuId"]: complete_days(s["points"]) for s in result["series"]}
-    result["dailyBackfill"] = read_daily_backfill(result["series"], official_days)
+    result["dailyBackfill"] = read_daily_backfill(result["series"], official_days, today, backfill_source)
     daily = daily_csv(result["series"], official_days, result["dailyBackfill"])
     output = io.StringIO(newline="")
     writer = csv.writer(output, lineterminator="\n")

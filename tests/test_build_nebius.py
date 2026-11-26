@@ -93,6 +93,76 @@ class ArchiveTests(unittest.TestCase):
         self.assertEqual(min(r["date_utc"] for r in rows), "2026-10-28")
         self.assertEqual(max(r["date_utc"] for r in rows), "2026-11-25")
 
+    def test_missing_frozen_csv_preserves_published_archive(self):
+        self.write_backfill(b"""date,gpu,region,avg_usd_per_gpu_hour,steps,sku_id
+2026-09-20,B300,r,4,96,a
+""")
+        builder.archive_spot(self.end)
+        self.assertEqual(self.data()["dailyBackfill"]["points"], {"a": [["2026-09-20", 4]]})
+        (self.backfill / "nebius-spot-daily.csv").unlink()
+        files = [*self.public.iterdir(), *self.raw.rglob("*.gz")]
+        published = {path: path.read_bytes() for path in files}
+        for with_metadata in (True, False):
+            with self.subTest(with_metadata=with_metadata):
+                if not with_metadata:
+                    (self.backfill / "metadata.json").unlink()
+                with self.assertRaisesRegex(ValueError, "Missing frozen 06.ai CSV"):
+                    builder.archive_spot(self.end + builder.HOUR)
+                self.assertEqual({path: path.read_bytes() for path in files}, published)
+                self.assertEqual(set(self.raw.rglob("*.gz")), {path for path in files if path.suffix == ".gz"})
+
+    def test_missing_frozen_csv_also_protects_metadata_only_and_legacy_points(self):
+        self.backfill.mkdir()
+        metadata = self.backfill / "metadata.json"
+        metadata.write_text("{}")
+        with self.assertRaisesRegex(ValueError, "Missing frozen 06.ai CSV"):
+            builder.archive_spot(self.end)
+        self.assertFalse(self.public.exists())
+        metadata.unlink()
+        builder.publish(self.public / "nebius.json", builder.encode({
+            "series": [], "dailyBackfill": {"points": {"a": [["2026-09-20", 4]]}},
+        }))
+        with self.assertRaisesRegex(ValueError, "Missing frozen 06.ai CSV"):
+            builder.archive_spot(self.end)
+        self.assertFalse((self.public / "nebius-daily.csv").exists())
+
+    def test_partial_official_history_keeps_backfill_until_first_complete_day(self):
+        self.models = {"a": "b300"}
+        self.end = datetime(2026, 11, 1, 12, tzinfo=timezone.utc)
+        first_day = self.end.replace(hour=0)
+        self.boundary = first_day
+        self.patch("earliest_hour", lambda end: first_day)
+        self.write_backfill(b"""date,gpu,region,avg_usd_per_gpu_hour,steps,sku_id
+2026-09-20,B300,r,4,96,a
+2026-10-07,B300,r,4,95,a
+2026-10-08,B300,r,3,96,a
+2026-11-01,B300,r,7,96,a
+2026-11-02,B300,r,8,96,a
+""")
+        builder.archive_spot(self.end)
+        backfill = self.data()["dailyBackfill"]
+        self.assertEqual(backfill["points"], {"a": [["2026-09-20", 4], ["2026-10-08", 3]]})
+        self.assertEqual(backfill["series"], [{"skuId": "a", "model": "B300", "region": "r"}])
+        self.assertEqual([r["source"] for r in self.daily_rows()], ["06.ai", "06.ai"])
+
+        builder.archive_spot(first_day + 24 * builder.HOUR)
+        self.assertEqual(self.data()["dailyBackfill"], backfill)
+        self.assertEqual([(r["date_utc"], r["source"]) for r in self.daily_rows()], [
+            ("2026-09-20", "06.ai"), ("2026-10-08", "06.ai"), ("2026-11-01", "nebius_api"),
+        ])
+
+    def test_known_sku_without_observations_uses_only_finished_frozen_days(self):
+        self.write_backfill(b"""date,gpu,region,avg_usd_per_gpu_hour,steps,sku_id
+2026-11-25,B300,r,4,96,a
+2026-11-26,B300,r,3,96,a
+""")
+        source = builder.read_backfill_source(None)
+        backfill = builder.read_daily_backfill(
+            [{"skuId": "a", "model": "B300", "region": "r", "points": []}],
+            {"a": {}}, "2026-11-26", source,
+        )
+        self.assertEqual(backfill["points"], {"a": [("2026-11-25", 4)]})
+
     def test_backfill_stops_before_each_skus_first_complete_day(self):
         first = datetime(2026, 10, 28, tzinfo=timezone.utc)
         self.missing.add(("b", first + builder.HOUR))

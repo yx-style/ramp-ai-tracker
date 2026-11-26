@@ -5,7 +5,6 @@ const money = value => value == null ? '—' : '$' + value.toFixed(2);
 const mean = values => values.reduce((a, b) => a + b, 0) / values.length;
 const stamp = (time, hourly) => new Date(time).toISOString().slice(0, hourly ? 16 : 10).replace('T', ' ');
 const rateStart = Date.parse('2026-10-01');
-const officialSeam = Date.parse('2026-10-27');
 const styles = {
   fixed: {label: '06.ai 日线（固定挂牌）', color: '#737477', dash: []},
   dynamic: {label: '06.ai 日线（动态现货）', color: '#345e82', dash: [5, 3]},
@@ -14,7 +13,7 @@ const styles = {
   rate: {label: '最近核实的按需牌价（10/01 起）', color: '#555', dash: [4, 4]},
 };
 const regions = new Map();
-let data, dynamicStart, officialStart = Infinity, plotted = [], hourly, xs = [];
+let data, dynamicStart, plotted = [], hourly, xs = [];
 
 function append(map, key, value) {
   if (!map.has(key)) map.set(key, []);
@@ -68,14 +67,22 @@ function draw() {
   ctx.scale(scale, scale);
   xs = [];
   if (!plotted.length) return;
-  const start = plotted[0].t, end = plotted[plotted.length - 1].t, span = end - start || 1;
-  const markers = hourly ? [] : [[dynamicStart, '10/8 动态定价'], [officialSeam, '10/27 官方归档']]
-    .filter(([t]) => t >= start && t <= end);
+  const start = plotted[0].t, end = plotted[plotted.length - 1].t;
+  const markers = [];
+  if (!hourly) {
+    if (start <= dynamicStart && dynamicStart <= end) markers.push([dynamicStart, '10/8 动态定价']);
+    const official = plotted.find(p => p.source === 'official' || p.source === 'mixed');
+    if (official) {
+      const date = new Date(official.t);
+      const label = plotted.some(p => p.source === 'mixed') ? ' 开始纳入官方' : ' 官方归档';
+      markers.push([official.t, (date.getUTCMonth() + 1) + '/' + date.getUTCDate() + label]);
+    }
+  }
   const left = 46, right = w - 10, bottom = h - 32, top = markers.length ? 22 + markers.length * 15 : 14;
   const rate = end >= rateStart ? data.onDemand.usd[$('model').value] : null;
   const max = Math.ceil(plotted.reduce((a, p) => Math.max(a, p.v), rate || 1) * 1.08);
   const y = v => bottom - v / max * (bottom - top);
-  const x = t => left + (t - start) / span * (right - left);
+  const x = t => start === end ? (left + right) / 2 : left + (t - start) / (end - start) * (right - left);
   xs = plotted.map(p => x(p.t));
   ctx.font = '12px Arial, sans-serif';
   ctx.fillStyle = '#58585a';
@@ -95,9 +102,14 @@ function draw() {
     ctx.strokeStyle = '#a09a99';
     ctx.beginPath(); ctx.moveTo(at, labelY + 3); ctx.lineTo(at, bottom); ctx.stroke();
   });
-  if (rate != null && start !== end) {
+  if (rate != null) {
     ctx.setLineDash(styles.rate.dash); ctx.strokeStyle = styles.rate.color;
-    ctx.beginPath(); ctx.moveTo(x(Math.max(start, rateStart)), y(rate)); ctx.lineTo(right, y(rate)); ctx.stroke();
+    const at = x(Math.max(start, rateStart));
+    const short = start === end || at === right;
+    ctx.beginPath();
+    ctx.moveTo(short ? at - 12 : at, y(rate));
+    ctx.lineTo(short ? Math.min(right, at + 12) : right, y(rate));
+    ctx.stroke();
   }
   ctx.lineWidth = hourly ? 1.4 : 2;
   for (const source of new Set(plotted.map(p => p.source))) {
@@ -115,7 +127,8 @@ function draw() {
     ctx.setLineDash([]);
     ctx.fillStyle = color;
     plotted.forEach((p, i) => {
-      if (p.source !== source || (hourly && plotted.length > 1)) return;
+      if (p.source !== source) return;
+      if (hourly && (p.t - plotted[i - 1]?.t === hour || plotted[i + 1]?.t - p.t === hour)) return;
       ctx.beginPath(); ctx.arc(xs[i], y(p.v), 2.4, 0, Math.PI * 2); ctx.fill();
     });
   }
@@ -124,7 +137,7 @@ function draw() {
   ctx.fillStyle = '#58585a';
   for (let i = 0; i < ticks; i++) {
     const k = Math.round((plotted.length - 1) * i / Math.max(1, ticks - 1));
-    ctx.textAlign = !i ? 'left' : i === ticks - 1 ? 'right' : 'center';
+    ctx.textAlign = ticks === 1 ? 'center' : !i ? 'left' : i === ticks - 1 ? 'right' : 'center';
     ctx.fillText(stamp(plotted[k].t, false).slice(5), xs[k], bottom + 22);
   }
 }
@@ -159,47 +172,67 @@ function chooseModel() {
   render();
 }
 
+function regionQuotes({model, region}) {
+  if (!regions.has(model)) regions.set(model, new Map());
+  const byRegion = regions.get(model);
+  if (!byRegion.has(region)) byRegion.set(region, {hourly: new Map(), daily: new Map()});
+  return byRegion.get(region);
+}
+
 async function init() {
   const res = await fetch('data/nebius.json');
   if (!res.ok) throw new Error('HTTP ' + res.status);
   data = await res.json();
   dynamicStart = Date.parse(data.dailyBackfill?.dynamicStart || '2026-10-08');
-  let first = Infinity, last = 0, count = 0;
-  let backfillFirst = Infinity, backfillLast = -Infinity, officialLast = -Infinity;
+  let first = Infinity, last = -Infinity, count = 0;
   for (const s of data.series) {
-    if (!regions.has(s.model)) regions.set(s.model, new Map());
-    const model = regions.get(s.model);
-    if (!model.has(s.region)) model.set(s.region, {hourly: new Map(), daily: new Map()});
-    const quotes = model.get(s.region), days = new Map();
+    if (!s.points.length) continue;
+    const quotes = regionQuotes(s);
     for (const [end, value] of s.points) {
       const t = Date.parse(end) - hour;
       append(quotes.hourly, t, {v: value, source: 'official'});
-      append(days, Math.floor(t / day) * day, value);
       first = Math.min(first, t); last = Math.max(last, t + hour); count++;
     }
-    for (const [t, values] of days) {
-      if (values.length !== 24) continue;
-      append(quotes.daily, t, {v: mean(values), source: 'official'});
-      officialStart = Math.min(officialStart, t); officialLast = Math.max(officialLast, t);
-    }
+  }
+  const bySku = new Map((data.dailyBackfill?.series || []).map(s => [s.skuId, s]));
+  for (const s of data.series) bySku.set(s.skuId, s);
+  for (const s of bySku.values()) {
     for (const [date, value] of data.dailyBackfill?.points?.[s.skuId] || []) {
       const t = Date.parse(date);
-      append(quotes.daily, t, {v: value, source: t < dynamicStart ? 'fixed' : 'dynamic'});
-      backfillFirst = Math.min(backfillFirst, t); backfillLast = Math.max(backfillLast, t);
+      append(regionQuotes(s).daily, t, {v: value, source: t < dynamicStart ? 'fixed' : 'dynamic'});
+    }
+  }
+  let dayFirst = Infinity, dayLast = -Infinity, backfillFirst = Infinity, backfillLast = -Infinity;
+  for (const byRegion of regions.values()) {
+    for (const quotes of byRegion.values()) {
+      const days = new Map();
+      for (const [t, values] of quotes.hourly) {
+        append(days, Math.floor(t / day) * day, mean(values.map(p => p.v)));
+      }
+      for (const [t, values] of days) {
+        if (values.length === 24) quotes.daily.set(t, [{v: mean(values), source: 'official'}]);
+      }
+      for (const [t, values] of quotes.daily) {
+        dayFirst = Math.min(dayFirst, t); dayLast = Math.max(dayLast, t);
+        if (values[0].source !== 'official') {
+          backfillFirst = Math.min(backfillFirst, t); backfillLast = Math.max(backfillLast, t);
+        }
+      }
     }
   }
   const dateRange = (a, b) => stamp(a, false) + ' 至 ' + stamp(b, false);
-  const dayStatus = Number.isFinite(officialStart)
-    ? '日线 ' + dateRange(Math.min(backfillFirst, officialStart), Math.max(backfillLast, officialLast)) +
+  const dayStatus = Number.isFinite(dayFirst)
+    ? '日线 ' + dateRange(dayFirst, dayLast) +
       (Number.isFinite(backfillFirst) ? '（06.ai 补齐 ' + dateRange(backfillFirst, backfillLast) + '）' : '')
     : '暂无完整日线';
-  $('status').textContent = dayStatus + ' · 官方小时归档 ' + stamp(first, true) + ' 至 ' + stamp(last, true) +
-    ' UTC · ' + count.toLocaleString() + ' 条';
-  const gaps = data.gaps || [];
+  const hourStatus = count ? '官方小时归档 ' + stamp(first, true) + ' 至 ' + stamp(last, true) +
+    ' UTC · ' + count.toLocaleString() + ' 条' : '暂无官方小时归档';
+  $('status').textContent = dayStatus + ' · ' + hourStatus;
+  const gaps = (data.gaps || []).filter(gap => bySku.has(gap.skuId));
   const revised = (data.revisions || []).length;
   $('coverage').textContent = (gaps.length ? '已存序列有 ' + gaps.length + ' 段缺报。'
-    : '各序列在各自覆盖期内均无缺报。') + '累计记录 ' + revised + ' 条小时报价修订。';
-  const bySku = new Map(data.series.map(s => [s.skuId, s]));
+    : count ? '各序列在各自覆盖期内均无缺报。' : '暂无官方小时归档。') +
+    '累计记录 ' + revised + ' 条小时报价修订。';
   for (const gap of gaps) {
     const s = bySku.get(gap.skuId), li = document.createElement('li');
     li.textContent = s.model + ' · ' + s.region + ' · ' + stamp(Date.parse(gap.start), true) +
@@ -208,6 +241,12 @@ async function init() {
     $('gap-list').append(li);
   }
   $('gap-list').hidden = !gaps.length;
+  if (!regions.size) {
+    for (const id of ['model', 'region', 'grain', 'range']) $(id).disabled = true;
+    $('detail').textContent = '暂无现货报价可显示。';
+    return;
+  }
+  if (count) $('hour-note').textContent += ' 官方小时归档自 ' + stamp(first, true) + ' UTC 起。';
   const models = [...new Set(['B300', 'B200', 'H200', 'H100', ...regions.keys()])].filter(m => regions.has(m));
   for (const model of models) {
     $('model').add(new Option(model, model));
@@ -240,6 +279,10 @@ async function init() {
       showDetail(index);
     }
   };
+  const initialModel = $('model').value;
+  if (aggregate(initialModel, '', false).length && !aggregate(initialModel, '', false, 'dynamic').length) {
+    $('range').value = 'all';
+  }
   chooseModel();
   new ResizeObserver(draw).observe($('nebius-plot'));
 }
