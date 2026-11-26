@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="style.css?v=7">
+<title>Nebius GPU 租赁价格</title>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap"><a class="brand" href="index.html">ramp-ai-tracker</a>
+    <nav aria-label="页内导航"><a href="#charts">走势</a><a href="#method">口径</a><a href="#downloads">下载</a></nav>
+  </div>
+  <div class="switch-band"><nav class="wrap tracker-switch" aria-label="数据来源">
+    <a href="index.html">Ramp 企业 token 支出</a><a href="yipit.html">YipitData Anthropic</a>
+    <a href="nebius.html" aria-current="page">Nebius GPU 租价</a>
+  </nav></div>
+</header>
+<main class="wrap">
+  <header class="pack-head"><p class="eyebrow">Nebius AI Cloud</p><h1>GPU 租赁价格</h1>
+    <p class="dek">对照各地区可抢占 GPU 的现货报价与按需牌价。单位为美元／GPU 小时。</p>
+    <p class="meta" id="status" role="status">正在读取报价…</p>
+  </header>
+  <section class="kpis" id="kpis" aria-label="各型号最新完整日均价"></section>
+  <section class="card" id="charts"><h2>现货价格走势</h2>
+    <div class="y-selectors">
+      <label>型号 <select id="model"></select></label><label>地区 <select id="region"></select></label>
+      <label>粒度 <select id="grain"><option value="day">日均</option><option value="hour">小时</option></select></label>
+    </div>
+    <div class="legend"><span><i style="color:var(--accent)"></i>现货均价</span><span><i class="dash"></i>当前按需牌价</span></div>
+    <canvas id="nebius-plot" aria-label="所选型号和地区的现货报价走势，具体数值见下表"></canvas>
+    <p class="note" id="detail"></p><details><summary>查看图中数值</summary><div class="tablewrap"><table class="t"><thead><tr><th>UTC 区间起点</th><th>现货均价（美元）</th><th>地区数</th></tr></thead><tbody id="values"></tbody></table></div></details>
+  </section>
+  <section class="card method" id="method"><h2>方法与口径</h2>
+    <p>Nebius 根据供需按型号和地区调整报价，最快每 15 分钟更新。官方于 2026 年 11 月 2 日取消现货价上限，现货价可以高于按需价。<a href="https://nebius.com/blog/posts/introducing-spot-pricing-for-preemptible-vms">官方定价说明</a></p>
+    <p>接口的 METHOD_AVG_PRICE 取区间内报价的算术平均，不按持续时间或成交量加权。时间戳标记小时结束时刻。本站先减去一小时，再按 UTC 自然日计算日均价。官方仅提供最近 30 天，本地存档每 6 小时更新一次。<a href="https://docs.nebius.com/signup-billing/spot-prices">接口文档</a></p>
+    <p>同一地区先算小时均价，再取完整 24 小时的日均。跨地区指标对该时段有数据的地区等权，卡片采用最近完整日。图中虚线为当前按需牌价。<a href="https://nebius.com/prices">官网牌价表</a></p>
+  </section>
+  <section class="card" id="downloads"><h2>下载数据</h2><p><a download href="data/nebius.csv">逐小时 CSV</a>　<a download href="data/nebius.json">完整 JSON（含按需价）</a>　<a href="https://github.com/yx-style/ramp-ai-tracker/tree/main/data/nebius/raw">原始响应存档</a></p></section>
+</main>
+<footer class="site-foot"><div class="wrap">Nebius AI Cloud · GPU 小时报价</div></footer>
+<script src="nebius.js"></script>
+</body></html>

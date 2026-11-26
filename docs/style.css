@@ -148,3 +148,6 @@ table.t tr.focus td { background: var(--band); color: var(--fg); font-weight: 60
 #charts summary { cursor: pointer; }
 #charts details .tablewrap, #revisions .tablewrap { max-height: 370px; }
 #charts svg { overflow: hidden; }
+
+.site-head nav.tracker-switch { flex-wrap: wrap; column-gap: clamp(10px, 3vw, 22px); row-gap: 0; }
+#nebius-plot { width: 100%; height: 265px; display: block; }
