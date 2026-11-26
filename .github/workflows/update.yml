@@ -21,7 +21,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  queue: max
 
 jobs:
   update:
@@ -74,7 +74,14 @@ jobs:
         with:
           python-version: "3.12"
       - name: Archive Nebius GPU prices
-        run: python scripts/build_nebius.py
+        run: python scripts/build_nebius.py spot
+      - name: Verify on-demand rates
+        id: rates
+        continue-on-error: true
+        run: python scripts/build_nebius.py rates
+      - name: Report rate update failure
+        if: steps.rates.outcome == 'failure'
+        run: echo "::warning::牌价更新失败，沿用已存牌价，继续提交现货归档。"
       - name: Commit Nebius data only
         run: |
           git config user.name "github-actions[bot]"
@@ -84,6 +91,9 @@ jobs:
             git commit -m "更新 Nebius GPU 小时报价"
             git push origin HEAD:main
           fi
+      - name: Run Nebius archive regression tests
+        if: github.event_name == 'push'
+        run: python -m unittest discover -s tests -p 'test_build_nebius.py' -v
 
   package:
     needs: [update, nebius]

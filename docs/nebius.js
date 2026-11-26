@@ -126,7 +126,20 @@ async function init() {
     }
   }
   $('status').textContent = stamp(first, true) + ' 至 ' + stamp(last, true) + ' UTC · ' +
-    count.toLocaleString() + ' 条小时报价 · 牌价核对日 ' + data.onDemand.checked;
+    count.toLocaleString() + ' 条小时报价';
+  const gaps = data.gaps || [];
+  const revised = (data.revisions || []).length;
+  $('coverage').textContent = (gaps.length ? '已存序列有 ' + gaps.length + ' 段缺报。'
+    : '各序列在各自覆盖期内均无缺报。') + '累计记录 ' + revised + ' 条小时报价修订。';
+  const bySku = new Map(data.series.map(s => [s.skuId, s]));
+  for (const gap of gaps) {
+    const s = bySku.get(gap.skuId), li = document.createElement('li');
+    li.textContent = s.model + ' · ' + s.region + ' · ' + stamp(Date.parse(gap.start), true) +
+      ' 至 ' + stamp(Date.parse(gap.end), true) + ' UTC，缺 ' + gap.hours + ' 小时。';
+    if (gap.outsideRetentionHours) li.textContent += '其中 ' + gap.outsideRetentionHours + ' 小时已超出接口保留期。';
+    $('gap-list').append(li);
+  }
+  $('gap-list').hidden = !gaps.length;
   const models = [...new Set(['B300', 'B200', 'H200', 'H100', ...regions.keys()])].filter(m => regions.has(m));
   for (const model of models) {
     $('model').add(new Option(model, model));
@@ -136,6 +149,14 @@ async function init() {
     const lines = [['k', model + ' · 现货日均'], ['v', money(p?.v)], ['n', '按需 ' + money(rate) +
       '　现货／按需 ' + (p && rate ? (p.v / rate * 100).toFixed(1) + '%' : '—')],
       ['n', p ? stamp(p.t, false) + ' · ' + p.n + ' 个地区' : '尚无完整日']];
+    const info = data.onDemand.byModel?.[model];
+    const checked = info ? info.checked : data.onDemand.checked;
+    if (checked) lines.push(['n', '牌价核实于 ' + checked]);
+    if (info?.status === 'unverified') lines.push(['n', info.attempted + ' 未核实：' + info.reason]);
+    if (info?.lastChange) {
+      const change = info.lastChange;
+      lines.push(['n', change.observed + ' 核实调价：' + money(change.from) + ' → ' + money(change.to)]);
+    }
     for (const [cls, text] of lines) {
       const line = document.createElement('div');
       line.className = cls; line.textContent = text; el.append(line);
