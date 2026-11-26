@@ -744,6 +744,18 @@ sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T06:00:00Z,2.5
 sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T07:00:00Z,2.4
 sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T08:00:00Z,2.85
 sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T09:00:00Z,3.45
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T10:00:00Z,3.45
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T11:00:00Z,3.45
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T12:00:00Z,3.75
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T13:00:00Z,4.05
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T14:00:00Z,4.05
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T15:00:00Z,3.9
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T16:00:00Z,3.75
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T17:00:00Z,3.5
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T18:00:00Z,3.75
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T19:00:00Z,3.866666667
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T20:00:00Z,3.55
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26T21:00:00Z,3.25
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-10-26T09:00:00Z,3.8
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-10-26T10:00:00Z,4.05
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-10-26T11:00:00Z,4.35
@@ -1489,6 +1501,18 @@ sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T06:00:00Z,3.5
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T07:00:00Z,3.5
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T08:00:00Z,3.5
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T09:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T10:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T11:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T12:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T13:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T14:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T15:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T16:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T17:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T18:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T19:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T20:00:00Z,3.5
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26T21:00:00Z,3.5
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-10-26T09:00:00Z,9.19
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-10-26T10:00:00Z,9.49
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-10-26T11:00:00Z,9.49
@@ -2234,6 +2258,18 @@ sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T06:00:00Z,1.65
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T07:00:00Z,1.65
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T08:00:00Z,1.95
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T09:00:00Z,2.25
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T10:00:00Z,2.7
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T11:00:00Z,3.0
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T12:00:00Z,3.15
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T13:00:00Z,3.4
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T14:00:00Z,3.15
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T15:00:00Z,3.3
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T16:00:00Z,3.9
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T17:00:00Z,4.5
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T18:00:00Z,4.65
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T19:00:00Z,4.35
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T20:00:00Z,4.35
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26T21:00:00Z,4.65
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-10-26T09:00:00Z,2.95
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-10-26T10:00:00Z,2.5
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-10-26T11:00:00Z,2.05
@@ -2979,6 +3015,18 @@ sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T06:00:00Z,2.74
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T07:00:00Z,2.826666667
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T08:00:00Z,2.85
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T09:00:00Z,2.7
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T10:00:00Z,2.85
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T11:00:00Z,3.3
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T12:00:00Z,3.75
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T13:00:00Z,4.05
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T14:00:00Z,4.35
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T15:00:00Z,4.2
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T16:00:00Z,3.75
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T17:00:00Z,3.9
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T18:00:00Z,4.05
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T19:00:00Z,3.8
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T20:00:00Z,3.95
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26T21:00:00Z,3.85
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-10-26T09:00:00Z,0.99
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-10-26T10:00:00Z,0.99
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-10-26T11:00:00Z,0.99
@@ -3724,6 +3772,18 @@ sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T06:00:00Z,3.04
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T07:00:00Z,2.59
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T08:00:00Z,2.44
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T09:00:00Z,2.29
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T10:00:00Z,2.14
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T11:00:00Z,2.59
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T12:00:00Z,2.74
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T13:00:00Z,2.74
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T14:00:00Z,3.04
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T15:00:00Z,3.64
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T16:00:00Z,4.24
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T17:00:00Z,4.24
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T18:00:00Z,4.196666667
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T19:00:00Z,4.55
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T20:00:00Z,4.85
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26T21:00:00Z,5.0
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-10-26T09:00:00Z,0.95
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-10-26T10:00:00Z,0.95
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-10-26T11:00:00Z,0.95
@@ -4469,6 +4529,18 @@ sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T06:00:00Z,1.85
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T07:00:00Z,1.55
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T08:00:00Z,1.4
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T09:00:00Z,1.4
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T10:00:00Z,1.25
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T11:00:00Z,1.4
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T12:00:00Z,1.55
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T13:00:00Z,1.25
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T14:00:00Z,0.95
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T15:00:00Z,0.795
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T16:00:00Z,0.845
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T17:00:00Z,0.845
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T18:00:00Z,0.8
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T19:00:00Z,0.81
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T20:00:00Z,0.8
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26T21:00:00Z,0.79
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-10-26T09:00:00Z,1.25
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-10-26T10:00:00Z,1.25
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-10-26T11:00:00Z,1.4
@@ -5214,6 +5286,18 @@ sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T06:00:00Z,1.85
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T07:00:00Z,1.85
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T08:00:00Z,1.85
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T09:00:00Z,1.6
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T10:00:00Z,1.55
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T11:00:00Z,1.7
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T12:00:00Z,1.55
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T13:00:00Z,1.25
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T14:00:00Z,1.1
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T15:00:00Z,1.25
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T16:00:00Z,1.55
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T17:00:00Z,2.0
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T18:00:00Z,1.85
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T19:00:00Z,1.55
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T20:00:00Z,1.7
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26T21:00:00Z,2.15
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-10-26T09:00:00Z,0.79
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-10-26T10:00:00Z,0.79
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-10-26T11:00:00Z,0.79
@@ -5959,6 +6043,18 @@ sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T06:00:00Z,1.75
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T07:00:00Z,2.0
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T08:00:00Z,1.75
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T09:00:00Z,1.5
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T10:00:00Z,1.45
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T11:00:00Z,1.45
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T12:00:00Z,1.45
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T13:00:00Z,1.15
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T14:00:00Z,0.96
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T15:00:00Z,1.19
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T16:00:00Z,0.99
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T17:00:00Z,1.24
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T18:00:00Z,1.24
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T19:00:00Z,0.94
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T20:00:00Z,0.79
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26T21:00:00Z,0.79
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-10-26T09:00:00Z,5.24
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-10-26T10:00:00Z,5.39
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-10-26T11:00:00Z,5.39
@@ -6704,6 +6800,18 @@ sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T06:00:00Z,1.8
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T07:00:00Z,1.75
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T08:00:00Z,1.65
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T09:00:00Z,1.55
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T10:00:00Z,1.25
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T11:00:00Z,1.55
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T12:00:00Z,1.85
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T13:00:00Z,1.4
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T14:00:00Z,1.25
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T15:00:00Z,1.55
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T16:00:00Z,1.85
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T17:00:00Z,1.9
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T18:00:00Z,1.85
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T19:00:00Z,1.85
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T20:00:00Z,1.9
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26T21:00:00Z,1.85
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-10-26T09:00:00Z,1.15
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-10-26T10:00:00Z,1.6
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-10-26T11:00:00Z,1.95
@@ -7449,6 +7557,18 @@ sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T06:00:00Z,2.0
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T07:00:00Z,1.75
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T08:00:00Z,1.833333333
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T09:00:00Z,1.85
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T10:00:00Z,1.55
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T11:00:00Z,1.5
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T12:00:00Z,1.75
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T13:00:00Z,2.05
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T14:00:00Z,2.35
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T15:00:00Z,2.65
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T16:00:00Z,3.1
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T17:00:00Z,3.55
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T18:00:00Z,4.0
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T19:00:00Z,4.45
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T20:00:00Z,4.45
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26T21:00:00Z,4.15
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-10-26T09:00:00Z,1.38
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-10-26T10:00:00Z,1.38
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-10-26T11:00:00Z,1.38
@@ -8194,6 +8314,18 @@ sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T06:00:
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T07:00:00Z,1.29
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T08:00:00Z,1.38
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T09:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T10:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T11:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T12:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T13:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T14:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T15:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T16:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T17:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T18:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T19:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T20:00:00Z,1.38
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26T21:00:00Z,1.38
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-10-26T09:00:00Z,1.38
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-10-26T10:00:00Z,1.38
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-10-26T11:00:00Z,1.38
@@ -8939,6 +9071,18 @@ sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T06:00:
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T07:00:00Z,0.7945
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T08:00:00Z,0.889666667
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T09:00:00Z,0.94
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T10:00:00Z,1.235
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T11:00:00Z,1.083333333
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T12:00:00Z,0.79
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T13:00:00Z,0.94
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T14:00:00Z,1.183333333
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T15:00:00Z,1.23
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T16:00:00Z,1.38
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T17:00:00Z,1.23
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T18:00:00Z,0.935
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T19:00:00Z,0.89
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T20:00:00Z,0.94
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26T21:00:00Z,0.94
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-10-26T09:00:00Z,0.94
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-10-26T10:00:00Z,0.79
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-10-26T11:00:00Z,0.94
@@ -9684,3 +9828,15 @@ sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T06:00:
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T07:00:00Z,1.09
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T08:00:00Z,0.7945
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T09:00:00Z,0.7945
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T10:00:00Z,0.89
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T11:00:00Z,0.7945
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T12:00:00Z,0.893
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T13:00:00Z,0.94
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T14:00:00Z,0.94
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T15:00:00Z,1.24
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T16:00:00Z,1.09
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T17:00:00Z,0.94
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T18:00:00Z,1.326666667
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T19:00:00Z,1.5
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T20:00:00Z,1.4
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26T21:00:00Z,1.5
