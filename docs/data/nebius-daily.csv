@@ -66,6 +66,7 @@ sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-22,4.014611111125
 sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-23,3.110388888875,nebius_api,dynamic_spot
 sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-24,3.3052083333333333,nebius_api,dynamic_spot
 sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-25,3.5,nebius_api,dynamic_spot
+sku-e00k58wq19wjszct65fwm,B200,me-west1,gpu-b200-sxm-a,2026-11-26,3.315277777791666,nebius_api,dynamic_spot
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-09-20,3.95,06.ai,fixed_preemptible
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-09-21,3.95,06.ai,fixed_preemptible
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-09-22,3.95,06.ai,fixed_preemptible
@@ -133,6 +134,7 @@ sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-22,2.05416666666
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-23,2.891666666666667,nebius_api,dynamic_spot
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-24,3.686805555541667,nebius_api,dynamic_spot
 sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-25,2.7687500000000003,nebius_api,dynamic_spot
+sku-e00fjjc4gwdx48pck9b46,B200,us-central1,gpu-b200-sxm,2026-11-26,3.4128472222083333,nebius_api,dynamic_spot
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-09-20,4.3,06.ai,fixed_preemptible
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-09-21,4.3,06.ai,fixed_preemptible
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-09-22,4.3,06.ai,fixed_preemptible
@@ -200,6 +202,7 @@ sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-22,5.175,nebius_api
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-23,6.652083333333334,nebius_api,dynamic_spot
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-24,10.485416666666667,nebius_api,dynamic_spot
 sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-25,7.23125,nebius_api,dynamic_spot
+sku-e00vd4x28cozliwb6g4vh,B300,eu-west2,gpu-b300-sxm,2026-11-26,3.3937500000000003,nebius_api,dynamic_spot
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-09-20,4.3,06.ai,fixed_preemptible
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-09-21,4.3,06.ai,fixed_preemptible
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-09-22,4.3,06.ai,fixed_preemptible
@@ -267,6 +270,7 @@ sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-22,5.7875000000000
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-23,4.231944444458333,nebius_api,dynamic_spot
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-24,6.378125,nebius_api,dynamic_spot
 sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-25,5.22125,nebius_api,dynamic_spot
+sku-e00fmto201j24eyp0841g,B300,uk-south1,gpu-b300-sxm,2026-11-26,3.342361111125,nebius_api,dynamic_spot
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-09-20,4.3,06.ai,fixed_preemptible
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-09-21,4.3,06.ai,fixed_preemptible
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-09-22,4.3,06.ai,fixed_preemptible
@@ -334,6 +338,7 @@ sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-22,5.5406249999999
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-23,6.480416666666667,nebius_api,dynamic_spot
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-24,11.402500000000002,nebius_api,dynamic_spot
 sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-25,4.95875,nebius_api,dynamic_spot
+sku-e00hfg6dlxtt9ji6fqo9u,B300,us-north1,gpu-b300-sxm,2026-11-26,3.5427777777916667,nebius_api,dynamic_spot
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-09-20,2.15,06.ai,fixed_preemptible
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-09-21,2.15,06.ai,fixed_preemptible
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-09-22,2.15,06.ai,fixed_preemptible
@@ -401,6 +406,7 @@ sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-22,1.5509027777916
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-23,1.3332291666666667,nebius_api,dynamic_spot
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-24,1.9885416666666667,nebius_api,dynamic_spot
 sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-25,1.6285,nebius_api,dynamic_spot
+sku-e00ljkedv5qtbwhikuoct,H100,eu-north1,gpu-h100-sxm,2026-11-26,1.1291944444583333,nebius_api,dynamic_spot
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-09-20,2.45,06.ai,fixed_preemptible
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-09-21,2.45,06.ai,fixed_preemptible
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-09-22,2.45,06.ai,fixed_preemptible
@@ -468,6 +474,7 @@ sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-22,2.0091666666666
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-23,1.6343472222083333,nebius_api,dynamic_spot
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-24,2.0704166666666666,nebius_api,dynamic_spot
 sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-25,1.6229166666666668,nebius_api,dynamic_spot
+sku-e00agrh84hf7fwlrgsfsv,H200,eu-north1,gpu-h200-sxm,2026-11-26,1.7166666666666668,nebius_api,dynamic_spot
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-10-27,0.79,nebius_api,dynamic_spot
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-10-28,0.79,nebius_api,dynamic_spot
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-10-29,0.79,nebius_api,dynamic_spot
@@ -498,6 +505,7 @@ sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-22,1.1149305555416
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-23,1.5141666666666669,nebius_api,dynamic_spot
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-24,1.3497222222499998,nebius_api,dynamic_spot
 sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-25,0.9670833333333334,nebius_api,dynamic_spot
+sku-e00l6fc62duwaorcm7u4l,H200,eu-north2,gpu-h200-sxm,2026-11-26,1.2264583333333332,nebius_api,dynamic_spot
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-09-20,2.45,06.ai,fixed_preemptible
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-09-21,2.45,06.ai,fixed_preemptible
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-09-22,2.45,06.ai,fixed_preemptible
@@ -565,6 +573,7 @@ sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-22,1.04972222225,ne
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-23,1.1926666666666665,nebius_api,dynamic_spot
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-24,1.7249999999999999,nebius_api,dynamic_spot
 sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-25,1.4139583333333334,nebius_api,dynamic_spot
+sku-e00dh1moiqg9mc5ix6wj2,H200,eu-west1,gpu-h200-sxm,2026-11-26,1.64875,nebius_api,dynamic_spot
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-09-20,2.45,06.ai,fixed_preemptible
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-09-21,2.45,06.ai,fixed_preemptible
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-09-22,2.45,06.ai,fixed_preemptible
@@ -632,6 +641,7 @@ sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-22,1.30277777779
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-23,1.7947222222499999,nebius_api,dynamic_spot
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-24,1.7229166666666667,nebius_api,dynamic_spot
 sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-25,1.4364583333333334,nebius_api,dynamic_spot
+sku-e00em8l461xmyihec7sr8,H200,us-central1,gpu-h200-sxm,2026-11-26,2.572013888875,nebius_api,dynamic_spot
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-09-20,0.95,06.ai,fixed_preemptible
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-09-21,0.95,06.ai,fixed_preemptible
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-09-22,0.95,06.ai,fixed_preemptible
@@ -699,6 +709,7 @@ sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-22,0.7943
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-23,1.0417361111249999,nebius_api,dynamic_spot
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-24,1.194763888875,nebius_api,dynamic_spot
 sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-25,1.1045,nebius_api,dynamic_spot
+sku-e00g61h0323jih8tkg5jv,RTX PRO 6000,eu-south1,gpu-rtx6000-a,2026-11-26,1.3468055555416667,nebius_api,dynamic_spot
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-09-20,0.95,06.ai,fixed_preemptible
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-09-21,0.95,06.ai,fixed_preemptible
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-09-22,0.95,06.ai,fixed_preemptible
@@ -766,6 +777,7 @@ sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-22,1.1035
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-23,1.2849305555833332,nebius_api,dynamic_spot
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-24,1.29784722225,nebius_api,dynamic_spot
 sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-25,1.1895,nebius_api,dynamic_spot
+sku-e00lxawt0lavf9i0dutiz,RTX PRO 6000,uk-south2,gpu-rtx6000-a,2026-11-26,1.0158680555416666,nebius_api,dynamic_spot
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-09-20,0.95,06.ai,fixed_preemptible
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-09-21,0.95,06.ai,fixed_preemptible
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-09-22,0.95,06.ai,fixed_preemptible
@@ -833,3 +845,4 @@ sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-22,1.0389
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-23,1.287118055625,nebius_api,dynamic_spot
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-24,1.3531597222083331,nebius_api,dynamic_spot
 sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-25,1.2134722222083334,nebius_api,dynamic_spot
+sku-e00otwkvc6gea6nmvvsda,RTX PRO 6000,us-central1,gpu-rtx6000,2026-11-26,1.0759652777916666,nebius_api,dynamic_spot
