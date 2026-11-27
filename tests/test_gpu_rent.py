@@ -1,5 +1,8 @@
 """Regression checks for independent price feeds and the published archive."""
 import csv
+import os
+import shutil
+import subprocess
 import gzip
 import hashlib
 import json
@@ -66,13 +69,13 @@ class PriceTests(unittest.TestCase):
                     builder.verify(parsed)
                     for row in rows:
                         if row["raw"] == raw:
-                            self.assertIn({k: v for k, v in row.items() if k != "raw"}, parsed)
+                            self.assertIn({k: v for k, v in row.items() if k not in ("raw", "url")}, parsed)
 
     def test_bad_response_and_partial_retry(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             feeds = {"demo": ("Test", "https://example.com/prices", json.loads)}
-            with patch.object(builder, "ROOT", root), patch.object(builder, "DATA", root / "data"), patch.dict(FEEDS, feeds):
+            with patch.object(builder, "ROOT", root), patch.object(builder, "DATA", root / "data"), patch.object(builder, "PUBLIC", root / "public"), patch.dict(FEEDS, feeds):
                 rows = [rate("NVIDIA H100", 4), rate("NVIDIA B200", 6)]
                 date = "2026-11-27"
                 path = root / "data/demo/observations.json"
@@ -93,7 +96,7 @@ class PriceTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             data = Path(tmp)
             feeds = {"offline": None, "available": None}
-            with patch.object(builder, "DATA", data), patch.dict(FEEDS, feeds, clear=True), \
+            with patch.object(builder, "DATA", data), patch.object(builder, "PUBLIC", data), patch.dict(FEEDS, feeds, clear=True), \
                     patch.object(builder, "refresh", side_effect=[ValueError("HTTP 503"), 0]) as refresh, \
                     patch.object(builder, "export") as export, patch.object(sys, "argv", ["build_gpu_rent.py"]):
                 self.assertEqual(builder.main(), 0)
@@ -135,7 +138,7 @@ class PriceTests(unittest.TestCase):
         row.find_all("td", recursive=False)[1].decompose()
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            with patch.object(builder, "ROOT", root), patch.object(builder, "DATA", root / "data"):
+            with patch.object(builder, "ROOT", root), patch.object(builder, "DATA", root / "data"), patch.object(builder, "PUBLIC", root / "public"):
                 with patch.object(builder, "download", return_value=body):
                     builder.refresh("together", "2026-11-27")
                 path = root / "data/together/observations.json"
@@ -179,7 +182,7 @@ class PriceTests(unittest.TestCase):
     def test_missing_product_warns_each_day_until_it_returns(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            with patch.object(builder, "ROOT", root), patch.object(builder, "DATA", root / "data"), \
+            with patch.object(builder, "ROOT", root), patch.object(builder, "DATA", root / "data"), patch.object(builder, "PUBLIC", root / "public"), \
                     patch.dict(FEEDS, {"demo": ("Test", "https://example.com", json.loads)}, clear=True):
                 rows = [rate("H100", 4), rate("B200", 6)]
                 for i, (returned, missing) in enumerate([(rows, 0), (rows[:1], 1), (rows[:1], 1), (rows, 0)]):
@@ -200,18 +203,8 @@ class PriceTests(unittest.TestCase):
                                 for r in new_status.values()))
             self.assertEqual(original, (public / "gpu-rent.csv").read_bytes())
 
-    def test_published_dates_cover_historical_and_daily_inputs(self):
-        with (builder.PUBLIC / "gpu-rent.csv").open() as f:
-            keys = {tuple(r[k] for k in builder.FIELDS) + (r["date"],) for r in csv.DictReader(f)}
-        historical = json.loads((builder.DATA / "historical.json").read_bytes())
-        self.assertTrue(historical)
-        for r in historical:
-            self.assertIn(tuple(r[k] for k in builder.FIELDS) + (r["date"],), keys)
-        for feed, (source, _, _) in FEEDS.items():
-            dates = json.loads((builder.DATA / feed / "observations.json").read_bytes())
-            for date, rows in dates.items():
-                for r in rows:
-                    self.assertIn((source,) + tuple(r[k] for k in builder.FIELDS[1:]) + (date,), keys)
+    def test_published_files_match_all_inputs(self):
+        builder.validate_exports()
 
     def test_contracts_in_pages_checkout(self):
         validate_contracts(builder.PUBLIC / "gpu-contracts.json")
@@ -258,3 +251,159 @@ class PriceTests(unittest.TestCase):
             body = gzip.decompress(path.read_bytes())
             self.assertEqual(json.loads(body), oracle_gpu_items(body))
             self.assertEqual(set(json.loads(body)), {"lastUpdated", "items"})
+
+    def test_matching_exports_still_reject_removed_daily_series_and_tenfold_price(self):
+        # Change only files offered for download. The same checkout's source archives stay intact.
+        with tempfile.TemporaryDirectory() as tmp:
+            public = Path(tmp)
+            for name in ("gpu-rent.csv", "gpu-rent.json", "nebius-daily.csv"):
+                shutil.copy2(builder.PUBLIC / name, public / name)
+            with patch.object(builder, "PUBLIC", public):
+                csvpath, jsonpath = public / "gpu-rent.csv", public / "gpu-rent.json"
+                with csvpath.open() as f:
+                    rows = list(csv.DictReader(f))
+                data = json.loads(jsonpath.read_bytes())
+                original_csv, original_json = csvpath.read_bytes(), jsonpath.read_bytes()
+                spot = {"06.ai（Nebius）", "Nebius 现货"}
+                for fault in ("drop spot", "change H100"):
+                    with self.subTest(fault=fault):
+                        changed_rows = [r.copy() for r in rows]
+                        changed_data = json.loads(original_json)
+                        if fault == "drop spot":
+                            changed_rows = [r for r in changed_rows if r["source"] not in spot]
+                            changed_data["series"] = [s for s in data["series"] if s["source"] not in spot]
+                            self.assertLess(len(changed_rows), len(rows))
+                        else:
+                            def target(r):
+                                return (r["source"], r["product"], r["region"]) == (
+                                    "AWS EC2", "p5.48xlarge", "US West (N. California)")
+                            row, = [r for r in changed_rows if target(r) and r["date"] == "2026-11-27"]
+                            point, = [p for s in changed_data["series"] if target(s)
+                                      for p in s["points"] if p[0] == row["date"]]
+                            self.assertEqual(float(row["usd_per_gpu_hour"]), 8.6)
+                            row["usd_per_gpu_hour"], point[1] = "86.0", 86.0
+                        with csvpath.open("w", newline="") as f:
+                            writer = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
+                            writer.writeheader()
+                            writer.writerows(changed_rows)
+                        jsonpath.write_bytes(builder.encode(changed_data))
+                        with self.assertRaisesRegex(ValueError, "gpu-rent.csv"):
+                            builder.validate_exports()
+                        csvpath.write_bytes(original_csv)
+                        with self.assertRaisesRegex(ValueError, "gpu-rent.json"):
+                            builder.validate_exports()
+                        jsonpath.write_bytes(original_json)
+                        builder.validate_exports()
+
+    def test_official_day_replaces_only_the_matching_backfill_day(self):
+        with price_archive() as (_, public):
+            daily = public / "nebius-daily.csv"
+            original = daily.read_text()
+            daily.write_text(original + "06.ai,B200,dynamic_spot,US,HGX,2,4,2025-01-03\n")
+            builder.export()
+            with patch.object(builder, "download", return_value=json.dumps([rate("B200", 7)]).encode()):
+                builder.refresh("west", "2025-11-28")
+            for wrong in ("nebius_api,B200,dynamic_spot,EU,HGX,2,3.7,2025-01-03",
+                          "nebius_api,B200,dynamic_spot,US,HGX,1,3.7,2025-01-03",
+                          "nebius_api,B200,dynamic_spot,US,HGX,2,3.7,2025-01-04"):
+                daily.write_text(original + wrong + "\n")
+                with self.assertRaisesRegex(ValueError, "遗漏已发布"):
+                    builder.export()
+            daily.write_text(original + "nebius_api,B200,dynamic_spot,US,HGX,2,3.7,2025-01-03\n")
+            builder.export()
+            builder.validate_exports()
+            with (public / "gpu-rent.csv").open() as f:
+                rows = list(csv.DictReader(f))
+            new, = [r for r in rows if r["date"] == "2025-01-03"]
+            self.assertEqual((new["source"], float(new["usd_per_gpu_hour"])), ("Nebius 现货", 3.7))
+            self.assertTrue(any(r["source"] == "west" and r["date"] == "2025-11-28" for r in rows))
+
+    def test_parseable_archive_recovers_day_and_row_without_overwriting_new_quote(self):
+        with price_archive() as (data, public):
+            with patch.object(builder, "download", return_value=json.dumps([rate("B200", 6), rate("H100", 4)]).encode()):
+                builder.refresh("east", "2025-11-27")
+            builder.export()
+            path = data / "east/observations.json"
+            dates = json.loads(path.read_bytes())
+            del dates["2025-11-26"]
+            dates["2025-11-27"].pop()
+            path.write_text(json.dumps(dates))
+            with patch.object(builder, "download", return_value=json.dumps([rate("B200", 7)]).encode()):
+                self.assertEqual(builder.refresh("east", "2025-11-27"), 1)
+                builder.refresh("west", "2025-11-28")
+            builder.export()
+            builder.validate_exports()
+            with (public / "gpu-rent.csv").open() as f:
+                quotes = {(r["source"], r["date"], r["model"]): float(r["usd_per_gpu_hour"]) for r in csv.DictReader(f)}
+            self.assertEqual(quotes["east", "2025-11-26", "B200"], 5)
+            self.assertEqual(quotes["east", "2025-11-27", "H100"], 4)
+            self.assertEqual(quotes["east", "2025-11-27", "B200"], 7)
+            self.assertEqual(quotes["west", "2025-11-28", "B200"], 7)
+
+    def test_recovery_preserves_original_query_and_skips_curated_history(self):
+        with price_archive() as (data, public):
+            path = data / "east/observations.json"
+            previous = json.loads(path.read_bytes())
+            day = "2025-11-26"
+            url = "https://example.com/retail?region=all"
+            previous[day][0]["url"] = url
+            path.write_text(json.dumps(previous))
+            hist = data / "historical.json"
+            rows = json.loads(hist.read_bytes())
+            snapshot = builder.archive("east", b"old query", "2025-11-25")
+            rows.append(dict(rate("H100", 3), source="east", date="2025-11-25", url=url, raw=snapshot))
+            hist.write_text(json.dumps(rows))
+            builder.export()
+            original = (public / "gpu-rent.csv").read_bytes()
+            path.write_text("{invalid")
+            builder.export()
+            self.assertEqual(json.loads(path.read_bytes()), previous)
+            self.assertEqual((public / "gpu-rent.csv").read_bytes(), original)
+            builder.validate_exports()
+
+    def test_only_changed_gpu_files_require_the_packaging_gate(self):
+        script = builder.ROOT / "scripts/gpu_pages_scope.sh"
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "docs/data").mkdir(parents=True)
+            artifact = root / "docs/gpu-rent-revision.txt"
+            output = root / "output"
+            # Simulate Pages serving exactly the last successfully uploaded revision.
+            curl = root / "curl"
+            curl.write_text('#!/bin/sh\nwhile [ "$1" != "-o" ]; do shift; done\n'
+                            'if test -f deployed; then cat deployed > "$2"; printf 200; else printf 404; fi\n')
+            curl.chmod(0o755)
+            env = dict(os.environ, PATH=str(root) + os.pathsep + os.environ["PATH"], GITHUB_OUTPUT=str(output),
+                       PAGES_URL="https://test.invalid", GITHUB_RUN_ID="1", GITHUB_RUN_ATTEMPT="1")
+            def git(*args):
+                subprocess.run(["git", "-c", "user.name=test", "-c", "user.email=test@example.invalid", *args],
+                               cwd=root, check=True, capture_output=True)
+            def change(path):
+                (root / path).write_text("changed " + path)
+                git("add", path)
+                git("commit", "-qm", path)
+            def scope():
+                output.write_text("")
+                subprocess.run(["bash", str(script)], env=env, cwd=root, check=True)
+                return output.read_text().strip()
+            git("init", "-q")
+            change("docs/gpu-rent.html")
+            self.assertEqual(scope(), "changed=true")
+            shutil.copyfile(artifact, root / "deployed")
+            for path in ("docs/data/tracker.json", "docs/data/nebius-daily.csv"):
+                change(path)
+                self.assertEqual(scope(), "changed=false")
+            change("docs/data/gpu-contracts.json")
+            self.assertEqual(scope(), "changed=true")
+            # A failed GPU publication must not slip through a subsequent Ramp run.
+            change("docs/index.html")
+            self.assertEqual(scope(), "changed=true")
+            shutil.copyfile(artifact, root / "deployed")
+            self.assertEqual(scope(), "changed=false")
+        workflow = (builder.ROOT / ".github/workflows/update.yml").read_text().split("\n  package:\n")[1].split("\n  deploy:\n")[0]
+        steps = workflow.split("      - ")
+        for command in ("actions/setup-python", "pip install", "test_gpu_rent.py"):
+            step, = [s for s in steps if command in s]
+            self.assertIn("if: steps.gpu_scope.outputs.changed == 'true'", step)
+        upload, = [s for s in steps if "actions/upload-pages-artifact" in s]
+        self.assertNotIn("gpu_scope", upload)

@@ -42,6 +42,6 @@ python scripts/build_gpu_rent.py
 python -m unittest discover -s tests -v
 ```
 
-每个来源单独检查 robots.txt、下载并验证。成功响应以 UTC 日期和内容摘要归档在 `data/gpu-rent/<来源>/raw/`，当天重试保留已确认的报价。价格保留观察日期，缺报持续到产品重新出现。即使全部抓取失败，也会保留原价和观察日期，发布当次检查状态。打包 Pages 前会再次验证实际待发布的报价和合约文件。原始快照采用 gzip 压缩。Oracle 仅保留 lastUpdated 表头和符合 GPU 报价筛选条件的 SKU 原始记录。其他日更来源保存响应正文。AWS 旧版区域 CSV 保留原始表头和选定实例的原始行，源文件地址列在导出数据中。
+每个来源单独检查 robots.txt、下载并验证。成功响应以 UTC 日期和内容摘要归档在 `data/gpu-rent/<来源>/raw/`，当天重试保留已确认的报价。价格保留观察日期，缺报持续到产品重新出现。即使全部抓取失败，也会保留原价和观察日期，发布当次检查状态。打包 Pages 时对照线上已发布的 GPU 文件版本。首次发布或 GPU 文件有变化时，才安装 GPU 解析依赖，校验合约并由历史记录、各来源观察和 Nebius 日线逐条重建比对 CSV、JSON。仅更新 Ramp 或独立 Nebius 日线时，沿用已验证的汇总页；下一轮 GPU 日更再纳入最新日线。原始快照采用 gzip 压缩。Oracle 仅保留 lastUpdated 表头和符合 GPU 报价筛选条件的 SKU 原始记录。其他日更来源保存响应正文。AWS 旧版区域 CSV 保留原始表头和选定实例的原始行，源文件地址列在导出数据中。
 
 历史观察点存于 `data/gpu-rent/historical.json`，合同及出处存于 `docs/data/gpu-contracts.json`。单独运行 `python scripts/build_gpu_rent.py --export-only` 可从本地归档重建汇总，无需联网。走势图的 JSON 按同一来源、型号、实例、口径、期限和地区分组，points 每行依次为观察日、美元／GPU 小时、计算说明、来源 URL 和仓库内原始快照路径。Nebius 现货引用已有日线归档。受限制的指数按各自条款在页面注明。

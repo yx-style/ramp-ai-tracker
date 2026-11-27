@@ -4907,5 +4907,44 @@
   "source": "Nebius",
   "date": "2026-11-26",
   "url": "https://github.com/yx-style/ramp-ai-tracker/blob/2a945ea1cce150decb22cbf5092ab050083fd691/docs/data/nebius.json"
+ },
+ {
+  "model": "RTX PRO 6000",
+  "product": "NVIDIA RTX PRO 6000",
+  "price": 1.8,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "",
+  "source": "Nebius",
+  "date": "2026-09-23",
+  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
+ },
+ {
+  "model": "L40S",
+  "product": "NVIDIA L40S with Intel CPU",
+  "price": 1.55,
+  "kind": "按需挂牌起价",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "官网所列配置起价。",
+  "source": "Nebius",
+  "date": "2026-09-23",
+  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
+ },
+ {
+  "model": "L40S",
+  "product": "NVIDIA L40S with AMD CPU",
+  "price": 1.82,
+  "kind": "按需挂牌起价",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "官网所列配置起价。",
+  "source": "Nebius",
+  "date": "2026-09-23",
+  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
  }
 ]
