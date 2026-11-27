@@ -590,123 +590,123 @@ Azure,H100,Standard_ND96isr_H100_v5,期限计费折扣,5 年,美国东部,2023-1
 Azure,H100,Standard_ND96isr_H100_v5,期限计费折扣,5 年,美国东部,2026-11-26,4.915999,"自行折算：整机全期 $1,722,566 ÷ 5 年 ÷ 8,760 小时 ÷ 8 张，不含容量保证。",https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview,data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz
 Azure,H100,Standard_ND96isr_H100_v5,期限计费折扣,5 年,美国东部,2026-11-27,4.915999,"自行折算：整机全期 $1,722,566 ÷ 5 年 ÷ 8,760 小时 ÷ 8 张，不含容量保证。",https://prices.azure.com/api/retail/prices?%24filter=armRegionName+eq+%27eastus%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview,data/gpu-rent/azure-h100/raw/2026-11-27_8150bb8f550f97b4.gz
 CoreWeave,A100,NVIDIA A100,可中断挂牌,可中断,北美,2026-11-26,1.20625,自行折算：整机 $9.65/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,A100,NVIDIA A100,可中断挂牌,可中断,北美,2026-11-27,1.20625,自行折算：整机 $9.65/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,A100,NVIDIA A100,可中断挂牌,可中断,北美,2026-11-27,1.20625,自行折算：整机 $9.65/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,A100,NVIDIA A100,可中断挂牌,可中断,欧洲,2026-11-26,1.18875,自行折算：整机 $9.51/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,A100,NVIDIA A100,可中断挂牌,可中断,欧洲,2026-11-27,1.18875,自行折算：整机 $9.51/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,A100,NVIDIA A100,可中断挂牌,可中断,欧洲,2026-11-27,1.18875,自行折算：整机 $9.51/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,A100,NVIDIA A100,按需挂牌,无固定期,北美,2026-11-26,2.7,自行折算：整机 $21.6/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,A100,NVIDIA A100,按需挂牌,无固定期,北美,2026-11-27,2.7,自行折算：整机 $21.6/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,A100,NVIDIA A100,按需挂牌,无固定期,北美,2026-11-27,2.7,自行折算：整机 $21.6/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,A100,NVIDIA A100,按需挂牌,无固定期,欧洲,2026-11-26,2.7,自行折算：整机 $21.6/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,A100,NVIDIA A100,按需挂牌,无固定期,欧洲,2026-11-27,2.7,自行折算：整机 $21.6/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,A100,NVIDIA A100,按需挂牌,无固定期,欧洲,2026-11-27,2.7,自行折算：整机 $21.6/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,B200,NVIDIA HGX B200,可中断挂牌,可中断,北美,2026-11-26,4.26375,自行折算：整机 $34.11/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,B200,NVIDIA HGX B200,可中断挂牌,可中断,北美,2026-11-27,4.26375,自行折算：整机 $34.11/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,B200,NVIDIA HGX B200,可中断挂牌,可中断,北美,2026-11-27,4.26375,自行折算：整机 $34.11/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,B200,NVIDIA HGX B200,可中断挂牌,可中断,欧洲,2026-11-26,4.35875,自行折算：整机 $34.87/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,B200,NVIDIA HGX B200,可中断挂牌,可中断,欧洲,2026-11-27,4.35875,自行折算：整机 $34.87/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,B200,NVIDIA HGX B200,可中断挂牌,可中断,欧洲,2026-11-27,4.35875,自行折算：整机 $34.87/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,B200,NVIDIA HGX B200,按需挂牌,无固定期,北美,2026-11-26,8.6,自行折算：整机 $68.8/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,B200,NVIDIA HGX B200,按需挂牌,无固定期,北美,2026-11-27,8.6,自行折算：整机 $68.8/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,B200,NVIDIA HGX B200,按需挂牌,无固定期,北美,2026-11-27,8.6,自行折算：整机 $68.8/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,B200,NVIDIA HGX B200,按需挂牌,无固定期,欧洲,2026-11-26,8.6,自行折算：整机 $68.8/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,B200,NVIDIA HGX B200,按需挂牌,无固定期,欧洲,2026-11-27,8.6,自行折算：整机 $68.8/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,B200,NVIDIA HGX B200,按需挂牌,无固定期,欧洲,2026-11-27,8.6,自行折算：整机 $68.8/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,B300,NVIDIA HGX B300,可中断挂牌,可中断,北美,2026-11-26,4.48,自行折算：整机 $35.84/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,B300,NVIDIA HGX B300,可中断挂牌,可中断,北美,2026-11-27,4.48,自行折算：整机 $35.84/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,B300,NVIDIA HGX B300,可中断挂牌,可中断,北美,2026-11-27,4.48,自行折算：整机 $35.84/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,B300,NVIDIA HGX B300,可中断挂牌,可中断,欧洲,2026-11-26,4.5875,自行折算：整机 $36.7/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,B300,NVIDIA HGX B300,可中断挂牌,可中断,欧洲,2026-11-27,4.5875,自行折算：整机 $36.7/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,B300,NVIDIA HGX B300,可中断挂牌,可中断,欧洲,2026-11-27,4.5875,自行折算：整机 $36.7/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,GB200,NVIDIA GB200 NVL72,按需挂牌,无固定期,北美,2026-11-26,10.5,自行折算：整机 $42/小时 ÷ 4 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,GB200,NVIDIA GB200 NVL72,按需挂牌,无固定期,北美,2026-11-27,10.5,自行折算：整机 $42/小时 ÷ 4 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,GB200,NVIDIA GB200 NVL72,按需挂牌,无固定期,北美,2026-11-27,10.5,自行折算：整机 $42/小时 ÷ 4 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,GB200,NVIDIA GB200 NVL72,按需挂牌,无固定期,欧洲,2026-11-26,10.5,自行折算：整机 $42/小时 ÷ 4 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,GB200,NVIDIA GB200 NVL72,按需挂牌,无固定期,欧洲,2026-11-27,10.5,自行折算：整机 $42/小时 ÷ 4 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,GB200,NVIDIA GB200 NVL72,按需挂牌,无固定期,欧洲,2026-11-27,10.5,自行折算：整机 $42/小时 ÷ 4 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,GH200,NVIDIA GH200,按需挂牌,无固定期,北美,2026-11-26,6.5,自行折算：整机 $6.5/小时 ÷ 1 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,GH200,NVIDIA GH200,按需挂牌,无固定期,北美,2026-11-27,6.5,自行折算：整机 $6.5/小时 ÷ 1 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,GH200,NVIDIA GH200,按需挂牌,无固定期,北美,2026-11-27,6.5,自行折算：整机 $6.5/小时 ÷ 1 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,GH200,NVIDIA GH200,按需挂牌,无固定期,欧洲,2026-11-26,6.5,自行折算：整机 $6.5/小时 ÷ 1 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,GH200,NVIDIA GH200,按需挂牌,无固定期,欧洲,2026-11-27,6.5,自行折算：整机 $6.5/小时 ÷ 1 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,GH200,NVIDIA GH200,按需挂牌,无固定期,欧洲,2026-11-27,6.5,自行折算：整机 $6.5/小时 ÷ 1 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H100,NVIDIA HGX H100,可中断挂牌,可中断,北美,2026-11-26,2.46375,自行折算：整机 $19.71/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H100,NVIDIA HGX H100,可中断挂牌,可中断,北美,2026-11-27,2.46375,自行折算：整机 $19.71/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H100,NVIDIA HGX H100,可中断挂牌,可中断,北美,2026-11-27,2.46375,自行折算：整机 $19.71/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H100,NVIDIA HGX H100,可中断挂牌,可中断,欧洲,2026-11-26,2.43875,自行折算：整机 $19.51/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H100,NVIDIA HGX H100,可中断挂牌,可中断,欧洲,2026-11-27,2.43875,自行折算：整机 $19.51/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H100,NVIDIA HGX H100,可中断挂牌,可中断,欧洲,2026-11-27,2.43875,自行折算：整机 $19.51/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H100,NVIDIA HGX H100,按需挂牌,无固定期,北美,2026-11-26,6.155,自行折算：整机 $49.24/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H100,NVIDIA HGX H100,按需挂牌,无固定期,北美,2026-11-27,6.155,自行折算：整机 $49.24/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H100,NVIDIA HGX H100,按需挂牌,无固定期,北美,2026-11-27,6.155,自行折算：整机 $49.24/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H100,NVIDIA HGX H100,按需挂牌,无固定期,欧洲,2026-11-26,6.155,自行折算：整机 $49.24/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H100,NVIDIA HGX H100,按需挂牌,无固定期,欧洲,2026-11-27,6.155,自行折算：整机 $49.24/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H100,NVIDIA HGX H100,按需挂牌,无固定期,欧洲,2026-11-27,6.155,自行折算：整机 $49.24/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H200,NVIDIA HGX H200,可中断挂牌,可中断,北美,2026-11-26,2.61625,自行折算：整机 $20.93/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H200,NVIDIA HGX H200,可中断挂牌,可中断,北美,2026-11-27,2.61625,自行折算：整机 $20.93/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H200,NVIDIA HGX H200,可中断挂牌,可中断,北美,2026-11-27,2.61625,自行折算：整机 $20.93/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H200,NVIDIA HGX H200,可中断挂牌,可中断,欧洲,2026-11-26,2.58,自行折算：整机 $20.64/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H200,NVIDIA HGX H200,可中断挂牌,可中断,欧洲,2026-11-27,2.58,自行折算：整机 $20.64/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H200,NVIDIA HGX H200,可中断挂牌,可中断,欧洲,2026-11-27,2.58,自行折算：整机 $20.64/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H200,NVIDIA HGX H200,按需挂牌,无固定期,北美,2026-11-26,6.305,自行折算：整机 $50.44/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H200,NVIDIA HGX H200,按需挂牌,无固定期,北美,2026-11-27,6.305,自行折算：整机 $50.44/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H200,NVIDIA HGX H200,按需挂牌,无固定期,北美,2026-11-27,6.305,自行折算：整机 $50.44/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,H200,NVIDIA HGX H200,按需挂牌,无固定期,欧洲,2026-11-26,6.305,自行折算：整机 $50.44/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,H200,NVIDIA HGX H200,按需挂牌,无固定期,欧洲,2026-11-27,6.305,自行折算：整机 $50.44/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,H200,NVIDIA HGX H200,按需挂牌,无固定期,欧洲,2026-11-27,6.305,自行折算：整机 $50.44/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,L40,NVIDIA L40,可中断挂牌,可中断,北美,2026-11-26,0.78375,自行折算：整机 $6.27/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,L40,NVIDIA L40,可中断挂牌,可中断,北美,2026-11-27,0.78375,自行折算：整机 $6.27/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,L40,NVIDIA L40,可中断挂牌,可中断,北美,2026-11-27,0.78375,自行折算：整机 $6.27/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,L40,NVIDIA L40,按需挂牌,无固定期,北美,2026-11-26,1.25,自行折算：整机 $10/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,L40,NVIDIA L40,按需挂牌,无固定期,北美,2026-11-27,1.25,自行折算：整机 $10/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,L40,NVIDIA L40,按需挂牌,无固定期,北美,2026-11-27,1.25,自行折算：整机 $10/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,L40,NVIDIA L40,按需挂牌,无固定期,欧洲,2026-11-26,1.25,自行折算：整机 $10/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,L40,NVIDIA L40,按需挂牌,无固定期,欧洲,2026-11-27,1.25,自行折算：整机 $10/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,L40,NVIDIA L40,按需挂牌,无固定期,欧洲,2026-11-27,1.25,自行折算：整机 $10/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,L40S,NVIDIA L40S,可中断挂牌,可中断,北美,2026-11-26,0.985,自行折算：整机 $7.88/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,L40S,NVIDIA L40S,可中断挂牌,可中断,北美,2026-11-27,0.985,自行折算：整机 $7.88/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,L40S,NVIDIA L40S,可中断挂牌,可中断,北美,2026-11-27,0.985,自行折算：整机 $7.88/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,L40S,NVIDIA L40S,按需挂牌,无固定期,北美,2026-11-26,2.25,自行折算：整机 $18/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,L40S,NVIDIA L40S,按需挂牌,无固定期,北美,2026-11-27,2.25,自行折算：整机 $18/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,L40S,NVIDIA L40S,按需挂牌,无固定期,北美,2026-11-27,2.25,自行折算：整机 $18/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,L40S,NVIDIA L40S,按需挂牌,无固定期,欧洲,2026-11-26,2.25,自行折算：整机 $18/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,L40S,NVIDIA L40S,按需挂牌,无固定期,欧洲,2026-11-27,2.25,自行折算：整机 $18/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,L40S,NVIDIA L40S,按需挂牌,无固定期,欧洲,2026-11-27,2.25,自行折算：整机 $18/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),可中断挂牌,可中断,北美,2026-11-26,1.38625,自行折算：整机 $11.09/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),可中断挂牌,可中断,北美,2026-11-27,1.38625,自行折算：整机 $11.09/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),可中断挂牌,可中断,北美,2026-11-27,1.38625,自行折算：整机 $11.09/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),可中断挂牌,可中断,欧洲,2026-11-26,1.37625,自行折算：整机 $11.01/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),可中断挂牌,可中断,欧洲,2026-11-27,1.37625,自行折算：整机 $11.01/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),可中断挂牌,可中断,欧洲,2026-11-27,1.37625,自行折算：整机 $11.01/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),按需挂牌,无固定期,北美,2026-11-26,2.5,自行折算：整机 $20/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),按需挂牌,无固定期,北美,2026-11-27,2.5,自行折算：整机 $20/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),按需挂牌,无固定期,北美,2026-11-27,2.5,自行折算：整机 $20/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),按需挂牌,无固定期,欧洲,2026-11-26,2.5,自行折算：整机 $20/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),按需挂牌,无固定期,欧洲,2026-11-27,2.5,自行折算：整机 $20/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory),按需挂牌,无固定期,欧洲,2026-11-27,2.5,自行折算：整机 $20/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory),可中断挂牌,可中断,北美,2026-11-26,1.195,自行折算：整机 $9.56/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory),可中断挂牌,可中断,北美,2026-11-27,1.195,自行折算：整机 $9.56/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory),可中断挂牌,可中断,北美,2026-11-27,1.195,自行折算：整机 $9.56/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory),可中断挂牌,可中断,欧洲,2026-11-26,1.195,自行折算：整机 $9.56/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz
-CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory),可中断挂牌,可中断,欧洲,2026-11-27,1.195,自行折算：整机 $9.56/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_d5120941d88ae739.gz
+CoreWeave,RTX PRO 6000,NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory),可中断挂牌,可中断,欧洲,2026-11-27,1.195,自行折算：整机 $9.56/小时 ÷ 8 张。,https://www.coreweave.com/pricing,data/gpu-rent/coreweave/raw/2026-11-27_8a67d386f44fe9a5.gz
 DigitalOcean,B300,NVIDIA HGX B300,可中断挂牌,可中断,价目表未分地区,2026-11-26,6.17,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,B300,NVIDIA HGX B300,可中断挂牌,可中断,价目表未分地区,2026-11-27,6.17,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,B300,NVIDIA HGX B300,可中断挂牌,可中断,价目表未分地区,2026-11-27,6.17,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,B300,NVIDIA HGX B300,预留挂牌,12 个月,价目表未分地区,2026-07-21,5.65,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,B300,NVIDIA HGX B300,预留挂牌,12 个月,价目表未分地区,2026-08-01,7.94,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,B300,NVIDIA HGX B300,预留挂牌,12 个月,价目表未分地区,2026-11-26,7.94,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,B300,NVIDIA HGX B300,预留挂牌,12 个月,价目表未分地区,2026-11-27,7.94,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,B300,NVIDIA HGX B300,预留挂牌,12 个月,价目表未分地区,2026-11-27,7.94,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-07-21,3.39,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz
 DigitalOcean,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-08-01,4.41,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz
 DigitalOcean,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-11-26,4.41,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-11-27,4.41,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-11-27,4.41,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,H100,NVIDIA HGX H100,预留挂牌,12 个月,价目表未分地区,2026-07-21,2.5,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,H100,NVIDIA HGX H100,预留挂牌,12 个月,价目表未分地区,2026-08-01,3.26,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,H100,NVIDIA HGX H100,预留挂牌,12 个月,价目表未分地区,2026-11-26,3.26,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,H100,NVIDIA HGX H100,预留挂牌,12 个月,价目表未分地区,2026-11-27,3.26,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,H100,NVIDIA HGX H100,预留挂牌,12 个月,价目表未分地区,2026-11-27,3.26,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-07-21,3.44,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz
 DigitalOcean,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-08-01,4.47,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz
 DigitalOcean,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-11-26,4.47,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-11-27,4.47,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-11-27,4.47,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,H200,NVIDIA HGX H200,预留挂牌,12 个月,价目表未分地区,2026-07-21,2.75,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,H200,NVIDIA HGX H200,预留挂牌,12 个月,价目表未分地区,2026-08-01,3.4,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,H200,NVIDIA HGX H200,预留挂牌,12 个月,价目表未分地区,2026-11-26,3.4,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,H200,NVIDIA HGX H200,预留挂牌,12 个月,价目表未分地区,2026-11-27,3.4,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,H200,NVIDIA HGX H200,预留挂牌,12 个月,价目表未分地区,2026-11-27,3.4,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,L40S,NVIDIA L40S,按需挂牌,无固定期,价目表未分地区,2026-11-26,1.57,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,L40S,NVIDIA L40S,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.57,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,L40S,NVIDIA L40S,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.57,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI300X,AMD Instinct™ MI300X,按需挂牌,无固定期,价目表未分地区,2026-07-21,1.99,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz
 DigitalOcean,MI300X,AMD Instinct™ MI300X,按需挂牌,无固定期,价目表未分地区,2026-08-01,2.59,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz
 DigitalOcean,MI300X,AMD Instinct™ MI300X,按需挂牌,无固定期,价目表未分地区,2026-11-26,2.59,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI300X,AMD Instinct™ MI300X,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.59,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI300X,AMD Instinct™ MI300X,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.59,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI300X,AMD Instinct™ MI300X,预留挂牌,12 个月,价目表未分地区,2026-07-21,1.88,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,MI300X,AMD Instinct™ MI300X,预留挂牌,12 个月,价目表未分地区,2026-08-01,1.91,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,MI300X,AMD Instinct™ MI300X,预留挂牌,12 个月,价目表未分地区,2026-11-26,1.91,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI300X,AMD Instinct™ MI300X,预留挂牌,12 个月,价目表未分地区,2026-11-27,1.91,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI300X,AMD Instinct™ MI300X,预留挂牌,12 个月,价目表未分地区,2026-11-27,1.91,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI325X,AMD Instinct™ MI325X,按需挂牌,无固定期,价目表未分地区,2026-11-26,3.8,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI325X,AMD Instinct™ MI325X,按需挂牌,无固定期,价目表未分地区,2026-11-27,3.8,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI325X,AMD Instinct™ MI325X,按需挂牌,无固定期,价目表未分地区,2026-11-27,3.8,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI325X,AMD Instinct™ MI325X,预留挂牌,12 个月,价目表未分地区,2026-07-21,2.1,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,MI325X,AMD Instinct™ MI325X,预留挂牌,12 个月,价目表未分地区,2026-08-01,2.88,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,MI325X,AMD Instinct™ MI325X,预留挂牌,12 个月,价目表未分地区,2026-11-26,2.88,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI325X,AMD Instinct™ MI325X,预留挂牌,12 个月,价目表未分地区,2026-11-27,2.88,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI325X,AMD Instinct™ MI325X,预留挂牌,12 个月,价目表未分地区,2026-11-27,2.88,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI350X,AMD Instinct™ MI350X,可中断挂牌,可中断,价目表未分地区,2026-11-26,3.0,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI350X,AMD Instinct™ MI350X,可中断挂牌,可中断,价目表未分地区,2026-11-27,3.0,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI350X,AMD Instinct™ MI350X,可中断挂牌,可中断,价目表未分地区,2026-11-27,3.0,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI350X,AMD Instinct™ MI350X,预留挂牌,12 个月,价目表未分地区,2026-07-21,3.18,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,MI350X,AMD Instinct™ MI350X,预留挂牌,12 个月,价目表未分地区,2026-08-01,4.76,7 月 21 日公告列示旧价，新价自 8 月 1 日生效。,https://www.digitalocean.com/blog/price-changes-gpus,data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz
 DigitalOcean,MI350X,AMD Instinct™ MI350X,预留挂牌,12 个月,价目表未分地区,2026-11-26,4.76,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI350X,AMD Instinct™ MI350X,预留挂牌,12 个月,价目表未分地区,2026-11-27,4.76,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI350X,AMD Instinct™ MI350X,预留挂牌,12 个月,价目表未分地区,2026-11-27,4.76,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,MI355X,AMD Instinct™ MI355X,可中断挂牌,可中断,价目表未分地区,2026-11-26,4.5,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,MI355X,AMD Instinct™ MI355X,可中断挂牌,可中断,价目表未分地区,2026-11-27,4.5,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,MI355X,AMD Instinct™ MI355X,可中断挂牌,可中断,价目表未分地区,2026-11-27,4.5,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,RTX 4000 Ada,NVIDIA RTX 4000 Ada Generation,按需挂牌,无固定期,价目表未分地区,2026-11-26,0.76,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,RTX 4000 Ada,NVIDIA RTX 4000 Ada Generation,按需挂牌,无固定期,价目表未分地区,2026-11-27,0.76,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,RTX 4000 Ada,NVIDIA RTX 4000 Ada Generation,按需挂牌,无固定期,价目表未分地区,2026-11-27,0.76,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 DigitalOcean,RTX 6000 Ada,NVIDIA RTX 6000 Ada Generation,按需挂牌,无固定期,价目表未分地区,2026-11-26,1.57,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz
-DigitalOcean,RTX 6000 Ada,NVIDIA RTX 6000 Ada Generation,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.57,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_fae4840d9de353ba.gz
+DigitalOcean,RTX 6000 Ada,NVIDIA RTX 6000 Ada Generation,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.57,,https://www.digitalocean.com/pricing/gpu-droplets,data/gpu-rent/digitalocean/raw/2026-11-27_4bac38e84aa4f2c7.gz
 Impossible Cloud,MI355X,342-MI355X · 1 节点 8 张,预留挂牌,12 个月,欧盟,2026-11-07,7.21,报价生成日，未指定交付日。,https://console.impossiblecloud.com/api/gpu/offers,
 Impossible Cloud,MI355X,342-MI355X · 1 节点 8 张,预留挂牌,24 个月,欧盟,2026-11-07,6.13,报价生成日，未指定交付日。,https://console.impossiblecloud.com/api/gpu/offers,
 Lambda,A10,1x NVIDIA A10 · 24 GB,按需挂牌,无固定期,价目表未分地区,2026-11-26,1.29,每 GPU 小时，税另计。,https://lambda.com/pricing,data/gpu-rent/lambda/raw/2026-11-26_dd7f00d33518efcb.gz
@@ -1236,32 +1236,32 @@ Oracle,MI355X,OCI- Compute - GPU - MI355X · B111758,按需挂牌,无固定期,�
 Oracle,RTX PRO 6000,OCI - Compute - GPU - RTX PRO 6000 · B112613,按需挂牌,无固定期,全球公开价,2026-11-26,4.5,,https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD,data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz
 Oracle,RTX PRO 6000,OCI - Compute - GPU - RTX PRO 6000 · B112613,按需挂牌,无固定期,全球公开价,2026-11-27,4.5,,https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD,data/gpu-rent/oracle/raw/2026-11-27_cdcb5411361ffbe7.gz
 Together,B200,NVIDIA HGX B200,可中断挂牌,可中断,价目表未分地区,2026-11-26,4.65,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B200,NVIDIA HGX B200,可中断挂牌,可中断,价目表未分地区,2026-11-27,4.65,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B200,NVIDIA HGX B200,可中断挂牌,可中断,价目表未分地区,2026-11-27,4.65,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B200,NVIDIA HGX B200,按需挂牌,无固定期,价目表未分地区,2025-09-09,5.5,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,B200,NVIDIA HGX B200,按需挂牌,无固定期,价目表未分地区,2026-11-26,9.29,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B200,NVIDIA HGX B200,按需挂牌,无固定期,价目表未分地区,2026-11-27,9.29,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B200,NVIDIA HGX B200,按需挂牌,无固定期,价目表未分地区,2026-11-27,9.29,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B200,NVIDIA HGX B200,预留挂牌,1 周至 3 个月,价目表未分地区,2025-09-09,4,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,B200,NVIDIA HGX B200,预留挂牌,1–6 天,价目表未分地区,2025-09-09,4.5,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,B200,NVIDIA HGX B200,预留挂牌,31–90 天,价目表未分地区,2026-11-26,7.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B200,NVIDIA HGX B200,预留挂牌,31–90 天,价目表未分地区,2026-11-27,7.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B200,NVIDIA HGX B200,预留挂牌,31–90 天,价目表未分地区,2026-11-27,7.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B200,NVIDIA HGX B200,预留挂牌,3–30 天,价目表未分地区,2026-11-26,8.69,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B200,NVIDIA HGX B200,预留挂牌,3–30 天,价目表未分地区,2026-11-27,8.69,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B200,NVIDIA HGX B200,预留挂牌,3–30 天,价目表未分地区,2026-11-27,8.69,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B300,NVIDIA HGX B300,可中断挂牌,可中断,价目表未分地区,2026-11-26,5.75,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B300,NVIDIA HGX B300,可中断挂牌,可中断,价目表未分地区,2026-11-27,5.75,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B300,NVIDIA HGX B300,可中断挂牌,可中断,价目表未分地区,2026-11-27,5.75,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B300,NVIDIA HGX B300,按需挂牌,无固定期,价目表未分地区,2026-11-26,11.49,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B300,NVIDIA HGX B300,按需挂牌,无固定期,价目表未分地区,2026-11-27,11.49,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B300,NVIDIA HGX B300,按需挂牌,无固定期,价目表未分地区,2026-11-27,11.49,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B300,NVIDIA HGX B300,预留挂牌,31–90 天,价目表未分地区,2026-11-26,9.89,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B300,NVIDIA HGX B300,预留挂牌,31–90 天,价目表未分地区,2026-11-27,9.89,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B300,NVIDIA HGX B300,预留挂牌,31–90 天,价目表未分地区,2026-11-27,9.89,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,B300,NVIDIA HGX B300,预留挂牌,3–30 天,价目表未分地区,2026-11-26,10.59,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,B300,NVIDIA HGX B300,预留挂牌,3–30 天,价目表未分地区,2026-11-27,10.59,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,B300,NVIDIA HGX B300,预留挂牌,3–30 天,价目表未分地区,2026-11-27,10.59,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H100,NVIDIA HGX H100,可中断挂牌,可中断,价目表未分地区,2026-11-26,2.0,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H100,NVIDIA HGX H100,可中断挂牌,可中断,价目表未分地区,2026-11-27,2.0,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H100,NVIDIA HGX H100,可中断挂牌,可中断,价目表未分地区,2026-11-27,2.0,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-11-26,3.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-11-27,3.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H100,NVIDIA HGX H100,按需挂牌,无固定期,价目表未分地区,2026-11-27,3.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H100,NVIDIA HGX H100,预留挂牌,31–90 天,价目表未分地区,2026-11-26,3.45,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H100,NVIDIA HGX H100,预留挂牌,31–90 天,价目表未分地区,2026-11-27,3.45,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H100,NVIDIA HGX H100,预留挂牌,31–90 天,价目表未分地区,2026-11-27,3.45,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H100,NVIDIA HGX H100,预留挂牌,3–30 天,价目表未分地区,2026-11-26,3.69,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H100,NVIDIA HGX H100,预留挂牌,3–30 天,价目表未分地区,2026-11-27,3.69,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H100,NVIDIA HGX H100,预留挂牌,3–30 天,价目表未分地区,2026-11-27,3.69,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H100,NVIDIA HGX H100 Inference,按需挂牌,无固定期,价目表未分地区,2025-09-09,2.39,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H100,NVIDIA HGX H100 Inference,预留挂牌,1 周至 3 个月,价目表未分地区,2025-09-09,1.76,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H100,NVIDIA HGX H100 Inference,预留挂牌,1–6 天,价目表未分地区,2025-09-09,2,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
@@ -1269,195 +1269,195 @@ Together,H100,NVIDIA HGX H100 SXM,按需挂牌,无固定期,价目表未分地�
 Together,H100,NVIDIA HGX H100 SXM,预留挂牌,1 周至 3 个月,价目表未分地区,2025-09-09,2.2,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H100,NVIDIA HGX H100 SXM,预留挂牌,1–6 天,价目表未分地区,2025-09-09,2.5,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H200,NVIDIA HGX H200,可中断挂牌,可中断,价目表未分地区,2026-11-26,3.0,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H200,NVIDIA HGX H200,可中断挂牌,可中断,价目表未分地区,2026-11-27,3.0,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H200,NVIDIA HGX H200,可中断挂牌,可中断,价目表未分地区,2026-11-27,3.0,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2025-09-09,3.79,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-11-26,5.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-11-27,5.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H200,NVIDIA HGX H200,按需挂牌,无固定期,价目表未分地区,2026-11-27,5.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H200,NVIDIA HGX H200,预留挂牌,1 周至 3 个月,价目表未分地区,2025-09-09,3.15,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H200,NVIDIA HGX H200,预留挂牌,1–6 天,价目表未分地区,2025-09-09,3.45,,https://www.together.ai/blog/together-instant-clusters-ga,data/gpu-rent/together-history/raw/2025-09-09_585d4b0362422eff.gz
 Together,H200,NVIDIA HGX H200,预留挂牌,31–90 天,价目表未分地区,2026-11-26,4.15,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H200,NVIDIA HGX H200,预留挂牌,31–90 天,价目表未分地区,2026-11-27,4.15,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H200,NVIDIA HGX H200,预留挂牌,31–90 天,价目表未分地区,2026-11-27,4.15,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Together,H200,NVIDIA HGX H200,预留挂牌,3–30 天,价目表未分地区,2026-11-26,4.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-26_bd9d5d16b6d9d039.gz
-Together,H200,NVIDIA HGX H200,预留挂牌,3–30 天,价目表未分地区,2026-11-27,4.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_a1ae73154e8e21f4.gz
+Together,H200,NVIDIA HGX H200,预留挂牌,3–30 天,价目表未分地区,2026-11-27,4.99,,https://www.together.ai/pricing,data/gpu-rent/together/raw/2026-11-27_e79ef406f8523457.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,0.8665,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.8665,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.8665,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,1.733,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.733,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.733,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,1.69834,自行折算：单卡实例按需价 $1.733 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,1.69834,自行折算：单卡实例按需价 $1.733 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,1.69834,自行折算：单卡实例按需价 $1.733 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,1.59436,自行折算：单卡实例按需价 $1.733 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,1.59436,自行折算：单卡实例按需价 $1.733 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,1.59436,自行折算：单卡实例按需价 $1.733 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,1.29975,自行折算：单卡实例按需价 $1.733 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.29975,自行折算：单卡实例按需价 $1.733 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.29975,自行折算：单卡实例按需价 $1.733 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,1.68101,自行折算：单卡实例按需价 $1.733 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,1.68101,自行折算：单卡实例按需价 $1.733 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,1.68101,自行折算：单卡实例按需价 $1.733 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,1.66368,自行折算：单卡实例按需价 $1.733 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,1.66368,自行折算：单卡实例按需价 $1.733 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 40GB · 22 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,1.66368,自行折算：单卡实例按需价 $1.733 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,1.241,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,1.205,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,1.205,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,2.482,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.41,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.41,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,2.43236,自行折算：单卡实例按需价 $2.482 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,2.3618,自行折算：单卡实例按需价 $2.41 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,2.3618,自行折算：单卡实例按需价 $2.41 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,2.28344,自行折算：单卡实例按需价 $2.482 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,2.2172,自行折算：单卡实例按需价 $2.41 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,2.2172,自行折算：单卡实例按需价 $2.41 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,1.8615,自行折算：单卡实例按需价 $2.482 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.8075,自行折算：单卡实例按需价 $2.41 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.8075,自行折算：单卡实例按需价 $2.41 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,2.40754,自行折算：单卡实例按需价 $2.482 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,2.3377,自行折算：单卡实例按需价 $2.41 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,2.3377,自行折算：单卡实例按需价 $2.41 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,2.38272,自行折算：单卡实例按需价 $2.482 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,2.3136,自行折算：单卡实例按需价 $2.41 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,A100,1x A100 SXM4 80GB · 22 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,2.3136,自行折算：单卡实例按需价 $2.41 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,4.922,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,4.802,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,4.802,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,9.844,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,9.603,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,9.603,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,9.64712,自行折算：单卡实例按需价 $9.844 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,9.41094,自行折算：单卡实例按需价 $9.603 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,9.41094,自行折算：单卡实例按需价 $9.603 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,9.05648,自行折算：单卡实例按需价 $9.844 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,8.83476,自行折算：单卡实例按需价 $9.603 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,8.83476,自行折算：单卡实例按需价 $9.603 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,7.383,自行折算：单卡实例按需价 $9.844 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,7.20225,自行折算：单卡实例按需价 $9.603 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,7.20225,自行折算：单卡实例按需价 $9.603 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,9.54868,自行折算：单卡实例按需价 $9.844 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,9.31491,自行折算：单卡实例按需价 $9.603 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,9.31491,自行折算：单卡实例按需价 $9.603 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,9.45024,自行折算：单卡实例按需价 $9.844 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,9.21888,自行折算：单卡实例按需价 $9.603 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B200,1x B200 SXM6 180GB · 30 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,9.21888,自行折算：单卡实例按需价 $9.603 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,6.655,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,6.265,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,6.265,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,13.31,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,12.53,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,12.53,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,13.0438,自行折算：单卡实例按需价 $13.31 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,12.2794,自行折算：单卡实例按需价 $12.53 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,12.2794,自行折算：单卡实例按需价 $12.53 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,12.2452,自行折算：单卡实例按需价 $13.31 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,11.5276,自行折算：单卡实例按需价 $12.53 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,11.5276,自行折算：单卡实例按需价 $12.53 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,9.9825,自行折算：单卡实例按需价 $13.31 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,9.3975,自行折算：单卡实例按需价 $12.53 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,9.3975,自行折算：单卡实例按需价 $12.53 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,12.9107,自行折算：单卡实例按需价 $13.31 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,12.1541,自行折算：单卡实例按需价 $12.53 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,12.1541,自行折算：单卡实例按需价 $12.53 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,12.7776,自行折算：单卡实例按需价 $13.31 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,12.0288,自行折算：单卡实例按需价 $12.53 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,B300,1x B300 SXM6 268GB · 30 vCPU / 255 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,12.0288,自行折算：单卡实例按需价 $12.53 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,7.653,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,7.205,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,7.205,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,15.31,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,14.41,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,14.41,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,15.0038,自行折算：单卡实例按需价 $15.31 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,14.1218,自行折算：单卡实例按需价 $14.41 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,14.1218,自行折算：单卡实例按需价 $14.41 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,14.0852,自行折算：单卡实例按需价 $15.31 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,13.2572,自行折算：单卡实例按需价 $14.41 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,13.2572,自行折算：单卡实例按需价 $14.41 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,11.4825,自行折算：单卡实例按需价 $15.31 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,10.8075,自行折算：单卡实例按需价 $14.41 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,10.8075,自行折算：单卡实例按需价 $14.41 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,14.8507,自行折算：单卡实例按需价 $15.31 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,13.9777,自行折算：单卡实例按需价 $14.41 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,13.9777,自行折算：单卡实例按需价 $14.41 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,14.6976,自行折算：单卡实例按需价 $15.31 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,13.8336,自行折算：单卡实例按需价 $14.41 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,GB300,1x GB300 SXM6 288GB · 32 vCPU / 225 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,13.8336,自行折算：单卡实例按需价 $14.41 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,2.81,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,2.647,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,2.647,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,5.619,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,5.293,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,5.293,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,5.50662,自行折算：单卡实例按需价 $5.619 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,5.18714,自行折算：单卡实例按需价 $5.293 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,5.18714,自行折算：单卡实例按需价 $5.293 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,5.16948,自行折算：单卡实例按需价 $5.619 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,4.86956,自行折算：单卡实例按需价 $5.293 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,4.86956,自行折算：单卡实例按需价 $5.293 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,4.21425,自行折算：单卡实例按需价 $5.619 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,3.96975,自行折算：单卡实例按需价 $5.293 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,3.96975,自行折算：单卡实例按需价 $5.293 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,5.45043,自行折算：单卡实例按需价 $5.619 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,5.13421,自行折算：单卡实例按需价 $5.293 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,5.13421,自行折算：单卡实例按需价 $5.293 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,5.39424,自行折算：单卡实例按需价 $5.619 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,5.08128,自行折算：单卡实例按需价 $5.293 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 30 vCPU / 120 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,5.08128,自行折算：单卡实例按需价 $5.293 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,2.81,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,2.647,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,2.647,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,5.619,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,5.293,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,5.293,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,5.50662,自行折算：单卡实例按需价 $5.619 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,5.18714,自行折算：单卡实例按需价 $5.293 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,5.18714,自行折算：单卡实例按需价 $5.293 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,5.16948,自行折算：单卡实例按需价 $5.619 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,4.86956,自行折算：单卡实例按需价 $5.293 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,4.86956,自行折算：单卡实例按需价 $5.293 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,4.21425,自行折算：单卡实例按需价 $5.619 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,3.96975,自行折算：单卡实例按需价 $5.293 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,3.96975,自行折算：单卡实例按需价 $5.293 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,5.45043,自行折算：单卡实例按需价 $5.619 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,5.13421,自行折算：单卡实例按需价 $5.293 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,5.13421,自行折算：单卡实例按需价 $5.293 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,5.39424,自行折算：单卡实例按需价 $5.619 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,5.08128,自行折算：单卡实例按需价 $5.293 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H100,1x H100 SXM5 80GB · 32 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,5.08128,自行折算：单卡实例按需价 $5.293 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,3.592,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,3.384,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,3.384,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,7.184,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,6.768,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,6.768,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,7.04032,自行折算：单卡实例按需价 $7.184 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,6.63264,自行折算：单卡实例按需价 $6.768 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,6.63264,自行折算：单卡实例按需价 $6.768 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,6.60928,自行折算：单卡实例按需价 $7.184 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,6.22656,自行折算：单卡实例按需价 $6.768 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,6.22656,自行折算：单卡实例按需价 $6.768 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,5.388,自行折算：单卡实例按需价 $7.184 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,5.076,自行折算：单卡实例按需价 $6.768 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,5.076,自行折算：单卡实例按需价 $6.768 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,6.96848,自行折算：单卡实例按需价 $7.184 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,6.56496,自行折算：单卡实例按需价 $6.768 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,6.56496,自行折算：单卡实例按需价 $6.768 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,6.89664,自行折算：单卡实例按需价 $7.184 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,6.49728,自行折算：单卡实例按需价 $6.768 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,H200,1x H200 SXM5 141GB · 44 vCPU / 170 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,6.49728,自行折算：单卡实例按需价 $6.768 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,1.04,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,1.04,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,1.04,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,2.079,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.079,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.079,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,2.03742,自行折算：单卡实例按需价 $2.079 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,2.03742,自行折算：单卡实例按需价 $2.079 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,2.03742,自行折算：单卡实例按需价 $2.079 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,1.91268,自行折算：单卡实例按需价 $2.079 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,1.91268,自行折算：单卡实例按需价 $2.079 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,1.91268,自行折算：单卡实例按需价 $2.079 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,1.55925,自行折算：单卡实例按需价 $2.079 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.55925,自行折算：单卡实例按需价 $2.079 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.55925,自行折算：单卡实例按需价 $2.079 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,2.01663,自行折算：单卡实例按需价 $2.079 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,2.01663,自行折算：单卡实例按需价 $2.079 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,2.01663,自行折算：单卡实例按需价 $2.079 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,1.99584,自行折算：单卡实例按需价 $2.079 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,1.99584,自行折算：单卡实例按需价 $2.079 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,L40S,1x L40S 48GB · 20 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,1.99584,自行折算：单卡实例按需价 $2.079 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,0.848,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.811,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.811,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,1.696,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.622,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,1.622,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,1.66208,自行折算：单卡实例按需价 $1.696 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,1.58956,自行折算：单卡实例按需价 $1.622 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,1.58956,自行折算：单卡实例按需价 $1.622 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,1.56032,自行折算：单卡实例按需价 $1.696 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,1.49224,自行折算：单卡实例按需价 $1.622 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,1.49224,自行折算：单卡实例按需价 $1.622 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,1.272,自行折算：单卡实例按需价 $1.696 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.2165,自行折算：单卡实例按需价 $1.622 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,1.2165,自行折算：单卡实例按需价 $1.622 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,1.64512,自行折算：单卡实例按需价 $1.696 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,1.57334,自行折算：单卡实例按需价 $1.622 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,1.57334,自行折算：单卡实例按需价 $1.622 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,1.62816,自行折算：单卡实例按需价 $1.696 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,1.55712,自行折算：单卡实例按需价 $1.622 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX 6000 Ada,1x RTX 6000 Ada 48GB · 10 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,1.55712,自行折算：单卡实例按需价 $1.622 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,0.471,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.4485,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.4485,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,0.942,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,0.897,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,0.897,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,0.92316,自行折算：单卡实例按需价 $0.942 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,0.87906,自行折算：单卡实例按需价 $0.897 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,0.87906,自行折算：单卡实例按需价 $0.897 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,0.86664,自行折算：单卡实例按需价 $0.942 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,0.82524,自行折算：单卡实例按需价 $0.897 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,0.82524,自行折算：单卡实例按需价 $0.897 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,0.7065,自行折算：单卡实例按需价 $0.942 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,0.67275,自行折算：单卡实例按需价 $0.897 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,0.67275,自行折算：单卡实例按需价 $0.897 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,0.91374,自行折算：单卡实例按需价 $0.942 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,0.87009,自行折算：单卡实例按需价 $0.897 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,0.87009,自行折算：单卡实例按需价 $0.897 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,0.90432,自行折算：单卡实例按需价 $0.942 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,0.86112,自行折算：单卡实例按需价 $0.897 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX A6000,1x RTX A6000 48GB · 10 vCPU / 60 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,0.86112,自行折算：单卡实例按需价 $0.897 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,1.521,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,1.432,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,1.432,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,3.041,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.864,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,2.864,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,2.98018,自行折算：单卡实例按需价 $3.041 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,2.80672,自行折算：单卡实例按需价 $2.864 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,2.80672,自行折算：单卡实例按需价 $2.864 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,2.79772,自行折算：单卡实例按需价 $3.041 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,2.63488,自行折算：单卡实例按需价 $2.864 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,2.63488,自行折算：单卡实例按需价 $2.864 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,2.28075,自行折算：单卡实例按需价 $3.041 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,2.148,自行折算：单卡实例按需价 $2.864 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,2.148,自行折算：单卡实例按需价 $2.864 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,2.94977,自行折算：单卡实例按需价 $3.041 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,2.77808,自行折算：单卡实例按需价 $2.864 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,2.77808,自行折算：单卡实例按需价 $2.864 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,2.91936,自行折算：单卡实例按需价 $3.041 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,2.74944,自行折算：单卡实例按需价 $2.864 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,RTX PRO 6000,1x RTX PRO 6000 96GB · 30 vCPU / 90 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,2.74944,自行折算：单卡实例按需价 $2.864 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-26,0.128,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.128,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,可中断挂牌,可中断,价目表未分地区,2026-11-27,0.128,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-26,0.256,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,0.256,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,按需挂牌,无固定期,价目表未分地区,2026-11-27,0.256,,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-26,0.25088,自行折算：单卡实例按需价 $0.256 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,0.25088,自行折算：单卡实例按需价 $0.256 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,1 month,价目表未分地区,2026-11-27,0.25088,自行折算：单卡实例按需价 $0.256 × (1 − 2%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-26,0.23552,自行折算：单卡实例按需价 $0.256 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,0.23552,自行折算：单卡实例按需价 $0.256 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,1 year,价目表未分地区,2026-11-27,0.23552,自行折算：单卡实例按需价 $0.256 × (1 − 8%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-26,0.192,自行折算：单卡实例按需价 $0.256 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,0.192,自行折算：单卡实例按需价 $0.256 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,2 years,价目表未分地区,2026-11-27,0.192,自行折算：单卡实例按需价 $0.256 × (1 − 25%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-26,0.24832,自行折算：单卡实例按需价 $0.256 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,0.24832,自行折算：单卡实例按需价 $0.256 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,3 months,价目表未分地区,2026-11-27,0.24832,自行折算：单卡实例按需价 $0.256 × (1 − 3%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
 Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-26,0.24576,自行折算：单卡实例按需价 $0.256 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-26_ecdb781f145910ee.gz
-Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,0.24576,自行折算：单卡实例按需价 $0.256 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_9aa7687fd89882fc.gz
+Verda,V100,1x Tesla V100 16GB · 4 vCPU / 18 GB RAM,预留挂牌,6 months,价目表未分地区,2026-11-27,0.24576,自行折算：单卡实例按需价 $0.256 × (1 − 4%)。,https://verda.com/pricing,data/gpu-rent/verda/raw/2026-11-27_381d4febb8966a56.gz
