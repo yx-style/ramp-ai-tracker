@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="style.css?v=7">
+<title>GPU 租价汇总</title>
+<style>
+#rent-plot { width:100%; height:230px; display:block; }
+#quotes td, #contracts td, #history td { white-space:normal; vertical-align:top; text-align:left; }
+#quotes th, #contracts th, #history th { text-align:left; }
+#quotes button, #more-quotes { font:inherit; color:var(--title-red); background:transparent; border:1px solid var(--line); border-radius:4px; padding:3px 7px; cursor:pointer; }
+#quotes strong { font-variant-numeric:tabular-nums; }
+#charts label { flex-wrap:wrap; }
+#series { width:min(570px,100%); }
+.secondary { display:block; color:var(--muted); font-size:12px; }
+#history { max-width:630px; }
+@media(max-width:600px) {
+  .rent-table, .rent-table tbody, .rent-table tr, .rent-table td { display:block; }
+  .rent-table thead { position:absolute; width:1px; height:1px; clip-path:inset(50%); overflow:hidden; }
+  table.rent-table td { border:0; padding:2px 0; }
+  .rent-table tr { padding:9px 0; border-bottom:1px solid var(--line); }
+  .site-head nav { gap:8px; }
+}
+</style></head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="index.html">ramp-ai-tracker</a>
+<nav aria-label="页内导航"><a href="#charts">走势</a><a href="#disclosures">合约</a><a href="#sources">来源</a></nav></div>
+<div class="switch-band"><nav class="wrap tracker-switch" aria-label="数据来源">
+<a href="index.html">Ramp 企业 token 支出</a><a href="yipit.html">YipitData Anthropic</a><a href="nebius.html">Nebius GPU 租价</a><a href="gpu-rent.html" aria-current="page">GPU 租价汇总</a>
+</nav></div></header>
+<main class="wrap">
+<header class="pack-head"><h1>GPU 租价汇总</h1>
+<p class="dek">按型号查看不同云厂商的按需、现货和预留报价，并对照第三方指数及已披露合同。</p>
+<p class="meta" id="status" role="status"><span id="quote-status">正在读取报价…</span><span id="contract-count"></span></p></header>
+<section class="card" id="charts"><h2>按型号比较</h2>
+<div class="y-selectors"><label>GPU 型号 <select id="model"></select></label><label>价格口径 <select id="kind"></select></label></div>
+<p class="note">单位为美元／GPU 小时。各行保留最近一次实际观察日期。预留期限、可中断性、地区、显存和配套服务都会影响价格。</p>
+<div id="index-citation" class="method"></div>
+<div class="tablewrap"><table class="t rent-table" id="quotes"><thead><tr><th>来源／配置</th><th>地区／期限</th><th>最近读数／日期</th></tr></thead><tbody></tbody></table></div>
+<p><button id="more-quotes" hidden></button></p>
+<h2>价格走势</h2>
+<div class="y-selectors"><label>报价序列 <select id="series"></select></label></div>
+<canvas id="rent-plot" aria-label="所选序列的历史价格，可展开下方数值表"></canvas>
+<p id="basis" class="note"></p>
+<details><summary>查看历史数值和原始依据</summary><div class="tablewrap"><table class="t" id="history"><thead><tr><th>日期</th><th>价格</th><th>依据</th></tr></thead><tbody></tbody></table></div></details>
+</section>
+<section class="card" id="disclosures"><h2>已披露成交／合约价格点</h2>
+<p class="note">按签约、公告或报告期记录。每年按 8,760 小时折算。仅披露相对涨幅、每 MW 收入或组合对价的记录沿用原单位。</p>
+<div class="y-selectors"><label>合同型号 <select id="deal-model" disabled></select></label></div>
+<p class="note" role="status" id="deal-status" hidden></p>
+<table class="t rent-table" id="contracts"><thead><tr><th>日期／双方</th><th>型号／地区／期限</th><th>价格与依据</th></tr></thead><tbody></tbody></table>
+</section>
+<section class="card method" id="sources"><h2>来源与口径</h2>
+<p><strong>云厂商挂牌。</strong>按需价对应指定实例，现货可中断。Together、Lambda 1-Click、DigitalOcean、Verda 的预留价各有期限和数量条件。Azure 的期限折扣不保证容量。AWS Capacity Blocks 保证指定时段的容量，单独记录。CoreWeave、AWS EC2 的整机折算及 Azure、Verda 的计算式列在历史明细中。</p>
+<p><strong>第三方指数。</strong>Compute Desk／General Index 将美国成交与非超大云厂商牌价调整至一年期后平滑。本文署名引用 2026-11-25 单次读数。Silicon Data 的 neocloud 指数将不同地区、规格与期限归一至按需基准。Ornn OCPI 则按卡数加权统计按需成交。Silicon Data 与 Ornn 的历史序列须经授权才能对外分发。<a href="https://www.computedesk.com/index-methodology">Compute Desk 方法</a> · <a href="https://www.general-index.com/terms-conditions">GX 使用条款</a> · Silicon Data（silicondata.com，Products → Silicon Index） · <a href="https://data.ornn.com/docs">Ornn 文档</a> · <a href="https://data.ornn.com/terms">Ornn 条款</a></p>
+<p><strong>CCIR 合约汇总。</strong>CCIR 按签约半年与租期分组，调整捆绑服务和预付，大单权重较高。9 月专题中的 11 笔 B300 原始订单可在上表按型号查看。其条款允许署名引用，系统抓取和转载历史须取得书面许可。<a href="https://ccir.io/term">期限表</a> · <a href="https://ccir.io/research/b300-contract-prices">逐单样本</a> · <a href="https://ccir.io/documents/data-terms">CCIR 数据条款</a></p>
+<p><strong>历史覆盖。</strong>有历史公告或旧价目表的序列按已核实日期回填。其余挂牌按 UTC 逐日观察。单点只画一个点，相邻观察相隔超过一天时留白。Nebius 逐地区、逐 SKU 的可中断日均沿用已有归档，06.ai 回填与官方接口分别展示。<a href="nebius.html">Nebius 历史与方法</a></p>
+<p><strong>其他研究来源。</strong>Tiger Brokers 转载的 SpaceX 小集群报价源自机构快报，见<a href="https://www.itiger.com/news/1105347595">报道</a>。Impossible Cloud 接口的 robots.txt 禁止自动抓取，MI355X 留存一次人工记录。SemiAnalysis 公开 H100 调查可在其指数页阅读。SemiAnalysis Flash Update、Bloomberg 终端、券商 Excel（中金等）及非公开专家访谈仅列来源。<a href="https://console.impossiblecloud.com/robots.txt">Impossible Cloud 抓取规则</a> · <a href="https://gpu-index.semianalysis.com/">SemiAnalysis 公开指数</a></p>
+</section>
+<section class="card"><h2>下载数据</h2><p><a href="data/gpu-rent.csv" download>报价 CSV</a>　<a href="data/gpu-rent.json" download>走势 JSON</a>　<a href="data/gpu-contracts.json" download>合约价格点 JSON</a></p></section>
+</main><footer class="site-foot"><div class="wrap">GPU 租赁价格 · 公开来源归档</div></footer>
+<script src="gpu-rent.js"></script></body></html>

@@ -31,3 +31,17 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory docs
 打开 <http://127.0.0.1:8766/yipit.html>。脚本按文件名中的日期识别报告，支持一次传入多份文件，也可只传新一期。重跑同一期会替换该期数据，其余期次保留。页面可切换期次，并在「历史期次与修订」中对比相邻两期的同一观察值。
 
 脚本使用 openpyxl。公式没有缓存时，会用本机 LibreOffice 在临时目录重算。也可传入已由 Excel 重算并保存的副本。网页无需安装依赖。新增期次的图表从工作簿生成。报告摘要及报告专属外推按发布日期单独维护。工作表改名或表头变动时应检查脚本中的字段映射。
+
+## GPU 租价汇总
+
+`docs/gpu-rent.html` 按型号、地区、产品和租期比较公开报价，单独列示公司披露和合同。GitHub Actions 每天 13:23 UTC 更新，可手动选择 `gpu-rent` 单独运行。
+
+```sh
+python -m pip install -r scripts/gpu-rent-requirements.txt
+python scripts/build_gpu_rent.py
+python -m unittest discover -s tests -v
+```
+
+每个来源单独检查 robots.txt、下载并验证。成功响应以 UTC 日期和内容摘要归档在 `data/gpu-rent/<来源>/raw/`，当天重试保留已确认的报价。价格保留观察日期，缺报持续到产品重新出现。即使全部抓取失败，也会保留原价和观察日期，发布当次检查状态。打包 Pages 前会再次验证实际待发布的报价和合约文件。原始快照采用 gzip 压缩。Oracle 仅保留 lastUpdated 表头和符合 GPU 报价筛选条件的 SKU 原始记录。其他日更来源保存响应正文。AWS 旧版区域 CSV 保留原始表头和选定实例的原始行，源文件地址列在导出数据中。
+
+历史观察点存于 `data/gpu-rent/historical.json`，合同及出处存于 `docs/data/gpu-contracts.json`。单独运行 `python scripts/build_gpu_rent.py --export-only` 可从本地归档重建汇总，无需联网。走势图的 JSON 按同一来源、型号、实例、口径、期限和地区分组，points 每行依次为观察日、美元／GPU 小时、计算说明、来源 URL 和仓库内原始快照路径。Nebius 现货引用已有日线归档。受限制的指数按各自条款在页面注明。

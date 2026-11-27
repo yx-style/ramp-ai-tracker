@@ -10,7 +10,7 @@ on:
         type: choice
         description: 更新数据源
         default: all
-        options: [all, nebius, ramp]
+        options: [all, nebius, ramp, gpu-rent]
   push:
     branches: [main]
 
@@ -25,7 +25,7 @@ concurrency:
 
 jobs:
   update:
-    if: github.event.schedule != '17 */6 * * *' && inputs.source != 'nebius'
+    if: github.event.schedule != '17 */6 * * *' && inputs.source != 'nebius' && inputs.source != 'gpu-rent'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -64,7 +64,7 @@ jobs:
 
   nebius:
     needs: update
-    if: "!cancelled() && github.event.schedule != '23 13 * * *' && inputs.source != 'ramp'"
+    if: "!cancelled() && github.event.schedule != '23 13 * * *' && inputs.source != 'ramp' && inputs.source != 'gpu-rent'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -94,14 +94,48 @@ jobs:
             git push origin HEAD:main
           fi
 
-  package:
+  gpu-rent:
     needs: [update, nebius]
-    if: "!failure() && !cancelled() && (needs.update.result == 'success' || needs.nebius.result == 'success')"
+    if: "!cancelled() && (github.event.schedule == '23 13 * * *' || (github.event_name == 'workflow_dispatch' && (inputs.source == 'all' || inputs.source == 'gpu-rent')))"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install GPU price page parsers
+        run: pip install -r scripts/gpu-rent-requirements.txt
+      - name: Archive GPU rental prices and refresh exports
+        run: python scripts/build_gpu_rent.py
+      - name: Verify price archive and exports
+        run: python -m unittest discover -s tests -p 'test_gpu_rent.py' -v
+      - name: Commit verified GPU price updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/gpu-rent/ docs/data/gpu-rent.csv docs/data/gpu-rent.json
+          if ! git diff --cached --quiet; then
+            git commit -m "更新 GPU 租赁价格归档"
+            git push origin HEAD:main
+          fi
+
+  package:
+    needs: [update, nebius, gpu-rent]
+    if: "!cancelled() && (needs.gpu-rent.result == 'success' || needs.update.result == 'success' || needs.nebius.result == 'success')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate the GPU data in this Pages checkout
+        run: |
+          pip install -r scripts/gpu-rent-requirements.txt
+          python -m unittest discover -s tests -p 'test_gpu_rent.py' -v
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v5
         with:

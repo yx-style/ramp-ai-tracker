@@ -1,0 +1,966 @@
+[
+  {
+    "date": "2026Q3",
+    "party": "IREN",
+    "model": "混合机型",
+    "term": "3 年",
+    "region": "未披露",
+    "price": "$19m–23m",
+    "basis": "9 月季度签约，按合同年化收入加权，分母为公司估计部署 IT 负载。",
+    "links": [
+      [
+        "电话会",
+        "https://www.fool.com/earnings/call-transcripts/2026/11/06/iren-iren-q1-2027-earnings-call-transcript/"
+      ]
+    ],
+    "unit": "美元／IT-MW／年"
+  },
+  {
+    "date": "2026Q3",
+    "party": "IREN",
+    "model": "混合机型",
+    "term": "5 年",
+    "region": "未披露",
+    "price": "约 $17m",
+    "basis": "9 月季度签约，按合同年化收入加权，分母为公司估计部署 IT 负载。",
+    "links": [
+      [
+        "电话会",
+        "https://www.fool.com/earnings/call-transcripts/2026/11/06/iren-iren-q1-2027-earnings-call-transcript/"
+      ]
+    ],
+    "unit": "美元／IT-MW／年"
+  },
+  {
+    "date": "2026Q2",
+    "party": "Nebius → 四家客户",
+    "model": "混合机型",
+    "term": "未逐单披露",
+    "region": "未披露",
+    "price": "$20m–25m",
+    "basis": "公司股东信披露的大额 AI 云合同，卡数与机型未逐项披露。",
+    "links": [
+      [
+        "8 月股东信第 4 页",
+        "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026H2（截至 11-12）",
+    "party": "Nscale",
+    "model": "混合机型",
+    "term": "5–6 年",
+    "region": "未披露",
+    "price": ">$16m",
+    "basis": "S-1/A 图 8。基础设施合同，按签约期分组，披露值为下限。",
+    "links": [
+      [
+        "S-1/A 及正文",
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526458722/ck0002110365-20261112.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026H1",
+    "party": "Nscale",
+    "model": "混合机型",
+    "term": "5–6 年",
+    "region": "未披露",
+    "price": ">$12m",
+    "basis": "S-1/A 图 8。基础设施合同，按签约期分组，披露值为下限。",
+    "links": [
+      [
+        "S-1/A 及正文",
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526458722/ck0002110365-20261112.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-11-17 披露",
+    "party": "Axe Compute／Duos",
+    "model": "B300",
+    "term": "5 年",
+    "region": "美国佐治亚州",
+    "price": "下限约 $3.47",
+    "basis": "自行折算。总额超过 $350m，2,304 张。4 月订单延长，含存储，设备所有权及服务分工已改变。",
+    "links": [
+      [
+        "Axe 11 月 17 日公告",
+        "https://www.sec.gov/Archives/edgar/data/1446159/000117184326007509/exh_991.htm"
+      ],
+      [
+        "Duos 10-Q 附注 14",
+        "https://www.sec.gov/Archives/edgar/data/1396536/000107997326001535/R21.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-11-12 披露",
+    "party": "Nebius",
+    "model": "混合机型",
+    "term": "1–5 年",
+    "region": "未披露",
+    "price": ">$25m",
+    "basis": "Q3 加权年合同额。同季平均每 GPU 小时价格环比上升超过 20%。",
+    "links": [
+      [
+        "11 月股东信第 5–7 页",
+        "https://assets.nebius.com/assets/51f8e479-732f-4e56-bade-a6bde21024ab/SHL%20%282%29.pdf"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-11-11",
+    "party": "CoreWeave",
+    "model": "H100",
+    "term": "未披露",
+    "region": "未披露",
+    "price": "较首约高 20%–50%",
+    "basis": "CEO 在 CNBC 采访中描述重签价格。",
+    "links": [
+      [
+        "CNBC 发布的采访逐字稿",
+        "https://pressroom.versantmedia.com/cnbc/press-releases/first-cnbc-transcript-coreweave-co-founder-chairman-ceo-mike-intrator-speaks"
+      ]
+    ],
+    "unit": "%"
+  },
+  {
+    "date": "2026-11-10",
+    "party": "CoreWeave",
+    "model": "混合机型",
+    "term": "4–5 年",
+    "region": "未披露",
+    "price": "$20m–25m",
+    "basis": "管理层描述新设备长约报价水平，逐单卡数未披露。",
+    "links": [
+      [
+        "开场陈述",
+        "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-11-10",
+    "party": "CoreWeave",
+    "model": "混合机型",
+    "term": "3–6 个月",
+    "region": "未披露",
+    "price": "部分 >$40m",
+    "basis": "管理层披露部分签约短单的年化水平。",
+    "links": [
+      [
+        "开场陈述",
+        "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-11-10",
+    "party": "Sunon → Exascale",
+    "model": "B300",
+    "term": "36 个月",
+    "region": "美国加州 Irvine",
+    "price": "约 $4.56",
+    "basis": "自行折算。满用含税月费 $319,434 ÷ 96 张 ÷ 730 小时。采购方对外转售，实际月费按利用率调整。",
+    "links": [
+      [
+        "Sunon 与 Exascale 签字合同，§5.1A、附表 1–2",
+        "https://www.sec.gov/Archives/edgar/data/2109869/000182912626012515/exascalelabs_ex10-16.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-11-05 披露",
+    "party": "IREN",
+    "model": "H100",
+    "term": "多年",
+    "region": "加拿大 Prince George",
+    "price": "原约的 2 倍",
+    "basis": "同站旧 H100 重签。卡数、美元价格与客户身份未披露。",
+    "links": [
+      [
+        "演示 p.7、24",
+        "https://iren.com/api/media/file/Q1-FY27%20Presentation.pdf?prefix=payload"
+      ]
+    ],
+    "unit": "倍"
+  },
+  {
+    "date": "2026-11-05 披露",
+    "party": "IREN",
+    "model": "混合机型",
+    "term": "5 年",
+    "region": "未披露",
+    "price": "约 $22m",
+    "basis": "季后签约，预付约覆盖 GPU 投资的 90%。",
+    "links": [
+      [
+        "演示 p.7、24",
+        "https://iren.com/api/media/file/Q1-FY27%20Presentation.pdf?prefix=payload"
+      ]
+    ],
+    "unit": "美元／IT-MW／年"
+  },
+  {
+    "date": "2026-11-05 披露",
+    "party": "IREN",
+    "model": "混合机型",
+    "term": "3–6 个月",
+    "region": "未披露",
+    "price": "约 $40m",
+    "basis": "季后短约，按全年运行折算收入。",
+    "links": [
+      [
+        "演示 p.7、24",
+        "https://iren.com/api/media/file/Q1-FY27%20Presentation.pdf?prefix=payload"
+      ]
+    ],
+    "unit": "美元／IT-MW／年"
+  },
+  {
+    "date": "2026-11",
+    "party": "Sharon AI → 客户一",
+    "model": "混合机型",
+    "term": "未逐单披露",
+    "region": "未披露",
+    "price": "约 $19m",
+    "basis": "11 月演示列示的终端客户合同，卡数与型号未逐笔对应。",
+    "links": [
+      [
+        "Sharon 演示",
+        "https://sharonai.com/media/2026/11/Sharon-AI-3Q26-Earnings-Call-Presentation-FINAL.pdf"
+      ],
+      [
+        "11-16 公司稿，SEC 附件",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226052409/ex99-1.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-11",
+    "party": "Sharon AI → 客户二",
+    "model": "混合机型",
+    "term": "未逐单披露",
+    "region": "未披露",
+    "price": "约 $18m",
+    "basis": "11 月演示列示的终端客户合同，卡数与型号未逐笔对应。",
+    "links": [
+      [
+        "Sharon 演示",
+        "https://sharonai.com/media/2026/11/Sharon-AI-3Q26-Earnings-Call-Presentation-FINAL.pdf"
+      ],
+      [
+        "11-16 公司稿，SEC 附件",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226052409/ex99-1.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-09-17",
+    "party": "CoreWeave",
+    "model": "混合机型",
+    "term": "3–6 个月",
+    "region": "未披露",
+    "price": "约 $40m",
+    "unit": "美元／MW／年",
+    "basis": "第三季度已签短约。公司按合同年化收入除以相关集群所需功率计算。",
+    "links": [
+      [
+        "公司公告",
+        "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Continues-to-Contract-New-Compute-Capacity-at-Higher-Prices/default.aspx"
+      ]
+    ]
+  },
+  {
+    "date": "2026-09-10 披露",
+    "party": "Oracle",
+    "model": "混合机型",
+    "term": "续约期限未披露",
+    "region": "未披露",
+    "price": "较原约高 20%",
+    "basis": "管理层披露季度内到期容量的续约或转售价，多数设备已使用至少四年。",
+    "links": [
+      [
+        "管理层口头表述，Oracle FY27Q1 完整逐字稿",
+        "https://www.fool.com/earnings/call-transcripts/2026/09/11/oracle-orcl-q1-2027-earnings-call-transcript/"
+      ]
+    ],
+    "unit": "%"
+  },
+  {
+    "date": "2026-09-09",
+    "party": "Nebius（裸金属）",
+    "model": "混合机型",
+    "term": "未披露",
+    "region": "未披露",
+    "price": "$10m–15m",
+    "unit": "美元／MW／年",
+    "basis": "CEO 在花旗大会披露的裸金属价格水平，按每 MW 年收入表示。公司未列示单笔订单。",
+    "links": [
+      [
+        "花旗 TMT 大会发言",
+        "https://stockanalysis.com/stocks/nbis/transcripts/743850-citi-s-2026-global-tmt-conference/"
+      ]
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "party": "Nebius（云服务）",
+    "model": "混合机型",
+    "term": "未披露",
+    "region": "未披露",
+    "price": "$20m–25m",
+    "unit": "美元／MW／年",
+    "basis": "CEO 在花旗大会披露的云服务价格水平，按每 MW 年收入表示。公司未列示单笔订单。",
+    "links": [
+      [
+        "花旗 TMT 大会发言",
+        "https://stockanalysis.com/stocks/nbis/transcripts/743850-citi-s-2026-global-tmt-conference/"
+      ]
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "party": "Nebius（紧急短约）",
+    "model": "混合机型",
+    "term": "约 3–6 个月",
+    "region": "未披露",
+    "price": "$40m–50m",
+    "unit": "美元／MW／年",
+    "basis": "CEO 在花旗大会披露的紧急短约价格水平，按每 MW 年收入表示。公司未列示单笔订单。",
+    "links": [
+      [
+        "花旗 TMT 大会发言",
+        "https://stockanalysis.com/stocks/nbis/transcripts/743850-citi-s-2026-global-tmt-conference/"
+      ]
+    ]
+  },
+  {
+    "date": "2026-08",
+    "party": "WhiteFiber → BaseTen",
+    "model": "B300",
+    "term": "3 年",
+    "region": "未披露",
+    "price": "约 $4.52",
+    "basis": "自行折算。$165.2m 收入机会 ÷ 1,392 张 ÷ 26,280 小时。",
+    "links": [
+      [
+        "10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ],
+      [
+        "10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-08",
+    "party": "WhiteFiber → 既有客户",
+    "model": "B300",
+    "term": "5 年",
+    "region": "冰岛",
+    "price": "约 $3.47",
+    "basis": "自行折算。$87.5m 收入机会 ÷ 576 张 ÷ 43,800 小时，未计额外分成。",
+    "links": [
+      [
+        "10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ],
+      [
+        "10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-08",
+    "party": "WhiteFiber → Prime Intellect",
+    "model": "Vera Rubin",
+    "term": "3 年",
+    "region": "未披露",
+    "price": "约 $7.15",
+    "basis": "自行折算。$108.2m 收入机会 ÷ 576 张 ÷ 26,280 小时，预计 2027 年上半年交付。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ],
+      [
+        "WhiteFiber 9 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117728/ea0310427-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-07-27",
+    "party": "Axe Compute",
+    "model": "B300",
+    "term": "5 年",
+    "region": "未披露",
+    "price": "约 $3.72",
+    "basis": "量级估算。以 $1.5bn 和 9,200 张折算，金额与张数均为下限，单价上下限未披露。",
+    "links": [
+      [
+        "公告",
+        "https://www.sec.gov/Archives/edgar/data/1446159/000117184326004883/exh_991.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-07-22",
+    "party": "QumulusAI",
+    "model": "B300",
+    "term": "2 年",
+    "region": "未披露",
+    "price": "约 $4.08",
+    "basis": "情景折算。约 $32m ÷ 56 台 ÷ 8 张 ÷ 17,520 小时。八卡配置取自同系列订单，预付约两成。",
+    "links": [
+      [
+        "QumulusAI 10-Q，新签算力合同",
+        "https://www.sec.gov/Archives/edgar/data/2084026/000143774926028924/quma20260630_10q.htm"
+      ],
+      [
+        "订单",
+        "https://www.sec.gov/Archives/edgar/data/2084026/000143774926020200/ex_973916.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-07-16",
+    "party": "Catalyst Compute（KIDZ）→ Canopy Wave",
+    "model": "B300",
+    "term": "5 年",
+    "region": "美国马萨诸塞州福尔里弗（Fall River）",
+    "price": "$4.30 → $3.50",
+    "basis": "合同明价。256 张，前三年与后两年分别锁价，五年均价 $3.98。须下达不可取消的设备采购单。",
+    "links": [
+      [
+        "KIDZ 服务订单，Rental Terms",
+        "https://www.sec.gov/Archives/edgar/data/2022308/000147793226004422/kidz_ex101.htm"
+      ],
+      [
+        "公告",
+        "https://www.sec.gov/Archives/edgar/data/2022308/000147793226004422/kidz_ex991.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-07-09",
+    "party": "Boost Run",
+    "model": "B300",
+    "term": "4 年",
+    "region": "未披露",
+    "price": "约 $4.13",
+    "basis": "自行折算。$222.458m ÷ 1,536 张 ÷ 35,040 小时，含 CPU、约 5 PB 存储，预付 25%。",
+    "links": [
+      [
+        "10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2090646/000149315226039031/form10-q.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-07",
+    "party": "WhiteFiber",
+    "model": "B300",
+    "term": "3 年",
+    "region": "未披露",
+    "price": "约 $4.76",
+    "basis": "自行折算。$16m 收入机会 ÷ 128 张 ÷ 26,280 小时。",
+    "links": [
+      [
+        "10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-07",
+    "party": "Sharon AI → AI 实验室",
+    "model": "混合机型",
+    "term": "5 年",
+    "region": "新西兰",
+    "price": "约 $19m",
+    "basis": "11 月演示列示的终端客户合同，卡数与型号未逐笔对应。",
+    "links": [
+      [
+        "Sharon 演示",
+        "https://sharonai.com/media/2026/11/Sharon-AI-3Q26-Earnings-Call-Presentation-FINAL.pdf"
+      ],
+      [
+        "11-16 公司稿，SEC 附件",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226052409/ex99-1.htm"
+      ],
+      [
+        "招股文件，Key Corporate Milestones",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226054224/form424b3.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-06-29",
+    "party": "QumulusAI",
+    "model": "B300",
+    "term": "2 年",
+    "region": "未披露",
+    "price": "约 $4.01",
+    "basis": "情景折算。约 $18m ÷ 32 台 ÷ 8 张 ÷ 17,520 小时。八卡配置取自同系列订单，预付约两成。",
+    "links": [
+      [
+        "QumulusAI 10-Q，新签算力合同",
+        "https://www.sec.gov/Archives/edgar/data/2084026/000143774926028924/quma20260630_10q.htm"
+      ],
+      [
+        "订单",
+        "https://www.sec.gov/Archives/edgar/data/2084026/000143774926020200/ex_973916.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-06-28",
+    "party": "Firmus／NVIDIA",
+    "model": "混合机型",
+    "term": "前 6 年",
+    "region": "印尼巴淡岛",
+    "price": "$2.80–3.36",
+    "basis": "预计承购收入情景。$25bn–30bn，按最多 17 万个加速器全部付满六年，含 Grace Blackwell、Vera Rubin、Vera。",
+    "links": [
+      [
+        "Firmus 公告",
+        "https://firmus.co/newsroom/firmus-to-build-170-000-gpu-ai-factor-y-campus-with-nvidia-for-global-ai-natives"
+      ]
+    ],
+    "unit": "美元／加速器小时"
+  },
+  {
+    "date": "2026-06",
+    "party": "Sharon AI → NVIDIA（承购）",
+    "model": "GB300",
+    "term": "6 年",
+    "region": "澳大利亚",
+    "price": "约 $2.32",
+    "basis": "平均保底当量。$4.88bn ÷ 40,000 张 ÷ 52,560 小时，分批交付，实际费率随可用性和第三方销售调整。",
+    "links": [
+      [
+        "Sharon AI 招股文件，合同费率风险因素",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226054224/form424b3.htm"
+      ],
+      [
+        "Q2 p7",
+        "https://sharonai.com/media/2026/08/Sharon-AI-2Q26-Earnings-Call-Presentation-FINAL.pdf"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-05-21",
+    "party": "Boost Run → Thinking Machines Lab",
+    "model": "B300",
+    "term": "3 年",
+    "region": "未披露",
+    "price": "约 $3.59",
+    "basis": "自行折算。$471.7m ÷ 5,000 张 ÷ 26,280 小时，含 CPU 和网络存储。",
+    "links": [
+      [
+        "8-K",
+        "https://www.sec.gov/Archives/edgar/data/2090646/000149315226025672/form8-k.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-05-11",
+    "party": "QumulusAI",
+    "model": "B300",
+    "term": "3 年",
+    "region": "美国科罗拉多州丹佛",
+    "price": "$3.70",
+    "basis": "裸金属合同明价。128 台各 8 张，每月按 730 小时，税另计。",
+    "links": [
+      [
+        "订单",
+        "https://www.sec.gov/Archives/edgar/data/2084026/000143774926020200/ex_973916.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-05-07",
+    "party": "IREN → NVIDIA",
+    "model": "混合机型",
+    "term": "5 年",
+    "region": "未披露",
+    "price": "情景 $3.23",
+    "basis": "Blackwell，$3.4bn、约 60 MW。假设每 MW 400 张，含编排和集群管理。",
+    "links": [
+      [
+        "NVIDIA 公告",
+        "https://iren.com/api/media/file/IREN_Secures_34BN_AI_Cloud_Contract_NVIDIA.pdf?prefix=payload%2F"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-05",
+    "party": "WhiteFiber → Hyperbolic／Modal",
+    "model": "H200",
+    "term": "2 年",
+    "region": "未披露",
+    "price": "约 $1.90",
+    "basis": "自行折算。$17m ÷ 512 张 ÷ 17,520 小时。",
+    "links": [
+      [
+        "WhiteFiber Q3 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117728/ea0310427-10q_whitefiber.htm"
+      ],
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-05",
+    "party": "Sharon AI → 科技公司",
+    "model": "混合机型",
+    "term": "未逐单披露",
+    "region": "未披露",
+    "price": "约 $15m",
+    "basis": "11 月演示列示的终端客户合同，卡数与型号未逐笔对应。",
+    "links": [
+      [
+        "Sharon 演示",
+        "https://sharonai.com/media/2026/11/Sharon-AI-3Q26-Earnings-Call-Presentation-FINAL.pdf"
+      ],
+      [
+        "11-16 公司稿，SEC 附件",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226052409/ex99-1.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-04-22",
+    "party": "Axe Compute",
+    "model": "B300",
+    "term": "3 年",
+    "region": "美国佐治亚州",
+    "price": "约 $4.29",
+    "basis": "自行折算。约 $260m ÷ 2,304 张 ÷ 26,280 小时，含高速存储。",
+    "links": [
+      [
+        "8-K 附件",
+        "https://www.sec.gov/Archives/edgar/data/1446159/000117184326002636/exh_991.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-04",
+    "party": "WhiteFiber → Prime Intellect",
+    "model": "GB200",
+    "term": "1 年",
+    "region": "未披露",
+    "price": "上限约 $3.59",
+    "basis": "自行折算。收入机会上限 $6.8m 按 216 张及完整租期平摊。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ],
+      [
+        "WhiteFiber 9 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117728/ea0310427-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-03-31",
+    "party": "Sharon AI → ESDS 系客户",
+    "model": "B300",
+    "term": "5 年",
+    "region": "未披露",
+    "price": "$3.30",
+    "basis": "订单 GPU 项明价。8,208 张，含税总合同另含存储、安全与许可，整单折约 $3.52。第 36 个月后可按条款退出。",
+    "links": [
+      [
+        "SEC 服务订单，Appendix B",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226023769/ex10-17.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-03-15",
+    "party": "Boost Run",
+    "model": "B300",
+    "term": "3 年",
+    "region": "未披露",
+    "price": "$3.45",
+    "basis": "合同明价。1,280 张，预付 30%，4 月起租。",
+    "links": [
+      [
+        "S-1",
+        "https://www.sec.gov/Archives/edgar/data/2090646/000149315226031923/forms-1.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-03",
+    "party": "WhiteFiber",
+    "model": "H100",
+    "term": "2 年",
+    "region": "未披露",
+    "price": "约 $1.40",
+    "basis": "情景折算。$50.2m、256 台服务器，每台若有 8 张则为 $1.40，每台若有 4 张则为 $2.80。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ],
+      [
+        "WhiteFiber 9 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117728/ea0310427-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-03",
+    "party": "WhiteFiber → Prime Intellect",
+    "model": "GB200",
+    "term": "6 个月",
+    "region": "未披露",
+    "price": "上限约 $3.17",
+    "basis": "自行折算。收入机会上限 $1.0m 按 72 张及完整租期平摊。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ],
+      [
+        "WhiteFiber 9 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026117728/ea0310427-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2026-02",
+    "party": "Sharon AI → Canva／GMI",
+    "model": "混合机型",
+    "term": "未逐单披露",
+    "region": "未披露",
+    "price": "约 $17m",
+    "basis": "11 月演示列示的终端客户合同，卡数与型号未逐笔对应。",
+    "links": [
+      [
+        "Sharon 演示",
+        "https://sharonai.com/media/2026/11/Sharon-AI-3Q26-Earnings-Call-Presentation-FINAL.pdf"
+      ],
+      [
+        "11-16 公司稿，SEC 附件",
+        "https://www.sec.gov/Archives/edgar/data/2068385/000149315226052409/ex99-1.htm"
+      ]
+    ],
+    "unit": "美元／MW／年"
+  },
+  {
+    "date": "2026-01-21",
+    "party": "Nebius → Microsoft",
+    "model": "混合机型",
+    "term": "按各批次服务期，日期隐去",
+    "region": "未披露",
+    "price": "沿用原协议费率，金额隐去",
+    "unit": "美元／GPU 小时",
+    "basis": "补充协议增加两批 GPU 容量，每 GPU 定价沿用原协议第 3.1 节。型号、卡数和批次金额均已隐去。",
+    "links": [
+      [
+        "SEC 补充协议第 2 节",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231xex4d5.htm"
+      ],
+      [
+        "原协议第 3.1 节",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231xex4d4.htm"
+      ]
+    ]
+  },
+  {
+    "date": "2026-01",
+    "party": "WhiteFiber",
+    "model": "B200",
+    "term": "2 年",
+    "region": "未披露",
+    "price": "约 $2.69",
+    "basis": "自行折算。$18.1m 收入机会 ÷ 384 张 ÷ 17,520 小时。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2025Q3（11-10 披露）",
+    "party": "CoreWeave → 原客户",
+    "model": "H100",
+    "term": "未披露",
+    "region": "未披露",
+    "price": "首约的约 95%",
+    "basis": "同一客户续租逾一万张，未披露绝对价。",
+    "links": [
+      [
+        "开场陈述",
+        "https://s205.q4cdn.com/133937190/files/doc_events/2025/Nov/10/CORRECTED-TRANSCRIPT-CoreWeave-Inc-CRWV-US-Q3-2025-Earnings-Call-10-November-2025-5-00-PM-ET.pdf"
+      ],
+      [
+        "美银信贷大会完整问答",
+        "https://stockanalysis.com/stocks/crwv/transcripts/483890-bofa-securities-leveraged-finance-conference-2025/"
+      ]
+    ],
+    "unit": "%"
+  },
+  {
+    "date": "2025-11-02",
+    "party": "IREN → Microsoft",
+    "model": "GB300",
+    "term": "5 年",
+    "region": "美国得州",
+    "price": "约 $2.90",
+    "basis": "自行折算。GPU 服务费 $9.6642bn ÷ 约 76,000 张 ÷ 43,800 小时。订单遮盖了精确单价。",
+    "links": [
+      [
+        "合同第 3.1–3.3 条",
+        "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000015/exhibit103-partnerstatem.htm"
+      ],
+      [
+        "问答",
+        "https://equibles.com/stocks/iren/calls/2026-q1"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2025-10-07",
+    "party": "IREN",
+    "model": "混合机型",
+    "term": "组合期限不一",
+    "region": "加拿大",
+    "price": "约 $2.33",
+    "basis": "组合折算。$225m 已签 ARR ÷ 约 11,000 张 ÷ 8,760 小时，含附属服务。",
+    "links": [
+      [
+        "原公告",
+        "https://iren.gcs-web.com/static-files/2fb00db9-7a8c-4d71-88a7-6badfd3501a1"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2025-09-17",
+    "party": "Nscale／Aker → Microsoft",
+    "model": "GB300",
+    "term": "5 年",
+    "region": "挪威",
+    "price": "约 $2.72",
+    "basis": "自行折算。约 $6.2bn ÷ 52,000 张 ÷ 5 年 ÷ 8,760 小时，整套算力服务。",
+    "links": [
+      [
+        "Aker 原公告",
+        "https://news.cision.com/aker-asa/r/aker-nscale-jv-signs-multi-billion-dollar-ai-infrastructure-agreement-with-microsoft,c4233986"
+      ],
+      [
+        "Nscale 核对卡数",
+        "https://www.nscale.com/press-releases/nscale-microsoft-2025"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2025-09-07",
+    "party": "Nebius → Microsoft",
+    "model": "混合机型",
+    "term": "5 年",
+    "region": "美国新泽西州",
+    "price": "情景 $3.31–3.97",
+    "basis": "媒体报道口径的假设。彭博援引知情人士称协议涉及超过 10 万张 GB300，未区分基础承诺与增购容量。按基础承诺上限 $17.3929bn、完整五年和 10 万／11 万／12 万张分别折合 $3.97／$3.61／$3.31 每 GPU 小时。10 万取报道所述门槛，11 万和 12 万为情景假设，公司未披露实际卡数。",
+    "links": [
+      [
+        "9 月 6-K",
+        "https://cdn.yahoofinance.com/prod/sec-filings/0001513845/000110465925088312/tm2525580d1_6k.htm"
+      ],
+      [
+        "20-F，Significant Customer Agreements",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+      ],
+      [
+        "原协议第 3 节",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231xex4d4.htm"
+      ],
+      [
+        "彭博报道，卡数线索",
+        "https://news.bloomberglaw.com/artificial-intelligence/microsoft-bets-33-billion-on-neocloud-firms-to-ease-ai-crunch"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2025-01",
+    "party": "WhiteFiber",
+    "model": "H200",
+    "term": "1 年",
+    "region": "未披露",
+    "price": "约 $2.28",
+    "basis": "自行折算。$0.80m ÷ 40 张 ÷ 8,760 小时。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  },
+  {
+    "date": "2024-11",
+    "party": "WhiteFiber",
+    "model": "H200",
+    "term": "6 个月",
+    "region": "未披露",
+    "price": "约 $2.28",
+    "basis": "自行折算。收入机会 $0.16m ÷ 16 张 ÷ 4,380 小时。",
+    "links": [
+      [
+        "WhiteFiber 6 月 10-Q",
+        "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+      ]
+    ],
+    "unit": "美元／GPU 小时"
+  }
+]

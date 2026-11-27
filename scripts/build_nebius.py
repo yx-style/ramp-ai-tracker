@@ -60,8 +60,8 @@ def pages(endpoint, query):
         query["pageToken"] = token
 
 
-def rate_rows():
-    html = fetch(PRICES).decode()
+def rate_rows(body=None):
+    html = (fetch(PRICES) if body is None else body).decode()
     script = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
     if not script:
         raise ValueError("官网未返回牌价数据")
