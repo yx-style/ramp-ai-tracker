@@ -84,11 +84,17 @@ jobs:
         run: echo "::warning::牌价更新失败，沿用已存牌价，继续提交现货归档。"
       - name: Run Nebius archive regression tests
         run: python -m unittest discover -s tests -p 'test_build_nebius.py' -v
-      - name: Commit Nebius data only
+      - name: Synchronize rental exports with the Nebius daily archive
+        run: |
+          pip install -r scripts/gpu-rent-requirements.txt
+          python scripts/build_gpu_rent.py --export-only
+          python -m unittest discover -s tests -p 'test_gpu_rent.py' -v
+      - name: Commit Nebius prices and derived rental exports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- data/nebius/raw/ docs/data/nebius.json docs/data/nebius.csv docs/data/nebius-daily.csv
+          git add -- data/gpu-rent/ docs/data/gpu-rent.csv docs/data/gpu-rent.json docs/data/gpu-rent-series/
           if ! git diff --cached --quiet; then
             git commit -m "更新 Nebius GPU 小时报价"
             git push origin HEAD:main
@@ -115,7 +121,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/gpu-rent/ docs/data/gpu-rent.csv docs/data/gpu-rent.json
+          git add -- data/gpu-rent/ docs/data/gpu-rent.csv docs/data/gpu-rent.json docs/data/gpu-rent-series/
           if ! git diff --cached --quiet; then
             git commit -m "更新 GPU 租赁价格归档"
             git push origin HEAD:main

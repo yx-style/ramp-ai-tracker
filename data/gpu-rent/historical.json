@@ -79,7 +79,7 @@
  },
  {
   "model": "B200",
-  "product": "8x NVIDIA HGX B200 · 180 GB",
+  "product": "8x NVIDIA HGX B200 · 180 GB · 208 vCPU / 2900 GiB RAM / 22 TiB SSD",
   "price": 7.69,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -92,7 +92,7 @@
  },
  {
   "model": "H100",
-  "product": "8x NVIDIA HGX H100 · 80 GB",
+  "product": "8x NVIDIA HGX H100 · 80 GB · 208 vCPU / 1800 GiB RAM / 22 TiB SSD",
   "price": 4.59,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -105,7 +105,7 @@
  },
  {
   "model": "A100",
-  "product": "8x NVIDIA HGX A100 · 80 GB",
+  "product": "8x NVIDIA HGX A100 · 80 GB · 240 vCPU / 1800 GiB RAM / 19.5 TiB SSD",
   "price": 3.19,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -118,7 +118,7 @@
  },
  {
   "model": "A100",
-  "product": "8x NVIDIA HGX A100 · 40 GB",
+  "product": "8x NVIDIA HGX A100 · 40 GB · 124 vCPU / 1800 GiB RAM / 5.8 TiB SSD",
   "price": 1.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -131,7 +131,7 @@
  },
  {
   "model": "V100",
-  "product": "8x NVIDIA Tesla V100 · 16 GB",
+  "product": "8x NVIDIA Tesla V100 · 16 GB · 88 vCPU / 448 GiB RAM / 5.8 TiB SSD",
   "price": 0.79,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -144,7 +144,7 @@
  },
  {
   "model": "B200",
-  "product": "4x NVIDIA B200 SXM6 · 180 GB",
+  "product": "4x NVIDIA B200 SXM6 · 180 GB · 104 vCPU / 1440 GiB RAM / 11 TiB SSD",
   "price": 7.79,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -157,7 +157,7 @@
  },
  {
   "model": "H100",
-  "product": "4x NVIDIA H100 SXM · 80 GB",
+  "product": "4x NVIDIA H100 SXM · 80 GB · 104 vCPU / 900 GiB RAM / 11 TiB SSD",
   "price": 4.69,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -170,7 +170,7 @@
  },
  {
   "model": "A100",
-  "product": "4x NVIDIA A100 PCIe · 40 GB",
+  "product": "4x NVIDIA A100 PCIe · 40 GB · 120 vCPU / 900 GiB RAM / 1 TiB SSD",
   "price": 1.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -183,7 +183,7 @@
  },
  {
   "model": "A6000",
-  "product": "4x NVIDIA A6000 · 48 GB",
+  "product": "4x NVIDIA A6000 · 48 GB · 56 vCPU / 400 GiB RAM / 1 TiB SSD",
   "price": 1.09,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -196,7 +196,7 @@
  },
  {
   "model": "B200",
-  "product": "2x NVIDIA B200 SXM6 · 180 GB",
+  "product": "2x NVIDIA B200 SXM6 · 180 GB · 52 vCPU / 720 GiB RAM / 5.5 TiB SSD",
   "price": 7.89,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -209,7 +209,7 @@
  },
  {
   "model": "H100",
-  "product": "2x NVIDIA H100 SXM · 80 GB",
+  "product": "2x NVIDIA H100 SXM · 80 GB · 52 vCPU / 450 GiB RAM / 5.5 TiB SSD",
   "price": 4.79,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -222,7 +222,7 @@
  },
  {
   "model": "A100",
-  "product": "2x NVIDIA A100 PCIe · 40 GB",
+  "product": "2x NVIDIA A100 PCIe · 40 GB · 60 vCPU / 450 GiB RAM / 1 TiB SSD",
   "price": 1.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -235,7 +235,7 @@
  },
  {
   "model": "A6000",
-  "product": "2x NVIDIA A6000 · 48 GB",
+  "product": "2x NVIDIA A6000 · 48 GB · 28 vCPU / 200 GiB RAM / 1 TiB SSD",
   "price": 1.09,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -248,7 +248,7 @@
  },
  {
   "model": "B200",
-  "product": "1x NVIDIA B200 SXM6 · 180 GB",
+  "product": "1x NVIDIA B200 SXM6 · 180 GB · 26 vCPU / 360 GiB RAM / 2.75 TiB SSD",
   "price": 7.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -261,7 +261,7 @@
  },
  {
   "model": "GH200",
-  "product": "1x NVIDIA GH200 · 96 GB",
+  "product": "1x NVIDIA GH200 · 96 GB · 64 vCPU / 432 GiB RAM / 4 TiB SSD",
   "price": 2.59,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -274,7 +274,7 @@
  },
  {
   "model": "H100",
-  "product": "1x NVIDIA H100 SXM · 80 GB",
+  "product": "1x NVIDIA H100 SXM · 80 GB · 26 vCPU / 225 GiB RAM / 2.75 TiB SSD",
   "price": 4.89,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -287,7 +287,7 @@
  },
  {
   "model": "H100",
-  "product": "1x NVIDIA H100 PCIe · 80 GB",
+  "product": "1x NVIDIA H100 PCIe · 80 GB · 26 vCPU / 225 GiB RAM / 1 TiB SSD",
   "price": 3.79,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -300,7 +300,7 @@
  },
  {
   "model": "A100",
-  "product": "1x NVIDIA A100 SXM · 40 GB",
+  "product": "1x NVIDIA A100 SXM · 40 GB · 30 vCPU / 220 GiB RAM / 512 GiB SSD",
   "price": 1.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -313,7 +313,7 @@
  },
  {
   "model": "A100",
-  "product": "1x NVIDIA A100 PCIe · 40 GB",
+  "product": "1x NVIDIA A100 PCIe · 40 GB · 30 vCPU / 225 GiB RAM / 512 GiB SSD",
   "price": 1.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -326,7 +326,7 @@
  },
  {
   "model": "A10",
-  "product": "1x NVIDIA A10 · 24 GB",
+  "product": "1x NVIDIA A10 · 24 GB · 30 vCPU / 226 GiB RAM / 1.3 TiB SSD",
   "price": 1.29,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -339,7 +339,7 @@
  },
  {
   "model": "A6000",
-  "product": "1x NVIDIA A6000 · 48 GB",
+  "product": "1x NVIDIA A6000 · 48 GB · 14 vCPU / 100 GiB RAM / 512 GiB SSD",
   "price": 1.09,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -352,7 +352,7 @@
  },
  {
   "model": "QUADRO RTX 6000",
-  "product": "1x NVIDIA Quadro RTX 6000 · 24 GB",
+  "product": "1x NVIDIA Quadro RTX 6000 · 24 GB · 14 vCPU / 46 GiB RAM / 512 GiB SSD",
   "price": 0.69,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -582,7 +582,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "4 GPU / 186 GB VRAM / 144 vCPU / 960 GB RAM / 30.72 TB"
  },
  {
   "model": "B300",
@@ -595,7 +596,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 270 GB VRAM / 192 vCPU / 4,096 GB RAM / 61.44 TB"
  },
  {
   "model": "B200",
@@ -608,7 +610,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 180 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "B200",
@@ -621,7 +624,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 180 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "RTX PRO 6000",
@@ -634,7 +638,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 96 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "RTX PRO 6000",
@@ -647,7 +652,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 96 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "RTX PRO 6000",
@@ -660,7 +666,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 96 GB VRAM / 128 vCPU / 512 GB RAM / 7.68 TB"
  },
  {
   "model": "GH200",
@@ -673,7 +680,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "1 GPU / 96 GB VRAM / 72 vCPU / 480 GB RAM / 7.68 TB"
  },
  {
   "model": "H100",
@@ -686,7 +694,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "H100",
@@ -699,7 +708,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "L40",
@@ -712,7 +722,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 48 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "L40",
@@ -725,7 +736,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 48 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "H200",
@@ -738,7 +750,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 141 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "H200",
@@ -751,7 +764,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 141 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "L40S",
@@ -764,7 +778,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 48 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "L40S",
@@ -777,7 +792,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 48 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "A100",
@@ -790,7 +806,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 7.68 TB"
  },
  {
   "model": "A100",
@@ -803,7 +820,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 7.68 TB"
  },
  {
   "model": "GB200",
@@ -816,7 +834,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "4 GPU / 186 GB VRAM / 144 vCPU / 960 GB RAM / 30.72 TB"
  },
  {
   "model": "B300",
@@ -829,7 +848,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 270 GB VRAM / 192 vCPU / 4,096 GB RAM / 61.44 TB"
  },
  {
   "model": "B200",
@@ -842,7 +862,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 180 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "B200",
@@ -855,7 +876,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 180 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "RTX PRO 6000",
@@ -868,7 +890,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 96 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "RTX PRO 6000",
@@ -881,7 +904,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 96 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "RTX PRO 6000",
@@ -894,7 +918,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 96 GB VRAM / 128 vCPU / 512 GB RAM / 7.68 TB"
  },
  {
   "model": "GH200",
@@ -907,7 +932,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "1 GPU / 96 GB VRAM / 72 vCPU / 480 GB RAM / 7.68 TB"
  },
  {
   "model": "H100",
@@ -920,7 +946,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "H100",
@@ -933,7 +960,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "L40",
@@ -946,7 +974,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 48 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "H200",
@@ -959,7 +988,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 141 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "H200",
@@ -972,7 +1002,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 141 GB VRAM / 128 vCPU / 2,048 GB RAM / 61.44 TB"
  },
  {
   "model": "L40S",
@@ -985,7 +1016,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 48 GB VRAM / 128 vCPU / 1,024 GB RAM / 7.68 TB"
  },
  {
   "model": "A100",
@@ -998,7 +1030,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 7.68 TB"
  },
  {
   "model": "A100",
@@ -1011,7 +1044,8 @@
   "date": "2026-11-26",
   "source": "CoreWeave",
   "url": "https://www.coreweave.com/pricing",
-  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz"
+  "raw": "data/gpu-rent/coreweave/raw/2026-11-26_08e052f9bd00a836.gz",
+  "configuration": "8 GPU / 80 GB VRAM / 128 vCPU / 2,048 GB RAM / 7.68 TB"
  },
  {
   "model": "GB300",
@@ -2324,7 +2358,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet Choose between 1 or 8 GPU's per droplet / GPU Memory 256 GB / Droplet vCPUs 20 / Droplet Memory 164 GiB / Boot Disk 720 GiB NVMe / Scratch Disk 5 TiB NVMe"
  },
  {
   "model": "MI300X",
@@ -2337,7 +2372,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet Choose between 1 or 8 GPU's per droplet / GPU Memory 192 GB / Droplet vCPUs 20 / Droplet Memory 240 GiB / Boot Disk 720 GiB NVMe / Scratch Disk 5 TiB NVMe"
  },
  {
   "model": "H200",
@@ -2350,7 +2386,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet Choose between 1 or 8 GPU's per droplet / GPU Memory 141 GB / Droplet vCPUs 24 / Droplet Memory 240 GiB / Boot Disk 720 GiB NVMe / Scratch Disk 5 TiB NVMe"
  },
  {
   "model": "H100",
@@ -2363,7 +2400,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet Choose between 1 or 8 GPU's per droplet / GPU Memory 80 GB / Droplet vCPUs 20 / Droplet Memory 240 GiB / Boot Disk 720 GiB NVMe / Scratch Disk 5 TiB NVMe"
  },
  {
   "model": "RTX 4000 Ada",
@@ -2376,7 +2414,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet 1 / GPU Memory 20 GB / Droplet vCPUs 8 / Droplet Memory 32 GiB / Boot Disk 500 GiB NVMe"
  },
  {
   "model": "RTX 6000 Ada",
@@ -2389,7 +2428,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet 1 / GPU Memory 48 GB / Droplet vCPUs 8 / Droplet Memory 64 GiB / Boot Disk 500 GiB NVMe"
  },
  {
   "model": "L40S",
@@ -2402,7 +2442,8 @@
   "date": "2026-11-26",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
-  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz"
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "configuration": "GPUs per Droplet 1 / GPU Memory 48 GB / Droplet vCPUs 8 / Droplet Memory 64 GiB / Boot Disk 500 GiB NVMe"
  },
  {
   "model": "L40S",
@@ -2415,7 +2456,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B109479"
  },
  {
   "model": "H100T",
@@ -2428,7 +2469,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B109480"
  },
  {
   "model": "MI300X",
@@ -2441,7 +2482,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B109485"
  },
  {
   "model": "H200",
@@ -2454,7 +2495,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B110519"
  },
  {
   "model": "B200",
@@ -2467,7 +2508,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B110978"
  },
  {
   "model": "GB200",
@@ -2480,7 +2521,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B110979"
  },
  {
   "model": "MI355X",
@@ -2493,7 +2534,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B111758"
  },
  {
   "model": "GB300",
@@ -2506,7 +2547,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B112140"
  },
  {
   "model": "B300",
@@ -2519,7 +2560,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B112237"
  },
  {
   "model": "RTX PRO 6000",
@@ -2532,7 +2573,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B112613"
  },
  {
   "model": "A100",
@@ -2545,7 +2586,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B95907"
  },
  {
   "model": "A10",
@@ -2558,7 +2599,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B95909"
  },
  {
   "model": "H100",
@@ -2571,7 +2612,7 @@
   "date": "2026-11-26",
   "source": "Oracle",
   "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
-  "raw": "data/gpu-rent/oracle/raw/2026-11-26_cdcb5411361ffbe7.gz"
+  "partNumber": "B98415"
  },
  {
   "model": "GB200",
@@ -2584,7 +2625,8 @@
   "date": "2026-11-26",
   "source": "Azure",
   "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND128isr_NDR_GB200_v6%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-gb200/raw/2026-11-26_80875a0cfa6359f5.gz"
+  "raw": "data/gpu-rent/azure-gb200/raw/2026-11-26_80875a0cfa6359f5.gz",
+  "effective_date": "2025-04-01"
  },
  {
   "model": "GB200",
@@ -2597,7 +2639,8 @@
   "date": "2026-11-26",
   "source": "Azure",
   "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND128isr_NDR_GB200_v6%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-gb200/raw/2026-11-26_80875a0cfa6359f5.gz"
+  "raw": "data/gpu-rent/azure-gb200/raw/2026-11-26_80875a0cfa6359f5.gz",
+  "effective_date": "2025-04-01"
  },
  {
   "model": "H100",
@@ -2610,7 +2653,8 @@
   "date": "2026-11-26",
   "source": "Azure",
   "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz"
+  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz",
+  "effective_date": "2023-12-01"
  },
  {
   "model": "H100",
@@ -2623,7 +2667,8 @@
   "date": "2026-11-26",
   "source": "Azure",
   "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz"
+  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz",
+  "effective_date": "2023-12-01"
  },
  {
   "model": "H100",
@@ -2636,7 +2681,8 @@
   "date": "2026-11-26",
   "source": "Azure",
   "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz"
+  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz",
+  "effective_date": "2023-12-01"
  },
  {
   "model": "H100",
@@ -2649,7 +2695,8 @@
   "date": "2024-07-03",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20240703191414/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2024-07-03_ae5e198b3c652030.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2024-07-03_ae5e198b3c652030.gz",
+  "effective_date": "2024-06-01"
  },
  {
   "model": "H100",
@@ -2662,7 +2709,8 @@
   "date": "2024-12-23",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20241223225037/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2024-12-23_ef3ca4f525d437b8.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2024-12-23_ef3ca4f525d437b8.gz",
+  "effective_date": "2024-12-01"
  },
  {
   "model": "H100",
@@ -2675,7 +2723,8 @@
   "date": "2025-03-31",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250331133428/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-03-31_262f3065b0c42a85.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-03-31_262f3065b0c42a85.gz",
+  "effective_date": "2025-03-01"
  },
  {
   "model": "H200",
@@ -2688,7 +2737,8 @@
   "date": "2025-03-31",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250331133428/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-03-31_262f3065b0c42a85.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-03-31_262f3065b0c42a85.gz",
+  "effective_date": "2025-03-01"
  },
  {
   "model": "H100",
@@ -2701,7 +2751,8 @@
   "date": "2025-05-29",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250529210942/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-05-29_abe78e5ca321061f.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-05-29_abe78e5ca321061f.gz",
+  "effective_date": "2025-05-01"
  },
  {
   "model": "H200",
@@ -2714,7 +2765,8 @@
   "date": "2025-05-29",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250529210942/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-05-29_abe78e5ca321061f.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-05-29_abe78e5ca321061f.gz",
+  "effective_date": "2025-05-01"
  },
  {
   "model": "H100",
@@ -2727,7 +2779,8 @@
   "date": "2025-07-03",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250703204906/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-07-03_1e808a5c26f00663.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-07-03_1e808a5c26f00663.gz",
+  "effective_date": "2025-06-01"
  },
  {
   "model": "H200",
@@ -2740,7 +2793,8 @@
   "date": "2025-07-03",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250703204906/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-07-03_1e808a5c26f00663.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-07-03_1e808a5c26f00663.gz",
+  "effective_date": "2025-06-01"
  },
  {
   "model": "H100",
@@ -2753,7 +2807,8 @@
   "date": "2025-09-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz",
+  "effective_date": "2025-09-01"
  },
  {
   "model": "B200",
@@ -2766,7 +2821,8 @@
   "date": "2025-09-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz",
+  "effective_date": "2025-09-01"
  },
  {
   "model": "H100",
@@ -2779,7 +2835,8 @@
   "date": "2025-09-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz",
+  "effective_date": "2025-09-01"
  },
  {
   "model": "H200",
@@ -2792,7 +2849,8 @@
   "date": "2025-09-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz",
+  "effective_date": "2025-09-01"
  },
  {
   "model": "H100",
@@ -2805,7 +2863,8 @@
   "date": "2025-12-18",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz",
+  "effective_date": "2025-12-01"
  },
  {
   "model": "B200",
@@ -2818,7 +2877,8 @@
   "date": "2025-12-18",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz",
+  "effective_date": "2025-12-01"
  },
  {
   "model": "H100",
@@ -2831,7 +2891,8 @@
   "date": "2025-12-18",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz",
+  "effective_date": "2025-12-01"
  },
  {
   "model": "H200",
@@ -2844,7 +2905,8 @@
   "date": "2025-12-18",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz",
+  "effective_date": "2025-12-01"
  },
  {
   "model": "H100",
@@ -2857,7 +2919,8 @@
   "date": "2026-03-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz",
+  "effective_date": "2026-03-01"
  },
  {
   "model": "B200",
@@ -2870,7 +2933,8 @@
   "date": "2026-03-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz",
+  "effective_date": "2026-03-01"
  },
  {
   "model": "H100",
@@ -2883,7 +2947,8 @@
   "date": "2026-03-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz",
+  "effective_date": "2026-03-01"
  },
  {
   "model": "H200",
@@ -2896,7 +2961,8 @@
   "date": "2026-03-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz",
+  "effective_date": "2026-03-01"
  },
  {
   "model": "H100",
@@ -2909,7 +2975,8 @@
   "date": "2026-06-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "B300",
@@ -2922,7 +2989,8 @@
   "date": "2026-06-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "B200",
@@ -2935,7 +3003,8 @@
   "date": "2026-06-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "H100",
@@ -2948,7 +3017,8 @@
   "date": "2026-06-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "H200",
@@ -2961,7 +3031,8 @@
   "date": "2026-06-30",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "H100",
@@ -2974,7 +3045,8 @@
   "date": "2026-09-25",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz",
+  "effective_date": "2026-09-01"
  },
  {
   "model": "B300",
@@ -2987,7 +3059,8 @@
   "date": "2026-09-25",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz",
+  "effective_date": "2026-09-01"
  },
  {
   "model": "B200",
@@ -3000,7 +3073,8 @@
   "date": "2026-09-25",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz",
+  "effective_date": "2026-09-01"
  },
  {
   "model": "H100",
@@ -3013,7 +3087,8 @@
   "date": "2026-09-25",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz",
+  "effective_date": "2026-09-01"
  },
  {
   "model": "H200",
@@ -3026,7 +3101,8 @@
   "date": "2026-09-25",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz",
+  "effective_date": "2026-09-01"
  },
  {
   "model": "H100",
@@ -3039,7 +3115,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "B300",
@@ -3052,7 +3129,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "B200",
@@ -3065,7 +3143,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3078,7 +3157,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H200",
@@ -3091,7 +3171,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3104,7 +3185,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3117,7 +3199,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H200",
@@ -3130,7 +3213,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H200",
@@ -3143,7 +3227,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "B200",
@@ -3156,7 +3241,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3169,7 +3255,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3182,7 +3269,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H200",
@@ -3195,7 +3283,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H200",
@@ -3208,7 +3297,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3221,7 +3311,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "B200",
@@ -3234,7 +3325,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "B300",
@@ -3247,7 +3339,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3260,7 +3353,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H200",
@@ -3273,59 +3367,8 @@
   "date": "2026-11-26",
   "source": "AWS EC2",
   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
- },
- {
-  "model": "H100",
-  "product": "NVIDIA HGX H100",
-  "price": 2.95,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-05-31",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-05-31_37fc940bc3ee7779.gz"
- },
- {
-  "model": "H200",
-  "product": "NVIDIA HGX H200",
-  "price": 3.5,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-05-31",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-05-31_37fc940bc3ee7779.gz"
- },
- {
-  "model": "B200",
-  "product": "NVIDIA HGX B200",
-  "price": 5.5,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-05-31",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-05-31_37fc940bc3ee7779.gz"
- },
- {
-  "model": "B300",
-  "product": "NVIDIA HGX B300",
-  "price": 6.1,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-05-31",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-05-31_37fc940bc3ee7779.gz"
+  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz",
+  "effective_date": "2026-11-01"
  },
  {
   "model": "H100",
@@ -3335,10 +3378,11 @@
   "term": "无固定期",
   "region": "价目表未分地区",
   "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-06-01",
+  "date": "2026-06-16",
   "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz"
+  "url": "https://web.archive.org/web/20260616233813id_/https://docs.nebius.com/compute/resources/pricing",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "H200",
@@ -3348,10 +3392,11 @@
   "term": "无固定期",
   "region": "价目表未分地区",
   "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-06-01",
+  "date": "2026-06-16",
   "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz"
+  "url": "https://web.archive.org/web/20260616233813id_/https://docs.nebius.com/compute/resources/pricing",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "B200",
@@ -3361,10 +3406,11 @@
   "term": "无固定期",
   "region": "价目表未分地区",
   "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-06-01",
+  "date": "2026-06-16",
   "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz"
+  "url": "https://web.archive.org/web/20260616233813id_/https://docs.nebius.com/compute/resources/pricing",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "B300",
@@ -3374,10 +3420,11 @@
   "term": "无固定期",
   "region": "价目表未分地区",
   "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-06-01",
+  "date": "2026-06-16",
   "source": "Nebius",
-  "url": "https://web.archive.org/web/20260616000000id_/https://docs.nebius.com/compute/resources/pricing",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz"
+  "url": "https://web.archive.org/web/20260616233813id_/https://docs.nebius.com/compute/resources/pricing",
+  "raw": "data/gpu-rent/nebius-history/raw/2026-06-01_37fc940bc3ee7779.gz",
+  "effective_date": "2026-06-01"
  },
  {
   "model": "H100",
@@ -3390,7 +3437,9 @@
   "date": "2026-09-23",
   "source": "Nebius",
   "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz",
+  "effective_date": "2026-10-01",
+  "announced_price": 4.5
  },
  {
   "model": "H200",
@@ -3403,7 +3452,9 @@
   "date": "2026-09-23",
   "source": "Nebius",
   "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz",
+  "effective_date": "2026-10-01",
+  "announced_price": 5.4
  },
  {
   "model": "B200",
@@ -3416,7 +3467,9 @@
   "date": "2026-09-23",
   "source": "Nebius",
   "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz",
+  "effective_date": "2026-10-01",
+  "announced_price": 8.5
  },
  {
   "model": "B300",
@@ -3429,59 +3482,9 @@
   "date": "2026-09-23",
   "source": "Nebius",
   "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
- },
- {
-  "model": "H100",
-  "product": "NVIDIA HGX H100",
-  "price": 4.5,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-10-01",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-10-01_9a5f3542991c7a52.gz"
- },
- {
-  "model": "H200",
-  "product": "NVIDIA HGX H200",
-  "price": 5.4,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-10-01",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-10-01_9a5f3542991c7a52.gz"
- },
- {
-  "model": "B200",
-  "product": "NVIDIA HGX B200",
-  "price": 8.5,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-10-01",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-10-01_9a5f3542991c7a52.gz"
- },
- {
-  "model": "B300",
-  "product": "NVIDIA HGX B300",
-  "price": 9.5,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "按原价目表的生效期或存档日记录。",
-  "date": "2026-10-01",
-  "source": "Nebius",
-  "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
-  "raw": "data/gpu-rent/nebius-history/raw/2026-10-01_9a5f3542991c7a52.gz"
+  "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz",
+  "effective_date": "2026-10-01",
+  "announced_price": 9.5
  },
  {
   "model": "H100",
@@ -3546,7 +3549,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 1.91
  },
  {
   "model": "MI325X",
@@ -3559,7 +3564,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 2.88
  },
  {
   "model": "MI350X",
@@ -3572,7 +3579,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 4.76
  },
  {
   "model": "H100",
@@ -3585,7 +3594,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 3.26
  },
  {
   "model": "H200",
@@ -3598,7 +3609,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 3.4
  },
  {
   "model": "B300",
@@ -3611,85 +3624,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
- },
- {
-  "model": "MI300X",
-  "product": "AMD Instinct™ MI300X",
-  "price": 1.91,
-  "kind": "预留挂牌",
-  "term": "12 个月",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
- },
- {
-  "model": "MI325X",
-  "product": "AMD Instinct™ MI325X",
-  "price": 2.88,
-  "kind": "预留挂牌",
-  "term": "12 个月",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
- },
- {
-  "model": "MI350X",
-  "product": "AMD Instinct™ MI350X",
-  "price": 4.76,
-  "kind": "预留挂牌",
-  "term": "12 个月",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
- },
- {
-  "model": "H100",
-  "product": "NVIDIA HGX H100",
-  "price": 3.26,
-  "kind": "预留挂牌",
-  "term": "12 个月",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
- },
- {
-  "model": "H200",
-  "product": "NVIDIA HGX H200",
-  "price": 3.4,
-  "kind": "预留挂牌",
-  "term": "12 个月",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
- },
- {
-  "model": "B300",
-  "product": "NVIDIA HGX B300",
-  "price": 7.94,
-  "kind": "预留挂牌",
-  "term": "12 个月",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_e5fed883125d9b70.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 7.94
  },
  {
   "model": "MI300X",
@@ -3702,7 +3639,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 2.59
  },
  {
   "model": "H100",
@@ -3715,7 +3654,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 4.41
  },
  {
   "model": "H200",
@@ -3728,46 +3669,9 @@
   "date": "2026-07-21",
   "source": "DigitalOcean",
   "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz"
- },
- {
-  "model": "MI300X",
-  "product": "AMD Instinct™ MI300X",
-  "price": 2.59,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz"
- },
- {
-  "model": "H100",
-  "product": "NVIDIA HGX H100",
-  "price": 4.41,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz"
- },
- {
-  "model": "H200",
-  "product": "NVIDIA HGX H200",
-  "price": 4.47,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "价目表未分地区",
-  "note": "7 月 21 日公告列示旧价，新价自 8 月 1 日生效。",
-  "date": "2026-08-01",
-  "source": "DigitalOcean",
-  "url": "https://www.digitalocean.com/blog/price-changes-gpus",
-  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz"
+  "raw": "data/gpu-rent/digitalocean-history/raw/2026-07-21_6bc07776eafa8bf7.gz",
+  "effective_date": "2026-08-01",
+  "announced_price": 4.47
  },
  {
   "model": "H100",
@@ -3940,7 +3844,7 @@
  },
  {
   "model": "H100",
-  "product": "1x NVIDIA H100 PCIe · 80 GB",
+  "product": "1x NVIDIA H100 PCIe · 80 GB · 配套配置未披露",
   "price": 2.49,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -3953,7 +3857,7 @@
  },
  {
   "model": "H100",
-  "product": "1x NVIDIA H100 SXM · 80 GB",
+  "product": "1x NVIDIA H100 SXM · 80 GB · 配套配置未披露",
   "price": 3.29,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -3966,7 +3870,7 @@
  },
  {
   "model": "H100",
-  "product": "2x NVIDIA H100 SXM · 80 GB",
+  "product": "2x NVIDIA H100 SXM · 80 GB · 配套配置未披露",
   "price": 3.19,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -3979,7 +3883,7 @@
  },
  {
   "model": "H100",
-  "product": "4x NVIDIA H100 SXM · 80 GB",
+  "product": "4x NVIDIA H100 SXM · 80 GB · 配套配置未披露",
   "price": 3.09,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -3992,7 +3896,7 @@
  },
  {
   "model": "H100",
-  "product": "8x NVIDIA H100 SXM · 80 GB",
+  "product": "8x NVIDIA H100 SXM · 80 GB · 配套配置未披露",
   "price": 2.99,
   "kind": "按需挂牌",
   "term": "无固定期",
@@ -4002,110 +3906,6 @@
   "source": "Lambda",
   "url": "https://lambda.com/blog/creating-more-options-for-ai-developers-new-1x-2x-and-4x-sxm",
   "raw": "data/gpu-rent/lambda-history/raw/2024-10-07_fb963d3ee2433aa8.gz"
- },
- {
-  "model": "GB200",
-  "product": "u-p6e-gb200x72",
-  "price": 10.582,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (Dallas) Local Zone",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "GB200",
-  "product": "u-p6e-gb200x36",
-  "price": 10.582,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (Dallas) Local Zone",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "B300",
-  "product": "p6-b300.48xlarge",
-  "price": 16.146,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (N. Virginia)",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.208,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (Ohio)",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 5.97,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (N. Virginia)",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "H200",
-  "product": "p5e.48xlarge",
-  "price": 6.866,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (Ohio)",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.895,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (Ohio)",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
- },
- {
-  "model": "A100",
-  "product": "p4d.24xlarge",
-  "price": 1.696,
-  "kind": "容量预订挂牌",
-  "term": "1–182 天，按可订档期",
-  "region": "US East (N. Virginia)",
-  "note": "原表每加速器有效时价。",
-  "date": "2026-11-27",
-  "source": "AWS Capacity Blocks",
-  "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-  "raw": ""
  },
  {
   "model": "H100",
@@ -4145,708 +3945,6 @@
   "source": "Impossible Cloud",
   "url": "https://console.impossiblecloud.com/api/gpu/offers",
   "raw": ""
- },
- {
-  "model": "GB200",
-  "product": "Standard_ND128isr_NDR_GB200_v6",
-  "price": 17.305594,
-  "kind": "期限计费折扣",
-  "term": "1 年",
-  "region": "美国东部",
-  "note": "自行折算：整机全期 $606,388 ÷ 1 年 ÷ 8,760 小时 ÷ 4 张，不含容量保证。 日期取微软零售价格 API 的 effectiveStartDate。",
-  "date": "2025-04-01",
-  "source": "Azure",
-  "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND128isr_NDR_GB200_v6%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-gb200/raw/2026-11-26_80875a0cfa6359f5.gz"
- },
- {
-  "model": "GB200",
-  "product": "Standard_ND128isr_NDR_GB200_v6",
-  "price": 11.897603,
-  "kind": "期限计费折扣",
-  "term": "3 年",
-  "region": "美国东部",
-  "note": "自行折算：整机全期 $1,250,676 ÷ 3 年 ÷ 8,760 小时 ÷ 4 张，不含容量保证。 日期取微软零售价格 API 的 effectiveStartDate。",
-  "date": "2025-04-01",
-  "source": "Azure",
-  "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND128isr_NDR_GB200_v6%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-gb200/raw/2026-11-26_80875a0cfa6359f5.gz"
- },
- {
-  "model": "H100",
-  "product": "Standard_ND96isr_H100_v5",
-  "price": 7.865596,
-  "kind": "期限计费折扣",
-  "term": "1 年",
-  "region": "美国东部",
-  "note": "自行折算：整机全期 $551,221 ÷ 1 年 ÷ 8,760 小时 ÷ 8 张，不含容量保证。 日期取微软零售价格 API 的 effectiveStartDate。",
-  "date": "2023-12-01",
-  "source": "Azure",
-  "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz"
- },
- {
-  "model": "H100",
-  "product": "Standard_ND96isr_H100_v5",
-  "price": 5.39531,
-  "kind": "期限计费折扣",
-  "term": "3 年",
-  "region": "美国东部",
-  "note": "自行折算：整机全期 $1,134,310 ÷ 3 年 ÷ 8,760 小时 ÷ 8 张，不含容量保证。 日期取微软零售价格 API 的 effectiveStartDate。",
-  "date": "2023-12-01",
-  "source": "Azure",
-  "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz"
- },
- {
-  "model": "H100",
-  "product": "Standard_ND96isr_H100_v5",
-  "price": 4.915999,
-  "kind": "期限计费折扣",
-  "term": "5 年",
-  "region": "美国东部",
-  "note": "自行折算：整机全期 $1,722,566 ÷ 5 年 ÷ 8,760 小时 ÷ 8 张，不含容量保证。 日期取微软零售价格 API 的 effectiveStartDate。",
-  "date": "2023-12-01",
-  "source": "Azure",
-  "url": "https://prices.azure.com/api/retail/prices?%24filter=serviceName+eq+%27Virtual+Machines%27+and+armSkuName+eq+%27Standard_ND96isr_H100_v5%27&api-version=2023-01-01-preview",
-  "raw": "data/gpu-rent/azure-h100/raw/2026-11-26_c2e41bb6a9eb7ed3.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 12.29,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $98.32/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2024-07-03。",
-  "date": "2024-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20240703191414/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2024-07-03_ae5e198b3c652030.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 12.29,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $98.32/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2024-12-23。",
-  "date": "2024-12-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20241223225037/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2024-12-23_ef3ca4f525d437b8.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 12.29,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $98.32/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-03-31。",
-  "date": "2025-03-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250331133428/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-03-31_262f3065b0c42a85.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 10.6,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $84.8/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-03-31。",
-  "date": "2025-03-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250331133428/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-03-31_262f3065b0c42a85.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 12.29,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $98.32/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-05-29。",
-  "date": "2025-05-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250529210942/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-05-29_abe78e5ca321061f.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 10.6,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $84.8/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-05-29。",
-  "date": "2025-05-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250529210942/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-05-29_abe78e5ca321061f.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-07-03。",
-  "date": "2025-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250703204906/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-07-03_1e808a5c26f00663.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-07-03。",
-  "date": "2025-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250703204906/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-07-03_1e808a5c26f00663.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-09-30。",
-  "date": "2025-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-09-30。",
-  "date": "2025-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-09-30。",
-  "date": "2025-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-09-30。",
-  "date": "2025-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20250930212021/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-09-30_f65cb1fe9ac8d182.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-12-18。",
-  "date": "2025-12-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-12-18。",
-  "date": "2025-12-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-12-18。",
-  "date": "2025-12-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2025-12-18。",
-  "date": "2025-12-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20251218215508/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2025-12-18_155d87310f5052bc.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-03-26。",
-  "date": "2026-03-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-03-26。",
-  "date": "2026-03-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-03-26。",
-  "date": "2026-03-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-03-26。",
-  "date": "2026-03-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260326154455/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-03-26_c20a389b79799eb4.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-06-30。",
-  "date": "2026-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
- },
- {
-  "model": "B300",
-  "product": "p6-b300.48xlarge",
-  "price": 17.802,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $142.416/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-06-30。",
-  "date": "2026-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-06-30。",
-  "date": "2026-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-06-30。",
-  "date": "2026-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-06-30。",
-  "date": "2026-06-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260630192411/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-06-30_1cdfc62ef111e239.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-09-25。",
-  "date": "2026-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
- },
- {
-  "model": "B300",
-  "product": "p6-b300.48xlarge",
-  "price": 17.802,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $142.416/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-09-25。",
-  "date": "2026-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-09-25。",
-  "date": "2026-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-09-25。",
-  "date": "2026-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-09-25。",
-  "date": "2026-09-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20260925174521/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-09-25_11729d01207c1f7d.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
- },
- {
-  "model": "B300",
-  "product": "p6-b300.48xlarge",
-  "price": 17.802,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $142.416/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (N. Virginia)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_a92e74a60aa9d332.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (Ohio)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (Ohio)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (Ohio)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
- },
- {
-  "model": "H200",
-  "product": "p5e.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (Ohio)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US East (Ohio)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_2aa4bcec0b9d93a5.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 8.6,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (N. California)",
-  "note": "自行折算：Linux 整机 $8.6/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 8.6,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (N. California)",
-  "note": "自行折算：Linux 整机 $68.8/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 9.89,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (N. California)",
-  "note": "自行折算：Linux 整机 $79.12/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-1/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_81d2bab7e699630d.gz"
- },
- {
-  "model": "H200",
-  "product": "p5e.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (Oregon)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.4xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (Oregon)",
-  "note": "自行折算：Linux 整机 $6.88/小时 ÷ 1 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
- },
- {
-  "model": "B200",
-  "product": "p6-b200.48xlarge",
-  "price": 14.2416,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (Oregon)",
-  "note": "自行折算：Linux 整机 $113.933/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
- },
- {
-  "model": "B300",
-  "product": "p6-b300.48xlarge",
-  "price": 17.802,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (Oregon)",
-  "note": "自行折算：Linux 整机 $142.416/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
- },
- {
-  "model": "H100",
-  "product": "p5.48xlarge",
-  "price": 6.88,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (Oregon)",
-  "note": "自行折算：Linux 整机 $55.04/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
- },
- {
-  "model": "H200",
-  "product": "p5en.48xlarge",
-  "price": 7.912,
-  "kind": "按需挂牌",
-  "term": "无固定期",
-  "region": "US West (Oregon)",
-  "note": "自行折算：Linux 整机 $63.296/小时 ÷ 8 张。 日期取 AWS 原行的 EffectiveDate；目录观察日为 2026-11-26。",
-  "date": "2026-11-01",
-  "source": "AWS EC2",
-  "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-west-2/index.csv",
-  "raw": "data/gpu-rent/aws-price-list-excerpts/raw/2026-11-26_b2feb322648df7dd.gz"
  },
  {
   "model": "B300",
@@ -4946,5 +4044,117 @@
   "date": "2026-09-23",
   "url": "https://web.archive.org/web/20260923185137id_/https://nebius.com/prices",
   "raw": "data/gpu-rent/nebius-history/raw/2026-09-23_9a5f3542991c7a52.gz"
+ },
+ {
+  "model": "H100",
+  "product": "NVIDIA HGX H100 · 8 张",
+  "price": 4.41,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-h100x8-640gb：整机每小时 $35.28 ÷ 8 张。",
+  "configuration": "GPUs per Droplet 8 / Droplet vCPUs 160 / Droplet Memory 1920 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "H200",
+  "product": "NVIDIA HGX H200 · 8 张",
+  "price": 4.47,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-h200x8-1920gb：整机每小时 $35.76 ÷ 8 张。",
+  "configuration": "GPUs per Droplet 8 / Droplet vCPUs 192 / Droplet Memory 1920 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "B300",
+  "product": "NVIDIA HGX B300",
+  "price": 11.19,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-b300x1-288gb：整机每小时 $11.19 ÷ 1 张。",
+  "configuration": "GPUs per Droplet 1 / Droplet vCPUs 28 / Droplet Memory 448 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "B300",
+  "product": "NVIDIA HGX B300 · 8 张",
+  "price": 11.19,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-b300x8-2304gb：整机每小时 $89.52 ÷ 8 张。",
+  "configuration": "GPUs per Droplet 8 / Droplet vCPUs 224 / Droplet Memory 3584 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "MI300X",
+  "product": "AMD Instinct™ MI300X · 8 张",
+  "price": 2.59,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-mi300x8-1536gb：整机每小时 $20.72 ÷ 8 张。",
+  "configuration": "GPUs per Droplet 8 / Droplet vCPUs 160 / Droplet Memory 1920 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "MI325X",
+  "product": "AMD Instinct™ MI325X · 8 张",
+  "price": 3.8,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-mi325x8-2048gb：整机每小时 $30.4 ÷ 8 张。",
+  "configuration": "GPUs per Droplet 8 / Droplet vCPUs 160 / Droplet Memory 1310 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "MI350X",
+  "product": "AMD Instinct™ MI350X",
+  "price": 6.16,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-mi350x1-288gb：整机每小时 $6.16 ÷ 1 张。",
+  "configuration": "GPUs per Droplet 1 / Droplet vCPUs 24 / Droplet Memory 256 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
+ },
+ {
+  "model": "MI350X",
+  "product": "AMD Instinct™ MI350X · 8 张",
+  "price": 6.16,
+  "kind": "按需挂牌",
+  "term": "无固定期",
+  "region": "价目表未分地区",
+  "note": "gpu-mi350x8-2048gb：整机每小时 $49.28 ÷ 8 张。",
+  "configuration": "GPUs per Droplet 8 / Droplet vCPUs 192 / Droplet Memory 2048 GiB",
+  "raw": "data/gpu-rent/digitalocean/raw/2026-11-26_49199f86a8ef6202.gz",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "date": "2026-11-26",
+  "source": "DigitalOcean"
  }
 ]
